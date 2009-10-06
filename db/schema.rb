@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090402205803) do
+ActiveRecord::Schema.define(:version => 1) do
 
   create_table "crowds", :force => true do |t|
     t.string  "title",   :null => false
@@ -17,6 +17,11 @@ ActiveRecord::Schema.define(:version => 20090402205803) do
   end
 
   add_index "crowds", ["user_id"], :name => "user_id"
+
+  create_table "crowds_bak", :force => true do |t|
+    t.string  "title",   :null => false
+    t.integer "user_id", :null => false
+  end
 
   create_table "feeds", :force => true do |t|
     t.string   "title",        :null => false
@@ -40,24 +45,24 @@ ActiveRecord::Schema.define(:version => 20090402205803) do
   add_index "items", ["feed_id", "url"], :name => "feed_id_2", :unique => true
   add_index "items", ["feed_id"], :name => "feed_id"
 
-  create_table "items_old", :force => true do |t|
-    t.integer  "feed_id",    :null => false
-    t.string   "title",      :null => false
-    t.text     "url",        :null => false
-    t.datetime "created_at", :null => false
-  end
-
-  add_index "items_old", ["created_at"], :name => "items_created_at_index"
-  add_index "items_old", ["feed_id"], :name => "feed_id"
+  # create_table "items_old", :force => true do |t|
+  #   t.integer  "feed_id",    :null => false
+  #   t.string   "title",      :null => false
+  #   t.text     "url",        :null => false
+  #   t.datetime "created_at", :null => false
+  # end
+  # 
+  # add_index "items_old", ["created_at"], :name => "items_created_at_index"
+  # add_index "items_old", ["feed_id"], :name => "feed_id"
 
   create_table "ownerships", :force => true do |t|
     t.integer "feed_id",  :null => false
     t.integer "crowd_id", :null => false
   end
 
-  add_index "ownerships", ["crowd_id"], :name => "user_id"
-  add_index "ownerships", ["feed_id", "crowd_id"], :name => "feed_id_2", :unique => true
-  add_index "ownerships", ["feed_id"], :name => "feed_id"
+  # add_index "ownerships", ["crowd_id"], :name => "user_id"
+  # add_index "ownerships", ["feed_id", "crowd_id"], :name => "feed_id_2", :unique => true
+  # add_index "ownerships", ["feed_id"], :name => "feed_id"
 
   create_table "tags", :force => true do |t|
     t.string   "url",        :limit => 256, :null => false
@@ -65,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20090402205803) do
     t.datetime "created_at",                :null => false
   end
 
-  add_index "tags", ["url"], :name => "url", :unique => true
+  # add_index "tags", ["url"], :name => "url", :unique => true
 
   create_table "trueurls", :force => true do |t|
     t.string  "host"
@@ -77,15 +82,25 @@ ActiveRecord::Schema.define(:version => 20090402205803) do
   create_table "users", :force => true do |t|
     t.string   "title"
     t.string   "email"
-    t.string   "crypted_password",          :limit => 40
-    t.string   "salt",                      :limit => 40
+    t.string   "crypted_password",            :limit => 256
+    t.string   "salt",                        :limit => 256
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token"
-    t.datetime "remember_token_expires_at"
-    t.string   "perishable_token",                        :default => "", :null => false
+    t.string   "perishable_token"
+    t.datetime "perishable_token_expires_at"
+    t.string   "persistence_token"
   end
 
-  add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"
+  # create_table "users_bak", :force => true do |t|
+  #   t.string   "title"
+  #   t.string   "email"
+  #   t.string   "crypted_password",            :limit => 40
+  #   t.string   "salt",                        :limit => 40
+  #   t.datetime "created_at"
+  #   t.datetime "updated_at"
+  #   t.string   "perishable_token"
+  #   t.datetime "perishable_token_expires_at"
+  #   t.string   "persistence_token"
+  # end
 
 end
