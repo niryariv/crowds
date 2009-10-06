@@ -1,0 +1,12 @@
+
+
+crowds/list 						:	lists all crowds			
+crowds/show/1 (#crowd)	: shows feeds for crowd #1
+
+feeds/add/1 (#crowd)		:	add feed to crowd #1
+feeds/delete/1 (#feed)	: delete feed #1 
+
+items/1 (#item)					: shows context data for item #1
+
+crowd/new
+crowd/delete (blocked)	: deletes crowd #1

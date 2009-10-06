@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/stylesheets/rss.css" type="text/css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Brainspl.at</title>
+    <link>http://brainspl.at/</link>
+    <language>en-us</language>
+    <ttl>40</ttl>
+    <description>Brainspl.at</description>
+    <item>
+      <title>Merb 0.0.5</title>
+      <description>&lt;p&gt;Merb 0.0.5 is released in gem form. This release adds the following niceties:&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;ActiveRecord migrations.&lt;/li&gt;
+&lt;li&gt;Merbjs ajax template handlers&lt;/li&gt;
+&lt;li&gt;Layouts for templates&lt;/li&gt;
+&lt;li&gt;Merb &lt;span class="caps"&gt;IRB&lt;/span&gt; console&lt;/li&gt;
+&lt;li&gt;X-SENDFILE header support&lt;/li&gt;
+&lt;li&gt;Rendering partial templates with partial(:posts)&lt;/li&gt;
+&lt;li&gt;Improved Routing&lt;/li&gt;
+&lt;li&gt;New Daemonizing code&lt;/li&gt;
+&lt;li&gt;Built in merb_cluster support for starting multiple instances&lt;/li&gt;
+&lt;li&gt;Quite a few code and documentation improvements&lt;/li&gt;
+&lt;/ul&gt;
+
+	&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+Merb is moving pretty fast but it is getting to the point where it makes it pretty easy to make standalone web apps. It also plays nice with rails as a little secret weapon to speed up parts of your app and as well for file uploads. It is very surprising how much functionality I have been able to fit in 420 lines of code ;)&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Feedback and feature requests are welcome as always.&lt;br /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href='http://merb.devjavu.com/'&gt;http://merb.devjavu.com/&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 02 Nov 2006 03:00:00 +0000</pubDate>
+      <guid>urn:uuid:742718fc-afa5-4f5a-88ac-c8978e43aa8b</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/11/02/merb-0-0-5</link>
+      <category>merb</category>
+      <category>mongrel</category>
+      <category>server</category>
+      <category>erb</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3741</trackback:ping>
+    </item>
+    <item>
+      <title>BackgrounDRb 0.2.0 Released!</title>
+      <description>&lt;p&gt;I am really happy to announce the release of BackgrounDRb 0.2.0 . 
+This is a complete rewrite and re-architecture of this codebase. I want to 
+thank skaar for all of his hard work. I put out a call for help with the new
+ architecture and skaar stepped up bigtime. I had already written the new 
+scheduler and cron compatible syntax and moved to multi process 
+architecture. But he took what I had that wasn&amp;#8217;t very whole and did a 
+whopping 100 svn commits to the project! Big ups to skaar for this release!&lt;/p&gt;
+
+
+	&lt;p&gt;= BackgrounDRb 0.2.0&lt;/p&gt;
+
+
+	&lt;p&gt;!! Note that this is in an entirely different svn repo then the old plugin.
+Make sure you remove the old before you install the new.&lt;/p&gt;
+
+
+	&lt;p&gt;http://svn.devjavu.com/backgroundrb/tags/release-0.2.0/README
+http://svn.devjavu.com/backgroundrb/tags/release-0.2.0 (latest release)
+http://svn.devjavu.com/backgroundrb/trunk (svn trunk)
+http://backgroundrb.devjavu.com (trac)
+http://backgroundrb.rubyforge.org (rdoc)&lt;/p&gt;
+
+
+	&lt;p&gt;Copyright&amp;#169; 2006 Ezra Zygmuntowicz and skaar[at]waste[dot]org&lt;/p&gt;</description>
+      <pubDate>Mon, 30 Oct 2006 01:41:00 +0000</pubDate>
+      <guid>urn:uuid:2f9112b9-3176-4fcf-8a22-27a1d5505c55</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/30/backgroundrb-0-2-0-released</link>
+      <category>background</category>
+      <category>cron</category>
+      <category>server</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3736</trackback:ping>
+    </item>
+    <item>
+      <title>Merb is useable and a gem</title>
+      <description>&lt;p&gt;I&amp;#8217;m happy to announce the first useable release of my new pocket-framework Merb. Merb is a mongrel handler with built in controller and view templating with erb. It has a nice routing system similar to rails but much simpler. It uses some of the code from the camping handler and the rails handler and then some of its own secret sauce to form imho a nice fast little framework.&lt;/p&gt;
+
+
+	&lt;p&gt;ActiveRecord is supported as shown in the sample app. Merb does not use cgi.rb at all(yay!) but can handle file uploads very well. See the sample app. And it can process concurrent file uploads without blocking. Merb also supports the X-SENDFILE header so you can set that header to a path to a file in your controller and then mongrel will serve it directly and your controller can continue on to the next request.&lt;/p&gt;
+
+
+	&lt;p&gt;Merb is a pet project of mine but was born out of real life need. I am using it in combination with rails apps that need a lot of file uploads or need to serve some dynamic pages faster then rails will allow. Right now Merb performs very well for a dynamic ruby framework thanks to mongrel being very fast when it doesn&amp;#8217;t have the Rails Albatross ™ on its back. Serving a dynamic templated page thru merb routing and controller with 10 ActiveRecord objects being listed out in the view, merb clocks in at 400req/sec on my macbook and a bit better on a real server. Static files are served as fast as mongrel can.&lt;/p&gt;
+
+
+	&lt;p&gt;I am using this along side a rails app by rewriting requests to a suburl to the merb mongrel like /foo &amp;rarr; merb handler. I am investigating making it possible to mount merb at a url in mongrel itself along side a rails app but I have to do more testing to see how that affects everything.&lt;/p&gt;
+
+
+	&lt;p&gt;If you want to play along at home you can do this to get a quick start:&lt;/p&gt;
+
+
+&lt;pre&gt;
+$ sudo gem install merb
+$ gem unpack merb
+$ cd merb-0.0.3/examples/sample_app
+# edit the conf/merb_init.rb to add your database password info.
+# then add a posts table to your db with a title and body column.
+$ merb start -t
+&lt;/pre&gt;
+
+	&lt;p&gt;Then you can browse to these urls to play around.&lt;/p&gt;
+
+
+&lt;pre&gt;
+http://localhost:4000/posts/new
+or
+http://localhost:4000/posts/list
+or
+http://localhost:4000/uploads/start
+&lt;/pre&gt;
+
+	&lt;p&gt;Here are the relevant links if you want to get involved with Merb development.&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href='http://merb.rubyforge.org/'&gt;http://merb.rubyforge.org/&lt;/a&gt;&lt;br /&gt;
+&lt;a href='http://merb.devjavu.com/'&gt;http://merb.devjavu.com/&lt;/a&gt;&lt;br /&gt;
+&lt;a href='http://svn.devjavu.com/merb'&gt;http://svn.devjavu.com/merb&lt;/a&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;Keep in mind that Merb is only a week or two old and is changing fast! If you want to get in on the ground floor and help me add to the base system then you are most welcome. On the other hand, if Merb kills your children I am not responsible ;)&lt;/p&gt;
+
+
+	&lt;p&gt;Thanks for playing!&lt;/p&gt;</description>
+      <pubDate>Wed, 18 Oct 2006 00:03:00 +0000</pubDate>
+      <guid>urn:uuid:5c27a6cc-aa3c-4d74-a6f8-8152f57fc1a2</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/18/merb-is-useable-and-a-gem</link>
+      <category>merb</category>
+      <category>mongrel</category>
+      <category>server</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3724</trackback:ping>
+    </item>
+    <item>
+      <title>EngineYard Control Panel Screencast</title>
+      <description>&lt;p&gt;I&amp;#8217;m happy to release a preview screencast of the control panel I have been slaving away on for EngineYard.com. It is not complete yet but you can begin to get a feel for how nice it will be once its finished. I&amp;#8217;ll post more as I finish parts of it.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;&lt;a href='http://www.engineyard.com/movies/ey_cp_1.mov'&gt;&lt;span class="caps"&gt;EY &lt;/span&gt;Control Panel Screencast&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 16 Oct 2006 01:09:00 +0000</pubDate>
+      <guid>urn:uuid:91217ac4-1bb0-4e4e-8c19-b686617754c6</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/16/engineyard-control-panel-screencast</link>
+      <category>engineyard</category>
+      <category>scale</category>
+      <category>deployment</category>
+      <category>controlpanel</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3721</trackback:ping>
+    </item>
+    <item>
+      <title>Merb gets cool Routes and file uploads</title>
+      <description>I have done more work on Merb and it is getting close to being ready for production use. I implemented a cool route generator that I thought I would detail here a bit as I found it very fun to make.&lt;br /&gt;&lt;br /&gt;
+So here is a simple Merb route definition:&lt;br /&gt;
+&lt;pre&gt;
+  Merb::RouteMatcher.prepare do |r|
+    r.add '/foo/:bar/baz/:id', :class =&amp;gt; 'Test', :method =&amp;gt; 'foo'
+    r.add '/these/:routes/are/:sweet', :class =&amp;gt; 'Upload', :method =&amp;gt; 'start'
+    r.add '/:class/:method/:id', {}
+  end
+&lt;/pre&gt;
+This set of routes will be compiled into a route matching lambda on startup of Merb. So the above routes will generate and define a method for matching incoming requests with this lambda as the body of that method:&lt;br /&gt;
+&lt;pre&gt;
+lambda{|path| 
+  if Regexp.new('/foo/(.+)/baz/(.+)') =~ path
+    @sections[:bar] = $1
+    @sections[:id] = $2
+    return {:class=&amp;gt;"Test", :method=&amp;gt;"foo"}.merge(@sections)
+  end
+
+  if Regexp.new('/these/(.+)/are/(.+)') =~ path
+    @sections[:routes] = $1
+    @sections[:sweet] = $2
+    return {:class=&amp;gt;"Upload", :method=&amp;gt;"start"}.merge(@sections)
+  end
+
+  if Regexp.new('/(.+)/(.+)/(.+)') =~ path
+    @sections[:class] = $1
+    @sections[:method] = $2
+    @sections[:id] = $3
+    return {}.merge(@sections)
+  end
+
+  return {:class=&amp;gt;'NoRouteFound', :method=&amp;gt;'noroute'}
+}
+&lt;/pre&gt;
+
+So now lets look at what happens when an incoming request comes in and matches against our router lambda:&lt;br /&gt;
+&lt;pre&gt;
+  routes = Merb::RouteMatcher.new
+  p routes.route_request( "/foo/234/baz/dsdsd")
+  routes = Merb::RouteMatcher.new
+  p routes.route_request( "/these/234/are/yup")
+  routes = Merb::RouteMatcher.new
+  p routes.route_request( "/upload/test/12")
+  routes = Merb::RouteMatcher.new
+  p routes.route_request( '/hdsfvsdfsdfdsf')
+&lt;/pre&gt;
+Those four route matches will output these four hashes which are then used to instantiate and run your controller classes with the right params. You can see when a route doesn&amp;#8217;t match it routes to the Noroutefound#noroute  controller/action so you can put a custom error handler in place there.&lt;br /&gt;
+
+&lt;pre&gt;
+{:class=&amp;gt;"Test", :bar=&amp;gt;"234", :id=&amp;gt;"dsdsd", :method=&amp;gt;"foo"}
+{:class=&amp;gt;"Upload", :sweet=&amp;gt;"yup", :routes=&amp;gt;"234", :method=&amp;gt;"start"}
+{:class=&amp;gt;"upload", :id=&amp;gt;"12", :method=&amp;gt;"test"}
+{:class=&amp;gt;"Norouteround", :method=&amp;gt;"noroute"}
+&lt;/pre&gt;
+&lt;br /&gt;
+I am having a great time working on merb in little spurts. I think it will be very usefull as an additional weapon for your rails app arsenal. Pull out the Merb when you have a page that rails cannot serve fast enough or when you need to handle a ton of file uploads at once without blocking rails for each upload. So please now is the time for feature requests if anyone has any. &lt;br /&gt;&lt;br /&gt;
+Trac is here: &lt;a href='http://merb.devjavu.com/'&gt;http://merb.devjavu.com/&lt;/a&gt; and you can get the latest  from svn here: &lt;a href='http://svn.devjavu.com/merb'&gt;http://svn.devjavu.com/merb&lt;/a&gt; and here is the &lt;a href='http://svn.devjavu.com/merb/README'&gt;&lt;span class="caps"&gt;README&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+I have created the infrastructure to make a merb gem easy to build and just got a home for it on rubyforge so by rubyconf you will be able to gem install merb and then use the &amp;#8216;merb&amp;#8217; command line util to start your merb apps.&lt;br /&gt;&lt;br /&gt;
+Next feature is easy integration with ActiveRecord or Og ;)</description>
+      <pubDate>Sun, 15 Oct 2006 18:47:00 +0000</pubDate>
+      <guid>urn:uuid:80767745-0dd2-409c-8556-d839fb3f7573</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/15/merb-gets-cool-routes-and-file-uploads</link>
+      <category>mongrel</category>
+      <category>merb</category>
+      <category>metaprogramming</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3720</trackback:ping>
+    </item>
+    <item>
+      <title>Introducing the Merb</title>
+      <description>Meet the &amp;#8216;Merb&amp;#8217;. Merb == Mongrel + Erb. It is a super lightwieght ruby app server that maps urls to simple classes that can render erb templates. 
+&lt;pre&gt;
+so a request to:
+/foo/bar/baz/12 
+maps to:
+Foo.new.bar('baz', '12')
+&lt;/pre&gt;
+
+	&lt;p&gt;&lt;br /&gt;It parses the query string and form posts into @params and @cookies so you can use them in your mini controllers. This is just a toy for now but actually quite useful. If you have a few pages of your dynamic site that have to be fast and you maybe don&amp;#8217;t need the full power of rails then Merb can serve dynamic templated requests at 700req/sec with no database access. I&amp;#8217;ll get some benchmarks for db access as well soon. But the idea is to also be able to handle multiple file uploads at once without blocking your rails processes. You can either use your front end webservers rewrite module to send all requests to /merb or whatever to the merb server. I am also exploring making it so you can add this as a handler to the mongrels that run your main app and have them co-exist with your rails app mounted at a certain url.&lt;br /&gt;&lt;br /&gt;
+Anyway, please have a play with it and send any feature requests or bugs to the trac install here: &lt;a href='http://merb.devjavu.com/projects/merb/report/1'&gt;Merb Trac Install&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+And here is the readme that gives a little more detail about how Merb works currently. &lt;A href='http://svn.devjavu.com/merb/README.txt'&gt;Merb &lt;span class="caps"&gt;README&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+You can check it out of svn here:&lt;br /&gt;
+svn co http://svn.devjavu.com/merb &lt;br /&gt;&lt;br /&gt;
+There is a little sample app with a few controllers inside the repo. just run ruby server.rb and play on localhost:4000 a bit.&lt;br /&gt;&lt;br /&gt;
+Feedback is most welcome at this point&lt;br /&gt;&lt;/p&gt;</description>
+      <pubDate>Mon, 09 Oct 2006 23:02:00 +0000</pubDate>
+      <guid>urn:uuid:b470fe82-d6db-4aaf-828c-328294adb958</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/09/introducing-the-merb</link>
+      <category>merb</category>
+      <category>mongrel</category>
+      <category>server</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3714</trackback:ping>
+    </item>
+    <item>
+      <title>Nested Joins and ez-where update</title>
+      <description>So Fabien has been at it again and has updated ez-where with some awesome new syntax. You can now use nested joins inside your find_where&amp;#8217;s in a much more simple way.&lt;br /&gt;&lt;br /&gt;
+Jon Yurek was inspired by ez-where and built &lt;a href='http://giantrobots.thoughtbot.com/2006/9/29/an-improvement-for-querying-in-rails'&gt; squirrel &lt;/a&gt;. Well we were inspired back and decided it was time to finally finish the nested include problems in ez-where. I just egged him on and offered syntax examples but Fabien did all the work on this update and it totally brings things up to a new level. But also it leaves everything fully backwards compatible. This is only possible because we have such a huge test suite in this plugin that lets us refactor and be assured nothing is broken by new additions. Anyways, let&amp;#8217;s take a look at some new syntax shall we?&lt;br /&gt;&lt;br /&gt;
+Conditions involving associations are now handled more transparently,
+while also providing support for conditions on nested includes.
+&lt;pre&gt;
+articles = Article.find_where(:all) do |article|
+  article.title =~ 'Lorem%'
+  article.author.name  'Ezra'
+  article.comments.user.name  &amp;#8216;Fab&amp;#8217;
+end
+&lt;/pre&gt;
+What this does is create the correct options hash and pas it along to ActiveRecord::Base#find. So that query will result in these options to find(the empty {}&amp;#8217;s don&amp;#8217;t hurt anything and made implementation much easier):
+
+&lt;pre&gt;
+:include =&amp;gt; { :author =&amp;gt; {}, :comments =&amp;gt; { :user =&amp;gt; {} } }
+:conditions =&amp;gt; ["(articles.title LIKE ? AND (authors.name = ?) 
+ AND (users.name = ?))", "Lorem%", "Ezra", "Fab"]
+&lt;/pre&gt;
+
+	&lt;p&gt;To make the syntax feel even more natural you can do object comparison too.
+Behind the scenes the actual association is used to deduce the right FK:&lt;/p&gt;
+
+
+&lt;pre&gt;
+user = User.find(1)
+options = Article.find_where_options do |article|
+    article.comments.user == user
+end
+&lt;/pre&gt;
+
+	&lt;p&gt;which results in:&lt;/p&gt;
+
+
+&lt;pre&gt;
+options[:include] #=&amp;gt; { :comments =&amp;gt; { :user =&amp;gt; {} } }
+options[:conditions] #=&amp;gt; ["(comments.user_id = ?)", 1]
+&lt;/pre&gt;
+or you can also do:
+ &lt;pre&gt;
+users = User.find(1, 2)
+
+options = Article.find_where_options do |article|
+  article.comments.user === User.find(1, 2)
+end
+
+options[:include] #=&amp;gt; { :comments =&amp;gt; { :user =&amp;gt; {} } }
+options[:conditions] #=&amp;gt; ["(((comments.user_id IN (?))))", [1, 2]]
+&lt;/pre&gt;
+
+	&lt;p&gt;The new simplified syntax is completely backwards compatible. Also, we&amp;#8217;ve
+split find_where into find_where and find_where_options. This helps to check
+the generated options, especially when running tests.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+
+	&lt;p&gt;It&amp;#8217;s possible to use ez_where to build the :order part of the find options.
+All you need to do is call order! on the column you want to use, optionally
+passing :asc or :desc (string or symbol).&lt;/p&gt;
+
+
+Doing so automagically includes the right assocations:
+&lt;pre&gt;
+options = Customer.find_where_options do |customer|
+    customer.environments.apps.name =~ '%foo%'
+    customer.environments.apps.name.order! :desc
+end
+p options
+#=&amp;gt; {:order=&amp;gt;"apps.name DESC",
+  :conditions=&amp;gt;["(apps.name LIKE ?)", "%foo%"], 
+  :include=&amp;gt;{:environments=&amp;gt;{:apps=&amp;gt;{}}}}
+&lt;/pre&gt;
+&lt;br /&gt;
+You can also use very complex conditions to create custom queries:&lt;br /&gt;
+&lt;pre&gt;
+    options = Article.find_where_options do |article|
+      article.comments.user.name == 'Fab'
+      article.and( (article.c.title =~ 'A%') | (article.c.title =~ 'B%') )
+      article.comments.any do 
+        body =~ 'Lorem%'
+        body =~ 'Ipsum%'
+      end
+    end
+
+p options
+#=&amp;gt; {:include=&amp;gt;{:comments=&amp;gt;{:user=&amp;gt;{}}}, 
+:conditions=&amp;gt;["((users.name = ?) AND 
+ ((articles.title LIKE ?) OR 
+(articles.title LIKE ?)) 
+AND (comments.body LIKE ? OR 
+comments.body LIKE ?))", 
+"Fab", "A%", "B%", "Lorem%", "Ipsum%"]}
+&lt;/pre&gt;
+&lt;br /&gt;&lt;br /&gt;
+Have at it and have some fun. I really like these new features, it makes complex AR find calls super easy to deal with and much nicer to look at. Thanks Fabien for your hard work on it!&lt;br /&gt;
+
+	&lt;p&gt;get it here:&lt;br /&gt;
+script/plugin install svn://rubyforge.org/var/svn/ez-where&lt;/p&gt;</description>
+      <pubDate>Tue, 03 Oct 2006 19:58:00 +0000</pubDate>
+      <guid>urn:uuid:876ff6f2-1509-42e1-a5a6-196336fe34a2</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/10/03/nested-joins-and-ez-where-update</link>
+      <category>where</category>
+      <category>query</category>
+      <category>activerecord</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3708</trackback:ping>
+    </item>
+    <item>
+      <title>EngineYard Technology Stack</title>
+      <description>&lt;p&gt;People have been asking me for a little technology overview of how &lt;a href='http://engineyard.com'&gt;Engine Yard&lt;/a&gt; is structured. I&amp;#8217;ll give a small run down here.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 24 Sep 2006 19:06:00 +0000</pubDate>
+      <guid>urn:uuid:e5d86f0a-595f-428d-aa94-0c1fcc2da162</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/09/24/engineyard-technology-stack</link>
+      <category>cluster</category>
+      <category>deploy</category>
+      <category>engineyard</category>
+      <category>hardware</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3684</trackback:ping>
+    </item>
+    <item>
+      <title>Engineyard.com new site is up.</title>
+      <description>&lt;p&gt;I am really excited to announce that we just launched our new redesign at &lt;a href='http://engineyard.com'&gt; EngineYard.com&lt;/a&gt;. We have been working very hard to get the first cluster up and its running very very nicely. I am still hard at work on the control panel for making it very simple to deploy your apps to the cluster and hope to be done soon.&lt;br /&gt;
+&lt;a href='http://new-bamboo.co.uk/'&gt;Damien Tanner&lt;/a&gt; from New Bamboo did the design work for us and we are very happy with it.&lt;/p&gt;</description>
+      <pubDate>Sat, 23 Sep 2006 21:44:00 +0000</pubDate>
+      <guid>urn:uuid:21a69abe-a1e4-4ce6-b623-4940038e44f4</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/09/23/engineyard-com-new-site-is-up</link>
+      <category>engineyard</category>
+      <category>scale</category>
+      <category>deployment</category>
+      <category>cluster</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3681</trackback:ping>
+    </item>
+    <item>
+      <title>New Nginx Conf with Rails Caching</title>
+      <description>&lt;p&gt;[UPDATE] The config file has been updated and commented so it is easier to figure out. It also sets the right header when it proxies to mongrel and doesn;t choke on the foo.js?394732323 urls that rails generated for static assets.&lt;/p&gt;
+
+
+	&lt;p&gt;OK this is very sweet. We have a new Nginx conf file that works perfectly with rails page caching. nginx serves all static files and all rails cached file. &lt;b&gt;Fast&lt;/b&gt;
+&lt;br /&gt;&lt;br /&gt;
+I want to thank &lt;a href='http://blog.kovyrin.net/'&gt;Alexy Kovyrin&lt;/a&gt; and &lt;a href='http://imajes.info'&gt;James Cox&lt;/a&gt; for their help in getting this config perfected. This makes nginx truly one of the best options for fronting a cluster of mongrels.
+&lt;br /&gt;&lt;br /&gt;
+Might as well get the latest version while we&amp;#8217;re at it.
+&lt;pre&gt;
+curl -O http://sysoev.ru/nginx/nginx-0.4.0.tar.gz
+tar -xvzf nginx-0.4.0.tar.gz
+cd nginx-0.4.0
+./configure --sbin-path=/usr/local/sbin --with-http_ssl_module
+make
+sudo make install
+&lt;/pre&gt;
+&lt;br /&gt;
+Now for the new config file. Here you go folks, get it while its hot!&lt;br /&gt;&lt;br /&gt;
+&lt;a href='/nginx.conf.txt'&gt;nginx.conf&lt;/a&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 12 Sep 2006 16:02:00 +0000</pubDate>
+      <guid>urn:uuid:d50686e3-d16b-421b-9f74-7320a0880073</guid>
+      <author>ezmobius</author>
+      <link>http://brainspl.at/articles/2006/09/12/new-nginx-conf-with-rails-caching</link>
+      <category>nginx</category>
+      <category>proxy</category>
+      <category>loadbalance</category>
+      <category>server</category>
+      <category>deployment</category>
+      <trackback:ping>http://brainspl.at/articles/trackback/3645</trackback:ping>
+    </item>
+  </channel>
+</rss>

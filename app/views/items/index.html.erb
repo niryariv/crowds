@@ -1,0 +1,39 @@
+<% if @items.size == 0 -%>
+	<p>
+		Welcome! <br/>
+		You don't seem to have any items - here's two things you can to fix this: 
+		<ol>
+			<li><%= link_to "Add sources", crowd_feeds_path(@crowd.id) -%>: the more sources, the better the chance of
+				finding items.</li>
+			<li>Wait (but only after you added some sources ;): new items will usually appear only a day after adding 
+				sources, so give Crowds some time to read the new data.</li>
+		</ol>
+	</p>
+<% else -%>	
+	<p align="center">
+		Recent links from <b><%= @crowd.title %></b>
+		&nbsp;&nbsp;&nbsp;<%= link_to 'Sources',  crowd_feeds_url(@crowd.id) %>
+	</p>
+<% end -%> 
+<% ctr = 0 ; current_period = -1 -%>
+<% @items.each do |url, data| -%>
+	<% if data[:period] != current_period -%>
+		<br /><u><i><%= data[:period] %></i></u><br />
+		<% current_period = data[:period] %>
+	<% end -%>
+	<%= link_to_function "<tt>[+]</tt>", "Element.toggle('context-#{ctr}')" %>
+	<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
+	<span id="context-<%= ctr %>" style="display: none">
+		<ul>
+		  <% data[:feeds].each do |f| -%>
+			<li><% if url==f.url -%>
+					<a href="<%= f.feed.home_url -%>"><%= f.feed.title -%></a></li>
+				<% else -%>
+					<%= f.feed.title %> : <a href="<%= f.url -%>"><%= f.title -%></a></li>
+				<% end -%></li>
+		  <% end %>
+		</ul>
+	</span>
+	<br />
+	<% ctr += 1%>
+<% end %>

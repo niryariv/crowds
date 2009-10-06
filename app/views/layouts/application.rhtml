@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title><%= AppName %></title>
+  <%= stylesheet_link_tag 'scaffold' -%>
+	<%= javascript_include_tag 'prototype' -%>
+	<% if controller.controller_name=='items' and controller.action_name=='index' -%>
+		<%= auto_discovery_link_tag(:rss, {:controller => :items, :action => :index, :crowd_id => @crowd.id, :format => :xml}) %>
+	<% end -%>
+</head>
+<body>
+<table width="%90" height="%100"  cellpadding="5" cellspacing="5" align="center" border="0">
+<tr>
+	<td valign="top" height="50">
+		<table style="background-color: #deeff4; padding: 5px; height:40px;" width="%100"><!-- My God! A table?! -->
+		<tr>
+			<td><b class="headline"><%= link_to AppName, root_url %></b></td>
+			<td align="right">
+				<% if current_user -%>
+					<% if current_user.crowds.size > 0 %>
+						<% user_crowd = current_user.crowds.first %>
+						Your
+						<%= link_to "sources", crowd_feeds_path(user_crowd) %>
+						and 
+						<%= link_to "recent items", crowd_items_path(user_crowd) %>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+					<% end %>
+						(<%= link_to "Logout", user_session_path, :method => :delete %>)
+				<% else -%> 				
+				  <%= link_to "Register", new_account_path %> /
+				  <%= link_to "Login", new_user_session_path %>
+				  (<%= link_to "Forgot Password?", new_password_reset_path %>)
+				<% end -%>
+			</td>
+		</tr>
+		</table><!-- fetch the smelling salts! -->
+		<tr>
+			<td style="color: green"><%= flash[:notice] %></td>
+		</tr>
+		<tr>
+			<td valign="top"><%= yield  %></td>
+		</tr>
+		<tr>
+			<td align="center" height="50" valign="bottom">By <a href="http://niryariv.wordress.com/">Nir Yariv</a></td>
+		</tr>
+	</td>
+</tr>
+</table>	
+</body>
+</html>

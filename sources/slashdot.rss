@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0">
+
+<channel rdf:about="http://slashdot.org/">
+<title>Slashdot</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+<dc:language>en-us</dc:language>
+<dc:rights>Copyright 1997-2006, OSTG - Open Source Technology Group, Inc.  All Rights Reserved.</dc:rights>
+<dc:date>2006-11-23T19:00:02+00:00</dc:date>
+<dc:publisher>OSTG</dc:publisher>
+<dc:creator>pater@slashdot.org</dc:creator>
+<dc:subject>Technology</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=06/11/23/1717243&amp;from=rss" />
+  <rdf:li rdf:resource="http://linux.slashdot.org/article.pl?sid=06/11/23/1713245&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=06/11/23/178214&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=06/11/23/1546218&amp;from=rss" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=06/11/23/1448217&amp;from=rss" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=06/11/23/1339216&amp;from=rss" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=06/11/23/1325212&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=06/11/23/139220&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=06/11/23/0433202&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=06/11/23/0421252&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=06/11/23/0028238&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=06/11/22/2347220&amp;from=rss" />
+  <rdf:li rdf:resource="http://science.slashdot.org/article.pl?sid=06/11/22/2340224&amp;from=rss" />
+  <rdf:li rdf:resource="http://yro.slashdot.org/article.pl?sid=06/11/22/2321247&amp;from=rss" />
+  <rdf:li rdf:resource="http://it.slashdot.org/article.pl?sid=06/11/22/215256&amp;from=rss" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://images.slashdot.org/topics/topicslashdot.gif" />
+<textinput rdf:resource="http://slashdot.org/search.pl" />
+</channel>
+
+<image rdf:about="http://images.slashdot.org/topics/topicslashdot.gif">
+<title>Slashdot</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=06/11/23/1717243&amp;from=rss">
+<title>High-Tech Shopping in a Window Wonderland</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53259924/article.pl</link>
+<description>PreacherTom writes "Elaborate holiday window fronts are nothing new to the Miracle Mile of Chicago's Michigan Avenue, home to many of the world's most famous stores. However, retailers are debuting new technology to take things to the next level this year. On Nov. 20, Ralph Lauren installed a 67-in. touch-screen display that allows passersby to purchase any item from the company's RLX line of high-performance ski-wear. They can then retrieve available items from inside the store, or have the clothes shipped from a central warehouse ... skipping the line at the register completely. Ralph Lauren is far from alone: this is just one example of how stores are targeting the tech-savvy consumer."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=7wtvk8"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=7wtvk8" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53259924"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2006-11-23T18:56:00+00:00</dc:date>
+<dc:subject>toys</dc:subject>
+<slash:department>nothing-says-christmasy-like-hd-shopping</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:comments>1</slash:comments>
+<slash:hit_parade>1,1,1,1,0,0,0</slash:hit_parade>
+<feedburner:origLink>http://slashdot.org/article.pl?sid=06/11/23/1717243&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://linux.slashdot.org/article.pl?sid=06/11/23/1713245&amp;from=rss">
+<title>IBM Weighs In On Novell - Microsoft Deal</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53248777/article.pl</link>
+<description>Azul writes "In an interview, Scott Handy, IBM's VP of Worldwide Linux and Open Source, has stated IBM's position on the recent Novell-Microsoft agreement. According to Handy, Novell has been quite clear that they had never agreed that Microsoft had any proof of Microsoft patent violations in Linux." From the article: "'IBM has long supported interoperability between Windows and Linux. As supporters of open source and open standards, we applaud any effort to bridge this gap.' ... Looking ahead, Handy said that despite the outcry in some circles about Novell's deal with Microsoft, IBM will be making 'No change in our partnership with Novell ... IBM has two strategic Linux partners, Red Hat and Novell. This has served us very well for seven-years. Over 90 percent of the Linux server market now belongs to those two companies and the industry has consolidated around those two leaders,' he added."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=E4ewvS"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=E4ewvS" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53248777"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2006-11-23T18:13:00+00:00</dc:date>
+<dc:subject>ibm</dc:subject>
+<slash:department>i-am-the-atomic-alien-robot-please-give-my-best-wishes-to-everybody</slash:department>
+<slash:section>linux</slash:section>
+<slash:comments>19</slash:comments>
+<slash:hit_parade>19,17,11,11,3,2,0</slash:hit_parade>
+<feedburner:origLink>http://linux.slashdot.org/article.pl?sid=06/11/23/1713245&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=06/11/23/178214&amp;from=rss">
+<title>The Mathematics of Neuroscience</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53239941/article.pl</link>
+<description>eldavojohn writes "An academic paper on math [PDF] has been released by Paul Bressloff, resulting in much ado about the mathematical modeling of the brain's memory storage. The paper deals with specific receptors called AMPA and how memories are held while synapses still fire. Scientific American is running a more detailed report on the subject." From the article "At any given time, some AMPA receptors are moving inside the nerve cell where they are unable to receive signals. But to maintain memory, a number of AMPA receptors are anchored in place with what are known as scaffolding proteins, Bressloff said. The computer models examined how many AMPA receptors are anchored at the receiving area on the surface as opposed to those found elsewhere in the nerve cell. The more AMPA receptors that are anchored in place, the stronger the synapse."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=2S18vp"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=2S18vp" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53239941"/&gt;</description>
+<dc:creator>Zonk</dc:creator>
+<dc:date>2006-11-23T17:36:00+00:00</dc:date>
+<dc:subject>math</dc:subject>
+<slash:department>1-+-1-=-thinking</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>15</slash:comments>
+<slash:hit_parade>15,12,9,7,4,3,2</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=06/11/23/178214&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=06/11/23/1546218&amp;from=rss">
+<title>LSI Patents the Doubly-Linked List</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53217804/article.pl</link>
+<description>An anonymous reader writes "Back in April, LSI was granted patent number 7028023. This is a patent on a stunning new technique in data structures ... the concept that a linked list can in fact have multiple orderings. Of course, this has been used since the beginning of (computer) time in the form of doubly-linked lists. Even if LSI wants to (somehow) claim that the doubly-linked list doesn't count as prior art, maintaining linked lists of graphical objects sorted by both x and y co-ordinates for collision detection has been done since "graphical objects" meant ASCII characters on a green-on-black screen, and has probably been widespread in databases for probably even longer."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=cJDxf7"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=cJDxf7" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53217804"/&gt;</description>
+<dc:creator>CmdrTaco</dc:creator>
+<dc:date>2006-11-23T16:45:00+00:00</dc:date>
+<dc:subject>patents</dc:subject>
+<slash:department>all-your-b-trees-are-belong-to-me</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>134</slash:comments>
+<slash:hit_parade>134,132,107,88,31,21,13</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=06/11/23/1546218&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=06/11/23/1448217&amp;from=rss">
+<title>Microsoft Hands Over Docs to EU</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53197116/article.pl</link>
+<description>hankwang writes "Reuters reports that Microsoft has handed over technical documents to the EU in order to enable the competition to make interoperable software. So far, the EU has imposed fines of &amp;euro;497 and &amp;euro;280 onto Microsoft for abuse of its monopoly. The deadline for this documentation was today. According to Microsoft, the documentation is over 8500 pages."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=TrgOoy"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=TrgOoy" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53197116"/&gt;</description>
+<dc:creator>CmdrTaco</dc:creator>
+<dc:date>2006-11-23T16:00:00+00:00</dc:date>
+<dc:subject>microsoft</dc:subject>
+<slash:department>are-they-allowed-to-redact</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:comments>158</slash:comments>
+<slash:hit_parade>158,149,122,80,34,15,10</slash:hit_parade>
+<feedburner:origLink>http://slashdot.org/article.pl?sid=06/11/23/1448217&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=06/11/23/1339216&amp;from=rss">
+<title>Wii Internet Connection Reverse Engineered</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53188629/article.pl</link>
+<description>AlexTheBeast writes "By packet sniffing his wifi connection, this hacker has already begun to dig into the internet interactions of the new Nintendo Wii. Basically, by using firefox and after setting the user agent correctly, anybody can easily browse many wiishop pages including the WiiShop main page and startup manual. More advanced connections including binary and virtual console downloads are currently in the works. Come join the project."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=VNK8CB"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=VNK8CB" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53188629"/&gt;</description>
+<dc:creator>CmdrTaco</dc:creator>
+<dc:date>2006-11-23T15:08:00+00:00</dc:date>
+<dc:subject>nintendo</dc:subject>
+<slash:department>probably-violating-some-sort-of-lame-law</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:comments>99</slash:comments>
+<slash:hit_parade>99,97,82,59,20,14,7</slash:hit_parade>
+<feedburner:origLink>http://slashdot.org/article.pl?sid=06/11/23/1339216&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=06/11/23/1325212&amp;from=rss">
+<title>Tolkien Enterprises to film Hobbit with Jackson?</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53167787/article.pl</link>
+<description>cyclomedia writes "TheOneRing.Net has a new scoop on the ongoing Hobbit Movie saga, sourced from elbenwald.de. Apparently the rights to make the Hobbit film fall back to Saul Zaentz "next year". He claims that, under their stewardship, The Hobbit will "definitely be shot by Peter Jackson". For the whippersnappers amongst you: Mr. Zaentz is the head honcho of Tolkien Enterprises, which originally acquired exclusive rights to productions of the LOTR and Hobbit material in 1976, prior to overseeing the Bakshi animated version of LOTR."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=csZJAS"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=csZJAS" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53167787"/&gt;</description>
+<dc:creator>CmdrTaco</dc:creator>
+<dc:date>2006-11-23T14:14:00+00:00</dc:date>
+<dc:subject>lotr</dc:subject>
+<slash:department>rumors-keep-milling</slash:department>
+<slash:section>mainpage</slash:section>
+<slash:comments>99</slash:comments>
+<slash:hit_parade>99,94,74,53,28,19,10</slash:hit_parade>
+<feedburner:origLink>http://slashdot.org/article.pl?sid=06/11/23/1325212&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=06/11/23/139220&amp;from=rss">
+<title>Anonymizing RFI attacks through Google</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53159821/article.pl</link>
+<description>netbuzz writes "Noam Rathaus on his SecuriTeam blog describes a technique by which "Google can be utilized to hack into websites &amp;mdash; actively exploiting them (not information gathering by the use of "Google hacking", although that is how most of the sites vulnerable to RFI attacks are found)." He cites examples in the wild and even mentions that the technique could be used as a "covert" communications channel. "
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=V0sUt0"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=V0sUt0" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53159821"/&gt;</description>
+<dc:creator>CmdrTaco</dc:creator>
+<dc:date>2006-11-23T13:37:00+00:00</dc:date>
+<dc:subject>security</dc:subject>
+<slash:department>anonymizing-isn't-in-my-spellchecker</slash:department>
+<slash:section>it</slash:section>
+<slash:comments>53</slash:comments>
+<slash:hit_parade>53,52,41,25,10,8,5</slash:hit_parade>
+<feedburner:origLink>http://it.slashdot.org/article.pl?sid=06/11/23/139220&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=06/11/23/0433202&amp;from=rss">
+<title>Cell Phone Owners Allowed to Break Software Locks</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53092329/article.pl</link>
+<description>An anonymous reader writes "The library of congress approved many copyright exemptions today. Among the exemptions were new rules about cell phones, DVDs, and electronic books." From the article: "Cell phone owners will be allowed to break software locks on their handsets in order to use them with competing carriers under new copyright rules announced Wednesday. Other copyright exemptions approved by the Library of Congress will let film professors copy snippets from DVDs for educational compilations and let blind people use special software to read copy-protected electronic books. All told, Librarian of Congress James H. Billington approved six exemptions, the most his Copyright Office has ever granted. For the first time, the office exempted groups of users. The new rules will take effect Monday and expire in three years. In granting the exemption for cell phone users, the Copyright Office determined that consumers aren't able to enjoy full legal use of their handsets because of software locks that wireless providers have been placing to control access to phones' underlying programs."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=LNX1y1"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=LNX1y1" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53092329"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-23T09:13:00+00:00</dc:date>
+<dc:subject>communications</dc:subject>
+<slash:department>free-at-last</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>233</slash:comments>
+<slash:hit_parade>233,227,200,155,55,27,14</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=06/11/23/0433202&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=06/11/23/0421252&amp;from=rss">
+<title>Breakthrough in Human Genetics</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/53029753/article.pl</link>
+<description>Many readers have submitted this story about a breakthrough in our understanding of human DNA. In particular how much variation can exist between peoples genes and how genes are involved with certain diseases. "One person's DNA code can be as much as 10 percent different from another's, researchers said on Wednesday in a finding that questions the idea that everyone on Earth is 99.9 percent identical genetically. They said their new version of the human genetic map, or "book of life," fills in many missing pages and chapters to explain how genes are involved in common diseases. The Human Genome Project mapped the billions of letters that make up the human genetic code. Scientists later refined the map by looking for single variations called SNPs or single nucleotide polymorphisms. The CNV map gives researchers a different way to look for genes linked to diseases by identifying gains, losses and alterations in the genome."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=5rFvCb"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=5rFvCb" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/53029753"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-23T05:02:00+00:00</dc:date>
+<dc:subject>biotech</dc:subject>
+<slash:department>you-are-an-unique-individual</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>190</slash:comments>
+<slash:hit_parade>190,184,148,107,45,33,19</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=06/11/23/0421252&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=06/11/23/0028238&amp;from=rss">
+<title>Silicon Superconductors</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/52975544/article.pl</link>
+<description>Diana writes "Physicists at CNRS, have demonstrated superconductivity in silicon, the element long known for its semiconducting properties. High doping is the key &amp;mdash; by substituting 9% of the silicon atoms with boron atoms, it was found that the resistance of the material drops sharply when cooled below 0.35 K. A small increase in the transition temperature is likely with further work."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=J8NJq6"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=J8NJq6" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/52975544"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-23T03:00:00+00:00</dc:date>
+<dc:subject>tech</dc:subject>
+<slash:department>old-dog-new-tricks</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>118</slash:comments>
+<slash:hit_parade>118,116,89,67,26,18,12</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=06/11/23/0028238&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=06/11/22/2347220&amp;from=rss">
+<title>Robot Spaceplane to Launch in 2008</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/52952619/article.pl</link>
+<description>FleaPlus writes "The US Air Force has announced that it is developing an unmanned reusable spaceplane, the X-37B Orbital Test Vehicle. The first launch is in 2008 on an Atlas V rocket. The X-37B will be one-fourth the size of the Space Shuttle and serve as a testbed for technologies for future reusable spacecraft. Its predecessor, the X-37, was drop-tested from the Scaled Composites White Knight mothership earlier this year."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=xPyysl"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=xPyysl" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/52952619"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-23T01:44:00+00:00</dc:date>
+<dc:subject>space</dc:subject>
+<slash:department>I-still-want-my-hover-car</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>66</slash:comments>
+<slash:hit_parade>66,60,51,43,15,8,5</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=06/11/22/2347220&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://science.slashdot.org/article.pl?sid=06/11/22/2340224&amp;from=rss">
+<title>Emissions of Key Greenhouse Gas Stabilize</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/52932251/article.pl</link>
+<description>brian0918 writes "Multiple news sites are reporting that levels of the second most important greenhouse gas, methane, have stabilized". From Scientific American: "During the two decades of measurements, methane underwent double-digit growth as a constituent of our atmosphere, rising from 1,520 parts per billion by volume (ppbv) in 1978 to 1,767 ppbv in 1998. But the most recent measurements have revealed that methane levels are barely rising anymore &amp;mdash; and it is unclear why." From NewScientist: "Although this is good news, it does not mean that methane levels will not rise again, and that carbon dioxide remains the 800-pound gorilla of climate change."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=ileFC9"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=ileFC9" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/52932251"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-23T00:32:00+00:00</dc:date>
+<dc:subject>science</dc:subject>
+<slash:department>barter-town-halts-production</slash:department>
+<slash:section>science</slash:section>
+<slash:comments>208</slash:comments>
+<slash:hit_parade>208,204,172,121,30,14,9</slash:hit_parade>
+<feedburner:origLink>http://science.slashdot.org/article.pl?sid=06/11/22/2340224&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://yro.slashdot.org/article.pl?sid=06/11/22/2321247&amp;from=rss">
+<title>IBM Sues Amazon For Patent Infringement</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/52910367/article.pl</link>
+<description>Petersko writes "It appears Amazon is about to be sued for patent infringement by IBM". From the article: "Hundreds of other companies have licensed the same patents, and IBM has tried to negotiate licensing deals with Amazon "over a dozen times since 2002," Kelly said. Amazon.com, which has bought a lot of hardware from Hewlett-Packard Co. over the years but not IBM, has allegedly refused every time."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=Z2Lrba"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=Z2Lrba" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/52910367"/&gt;</description>
+<dc:creator>samzenpus</dc:creator>
+<dc:date>2006-11-22T23:46:00+00:00</dc:date>
+<dc:subject>ibm</dc:subject>
+<slash:department>they-did-it-first</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>190</slash:comments>
+<slash:hit_parade>190,184,152,113,36,24,17</slash:hit_parade>
+<feedburner:origLink>http://yro.slashdot.org/article.pl?sid=06/11/22/2321247&amp;from=rss</feedburner:origLink></item>
+
+<item rdf:about="http://it.slashdot.org/article.pl?sid=06/11/22/215256&amp;from=rss">
+<title>What's Wrong With The FOSS Community?</title>
+<link>http://rss.slashdot.org/~r/Slashdot/slashdot/~3/52889881/article.pl</link>
+<description>An anonymous reader writes "Patrick McFarland, one of the major Free Software Magazine authors, has completed his second article on whats wrong with the Free/Open Source Software (FOSS) community, and what we face in this world. He touches on ESR's Cathedral and the Bazaar essay briefly, and warns against cherry-picking style software development."
+&lt;p&gt;&lt;a href="http://rss.slashdot.org/~a/Slashdot/slashdot?a=xl1Inq"&gt;&lt;img src="http://rss.slashdot.org/~a/Slashdot/slashdot?i=xl1Inq" border="0"&gt;&lt;/img&gt;&lt;/a&gt;&lt;/p&gt;&lt;img src="http://rss.slashdot.org/~r/Slashdot/slashdot/~4/52889881"/&gt;</description>
+<dc:creator>ScuttleMonkey</dc:creator>
+<dc:date>2006-11-22T22:43:00+00:00</dc:date>
+<dc:subject>programming</dc:subject>
+<slash:department>500-words-due-next-tuesday</slash:department>
+<slash:section>it</slash:section>
+<slash:comments>295</slash:comments>
+<slash:hit_parade>295,288,244,182,50,31,25</slash:hit_parade>
+<feedburner:origLink>http://it.slashdot.org/article.pl?sid=06/11/22/215256&amp;from=rss</feedburner:origLink></item>
+
+<textinput rdf:about="http://slashdot.org/search.pl">
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>

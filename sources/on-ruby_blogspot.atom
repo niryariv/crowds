@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+
+<feed xmlns="http://purl.org/atom/ns#" version="0.3" xml:lang="en-US">
+<link href="https://www.blogger.com/atom/24599054" rel="service.post" title="On Ruby" type="application/atom+xml"/>
+<link href="https://www.blogger.com/atom/24599054" rel="service.feed" title="On Ruby" type="application/atom+xml"/>
+<title mode="escaped" type="text/html">On Ruby</title>
+<tagline mode="escaped" type="text/html"/>
+<link href="http://on-ruby.blogspot.com" rel="alternate" title="On Ruby" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054</id>
+<modified>2006-12-07T19:44:19Z</modified>
+<generator url="http://www.blogger.com/" version="6.72">Blogger</generator>
+<info mode="xml" type="text/html">
+<div xmlns="http://www.w3.org/1999/xhtml">This is an Atom formatted XML site feed. It is intended to be viewed in a Newsreader or syndicated to another site. Please visit the <a href="http://help.blogger.com/bin/answer.py?answer=697">Blogger Help</a> for more info.</div>
+</info>
+<convertLineBreaks xmlns="http://www.blogger.com/atom/ns#">false</convertLineBreaks>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="https://www.blogger.com/atom/24599054/116552058581141279" rel="service.edit" title="Rubinius Interview" type="application/atom+xml"/>
+<author>
+<name>pate</name>
+</author>
+<issued>2006-12-07T12:41:00-07:00</issued>
+<modified>2006-12-07T19:44:15Z</modified>
+<created>2006-12-07T19:43:05Z</created>
+<link href="http://on-ruby.blogspot.com/2006/12/rubinius-interview.html" rel="alternate" title="Rubinius Interview" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054.post-116552058581141279</id>
+<title mode="escaped" type="text/html">Rubinius Interview</title>
+<summary mode="escaped" type="text/plain" xml:base="http://on-ruby.blogspot.com">Rubinius is a project that's been in a lot of people's sights (and sites) lately.  From an article at InfoQ, to a donation from Geoffry Grossenbach, rubinius is making waves.  I was able to corner Evan for an interview over email recently.  Here's what we talked about. 
+
+
+
+Evan, thanks for agreeing to do this interview.  Would you mind starting out by introducing yourself?
+
+Evan:  I'm a computer</summary>
+<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="https://www.blogger.com/atom/24599054/116551467338367742" rel="service.edit" title="Springy and JRuby, the Rest of the Story" type="application/atom+xml"/>
+<author>
+<name>pate</name>
+</author>
+<issued>2006-12-07T11:02:00-07:00</issued>
+<modified>2006-12-07T18:04:33Z</modified>
+<created>2006-12-07T18:04:33Z</created>
+<link href="http://on-ruby.blogspot.com/2006/12/springy-and-jruby-rest-of-story.html" rel="alternate" title="Springy and JRuby, the Rest of the Story" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054.post-116551467338367742</id>
+<title mode="escaped" type="text/html">Springy and JRuby, the Rest of the Story</title>
+<summary mode="escaped" type="text/plain" xml:base="http://on-ruby.blogspot.com">While researching an article on Springy and JRuby, I spent some time with Jan Berkel of Trampoline Systems (Spring's developer).  Since it didn't all fit in the article, here's 'the rest of our discussion'.
+
+
+
+What made you decide to write springy in JRuby?
+
+Jan:  The goal for springy was to create a flexible and easy to use DSL to set up Spring contexts.  Ruby just happens to be well suited for</summary>
+<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="https://www.blogger.com/atom/24599054/116524305100750709" rel="service.edit" title="Benchmarking, Lies, and Statistics" type="application/atom+xml"/>
+<author>
+<name>pate</name>
+</author>
+<issued>2006-12-04T06:34:00-07:00</issued>
+<modified>2006-12-04T14:37:32Z</modified>
+<created>2006-12-04T14:37:31Z</created>
+<link href="http://on-ruby.blogspot.com/2006/12/benchmarking-lies-and-statistics.html" rel="alternate" title="Benchmarking, Lies, and Statistics" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054.post-116524305100750709</id>
+<title mode="escaped" type="text/html">Benchmarking, Lies, and Statistics</title>
+<summary mode="escaped" type="text/plain" xml:base="http://on-ruby.blogspot.com">Work on my book hasn't been going as well as I'd wanted (it's amazing how procrastination and laziness can throw you off a schedule).  Recently, I've been doing a little bit better though.  Last week I was working on some material on benchmarking Ruby code, and suddenly I started to channel Zed.
+I realized that in my discussion of how to use the Benchmark library, I was completely ignoring all of</summary>
+<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="https://www.blogger.com/atom/24599054/116498807241656578" rel="service.edit" title="JRuby and RSpec Leftovers" type="application/atom+xml"/>
+<author>
+<name>pate</name>
+</author>
+<issued>2006-12-01T06:46:00-07:00</issued>
+<modified>2006-12-01T17:47:21Z</modified>
+<created>2006-12-01T15:47:52Z</created>
+<link href="http://on-ruby.blogspot.com/2006/12/jruby-and-rspec-leftovers.html" rel="alternate" title="JRuby and RSpec Leftovers" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054.post-116498807241656578</id>
+<title mode="escaped" type="text/html">JRuby and RSpec Leftovers</title>
+<summary mode="escaped" type="text/plain" xml:base="http://on-ruby.blogspot.com">I took a few minutes to interview Charles Nutter, Michael Studman, and Aslak Hellesoy for an article I wrote for InfoQ.  I tend to ask a lot more questions than I'll have space to print in an article like that, and I hate to throw stuff like this away, so here's the whole interview.  Enjoy!
+
+
+
+Why do you think RSpec on JRuby is a big deal?
+
+Michael:  I think this development is important from a</summary>
+<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+</entry>
+<entry xmlns="http://purl.org/atom/ns#">
+<link href="https://www.blogger.com/atom/24599054/116499883827804347" rel="service.edit" title="Multipart Profiling (and a Rails Profiling Hint)" type="application/atom+xml"/>
+<author>
+<name>pate</name>
+</author>
+<issued>2006-12-01T06:45:00-07:00</issued>
+<modified>2006-12-01T18:47:20Z</modified>
+<created>2006-12-01T18:47:18Z</created>
+<link href="http://on-ruby.blogspot.com/2006/12/multipart-profiling-and-rails.html" rel="alternate" title="Multipart Profiling (and a Rails Profiling Hint)" type="text/html"/>
+<id>tag:blogger.com,1999:blog-24599054.post-116499883827804347</id>
+<title mode="escaped" type="text/html">Multipart Profiling (and a Rails Profiling Hint)</title>
+<summary mode="escaped" type="text/plain" xml:base="http://on-ruby.blogspot.com">In a comment on my Profiling and ruby-prof:  Getting Specific post, Thorsten asked:
+
+If you profile just a part of your code, is it possible to accumulate over multiple "parts"? For example, I want to profile a Rails action invocation, but I really want to profile 100 invocations. So I want to start/stop the profiling 100 times just around the action invocation and at the end I want to print out a</summary>
+<draft xmlns="http://purl.org/atom-blog/ns#">false</draft>
+</entry>
+</feed>

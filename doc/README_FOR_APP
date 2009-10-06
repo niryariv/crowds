@@ -1,0 +1,11 @@
+
+
+Some points:
+
+1. Users have Crowds. Crowds have feeds through Ownerships.
+
+2. Currently support only 1 crowd/user, but the infrastructure is there to have more.
+
+3. Deleting feeds or crowds or ownerships keeps the feed in the table. This is for quick lookup: when a user adds a URL, BottomFeeder needs to get the feed URL, site title etc - if these are already in the DB, there's no need to fetch/parse the URL. 
+
+4. However, when doing the daily feed refresh, only feeds which have Ownership (ie, are part of a certain crowd) are refreshed. This way BottomFeeder gets the benefit of keeping the data but doesn't waste resources updating unused feeds.

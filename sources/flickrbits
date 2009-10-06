@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Flickr Tools on Flickrbits &raquo; The definitive collection of Flickr tools, plugins and API applications</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="col"> 
+  
+<div id="logo"> 
+<img src="/img/flickrbitslogo.gif" width="106" height="35" alt="Flickrbits logo" />
+ 
+  </div>
+<h1>Flickr Bits and Pieces.</h1>
+<div class="summary">Please let us know if you have created a tool, plugin or app 
+    based on the Flickr API and you would like us to include it here.<br />
+    <br />
+    
+<div align="center"> 
+      
+<script type="text/javascript"><!--
+google_ad_client = "pub-8654343868103807";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_ad_type = "text_image";
+google_ad_channel ="8194487716";
+google_color_border = "CCCCCC";
+google_color_bg = "FFFFFF";
+google_color_link = "0066CC";
+google_color_text = "666666";
+google_color_url = "C94093";
+//--></script>
+      
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </div>
+</div>
+<div class="content"> 
+    
+<!-- <p style="background:#ccc; font-weight:bold">Last updated 03/08/06</p> -->
+<p>The following applications and plugins all utilise the Flickr API. You 
+      can read more about the API <a href="http://www.flickr.com/services/api/">here</a>.</p>
+<ul>
+      
+<li><a href="#official">Official Flickr Tools</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#flickrexport'>Flickr Export Plugin for iPhoto plugin for iPhoto 4 and 5</li>
+<li><a href='#flickruploadrformac'>Flickr Uploadr for Mac OS X 10.3 or higher</li>
+<li><a href='#flickruploadrforwin'>Flickr Uploadr for Windows XP, 2000, ME and 98</li>
+<li><a href='#sendtoflickr'>“Send To Flickr” Windows XP Explorer Wizard</li>
+        
+</ul>
+</li>
+<li><a href="#devtools">Development Tools</a>
+
+<ul class="submenu">
+			
+<li><a href='#chasr'>Chasr</li>
+<li><a href='#flashr'>Flashr</li>
+<li><a href='#flickrmixr'>Flickr Mixr</li>
+<li><a href='#FSViewr'>FSViewr</li>
+<li><a href='#phpflickr'>PHPFlickr (PHP Class)</li>
+        
+</ul>
+</li>
+<li><a href="#games">Games</a>
+
+<ul class="submenu">
+			
+<li><a href='#fastr'>Fastr</li>
+<li><a href='#flickrball'>Flickr Ball</li>
+<li><a href='#slidr'>Flickr Slidr</li>
+<li><a href='#tagman'>TagMan</li>
+        
+</ul>
+</li>
+<li><a href="#javaapps">Java Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#flickrfaves'>FlickrFaves</li>
+        
+</ul>
+</li>
+
+<li><a href="#linapps">Linux Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#flickruploadforgnome'>Flickr Upload for Gnome’s Nautilus</li>
+<li><a href='#flickruploadr'>FlickrUploadr</li>
+<li><a href='#flickr_upload'>flickr_upload</li>
+<li><a href='#juploadr'>jUploadr</li>
+		
+        
+</ul>
+</li>
+<li><a href="#macapps">Mac Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#1001'>1001</li>
+<li><a href='#flickrfinder'>Flickr Finder</li>
+<li><a href='#flidget'>Flidget</li>
+<li><a href='#picturesync'>PictureSync</li>
+
+        
+</ul>
+</li>
+<li><a href="#mobileapps">Mobile Phone Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#spahk'>Spahk</li>
+<li><a href='#zonetag'>Zone tag</li>
+        
+</ul>
+</li>
+<li><a href="#plugins">Plugins/Extensions</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#bigscreenphotos'>Big Screen Photos</li>
+<li><a href='#exo'>Exo Visualizer</li>
+<li><a href='#fireflix'>Fireflix</li>
+<li><a href='#flickengr'>Flickengr</li>
+<li><a href='#flickit'>Flickit (WordPress)</li>
+<li><a href='#export'>Flickr Export</li>
+<li><a href='#mtphotosets'>Flickr Photosets (Movable Type)</li>
+<li><a href='#ffsearch'>Flickr Search (Firefox Extension)</li>
+<li><a href='#flickrsets'>Flickr sets (Textpattern)</li>
+<li><a href='#flickrfox'>Flickrfox (Firefox Extension)</li>
+<li><a href='#flickrpress'>Flickrpress (WordPress)</li>
+<li><a href='#galleryr'>Galleryr (Blojsom Plugin)</li>
+<li><a href='#kubrickr'>Kubrickr (WordPress)</li>
+<li><a href='#twaingle'>Twaingle (TWAIN)</li>
+
+        
+</ul>
+</li>
+<li><a href="#webapps">Web Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#picker'>'Color Fields' Color Picker</li>
+<li><a href='#interesting05'>An interesting 2005</li>
+<li><a href='#bubblr'>Bubblr</li>
+<li><a href='#clockr'>Clockr</li>
+<li><a href='#favcol'>Favcol</li>
+<li><a href='#fd'>FD's Flickr Toys</li>
+<li><a href='#findr'>Findr</li>
+<li><a href='#flappr'>Flappr</li>
+<li><a href='#kaleidoscope'>Flash-based Kaleidoscope</li>
+<li><a href='#flickeur'>Flickeur</li>
+<li><a href='#chia'>Flickr Chia Pet</li>
+<li><a href='#flickrcolorselector'>Flickr Color Selectr</li>
+<li><a href='#flickrfont'>Flickr Font</li>
+<li><a href='#graph'>Flickr Graph</li>
+<li><a href='#flickrleech'>Flickr Leech</li>
+<li><a href='#flickrleech'>Flickr Leech</li>
+<li><a href='#flickrlogomakr'>Flickr Logo Makr</li>
+<li><a href='#finder'>Flickr People Finder</li>
+<li><a href='#reader'>Flickr RSS Reader</li>
+<li><a href='#flickrsetsrss'>Flickr Sets RSS</li>
+<li><a href='#flickr2photocast'>Flickr2Photocast</li>
+<li><a href='#flickrfling'>FlickrFling</li>
+<li><a href='#flickrfly'>FlickrFly</li>
+<li><a href='#flickrlilli'>FlickrLilli</li>
+<li><a href='#flickrnews'>FlickrNews</li>
+<li><a href='#replacr'>FlickrReplacr</li>
+<li><a href='#flicktionary'>Flicktionary</li>
+<li><a href='#fotocrib'>Fotocrib</li>
+<li><a href='#h4ppierphotos'>h4ppierphotos</li>
+<li><a href='#islands'>Islands of Consciousness</li>
+<li><a href='#mappr'>Mappr (US only)</li>
+<li><a href='#matchr'>Matchr</li>
+<li><a href='#printkillr'>Printr Killr</li>
+<li><a href='#retrievr'>Retrievr</li>
+<li><a href='#rss2pdf'>RSS 2 PDF</li>
+<li><a href='#selfportraitr'>Selfportraitr</li>
+<li><a href='#splashr'>Splashr</li>
+<li><a href='#sprinklr'>Sprinklr</li>
+<li><a href='#tagnautica'>Tagnautica</li>
+<li><a href='#tiltomo'>Tiltomo</li>
+<li><a href='#travelr'>Travelr</li>
+<li><a href='#wemapflickr'>We Map Flickr</li>
+
+        
+</ul>
+</li>
+<li><a href="#winapps">Windows Applications</a> 
+        
+<ul class="submenu">
+			
+<li><a href='#aquarius'>Aquarius Screensaver</li>
+<li><a href='#backgroundswitcher'>Background Switcher</li>
+<li><a href='#flickrandwebimager'>Flickr and Webimager</li>
+<li><a href='#screensaver'>Flickr Screensaver v3</li>
+<li><a href='#flickrdown'>FlickrDown</li>
+<li><a href='#kaleidoscopescr'>Kaleidoscope Screensaver</li>
+<li><a href='#loopy'>Loopy</li>
+<li><a href='#photocaster'>My Photocaster</li>
+<li><a href='#screensvr'>ScreenSvr</li>
+<li><a href='#wickr'>Wickr</li>
+        
+</ul>
+</li>
+</ul>
+<h2 id="official">'Official' Flickr Tools </h2>
+<h3 id='flickrexport'>Flickr Export Plugin for iPhoto plugin for iPhoto 4 and 5</h3>
+<div class='submenu'><a href='http://www.speirs.org/flickrexport/'>Home Page</a> &mdash; <a href='http://www.speirs.org/'>Fraser Speirs</a></div>
+<p>Flickr Export Plugin for iPhoto plugin for iPhoto 4 and 5 - provides a direct export interface to Flickr.com.</p><h3 id='flickruploadrformac'>Flickr Uploadr for Mac OS X 10.3 or higher</h3>
+<div class='submenu'><a href='http://www.flickr.com/tools/'>Home Page</a> &mdash; <a href='http://www.flickr.com/tools/'>Flickr</a></div>
+<p>Drag and drop from iPhoto or the Finder, and upload your photos in batches.</p><h3 id='flickruploadrforwin'>Flickr Uploadr for Windows XP, 2000, ME and 98</h3>
+<div class='submenu'><a href='http://www.flickr.com/tools/'>Home Page</a> &mdash; <a href='http://www.flickr.com/tools/'>Flickr</a></div>
+<p>Download an installer (.exe) that allows you to publish a batch of photos into Flickr directly from your computer. Just drag and drop in your photos and add some tags.</p><h3 id='sendtoflickr'>“Send To Flickr” Windows XP Explorer Wizard</h3>
+<div class='submenu'><a href='http://www.flickr.com/tools/'>Home Page</a> &mdash; <a href='http://www.flickr.com/tools/'>Flickr</a></div>
+<p>Download an executable file which integrates into the Windows XP Explorer system to allow you to publish a batch of photos into Flickr direct from your file system.</p>
+<h2 id="devtools">Development Tools</h2>
+<h3 id='chasr'>Chasr</h3>
+<div class='submenu'><a href='http://www.chasenlehara.com/chasr/'>Home Page</a> &mdash; <a href='http://www.chasenlehara.com/'>Chasen Le Hara</a></div>
+<p>A development tool which allows you to insert Flickr photos into your own web pages.</p><h3 id='flashr'>Flashr</h3>
+<div class='submenu'><a href='http://flashr.kelvinluck.com/'>Home Page</a> &mdash; <a href='http://www.kelvinluck.com/'>Kelvin Luck</a></div>
+<p>ActionScript wrapper for the flickr API.</p><h3 id='flickrmixr'>Flickr Mixr</h3>
+<div class='submenu'><a href='http://anoptique.net/FlickrMixr'>Home Page</a> &mdash; <a href='http://anoptique.net'>Yann Le Guennec</a></div>
+<p>PHP code which allows web developers to parse in RSS feeds into a new image.</p><h3 id='FSViewr'>FSViewr</h3>
+<div class='submenu'><a href='http://www.lackadaisical.com/apps/fsviewr/'>Home Page</a> &mdash; <a href='http://www.lackadaisical.com/'>Lucas Shuman</a></div>
+<p>FSViewr (short for Flickr set viewer), is a light-weight, easy to configure Flash environment for displaying images from a Flickr photo set on a separate website. Uses could include a personal portfolio or special presentation site with the ability to administer content on Flickr.</p><h3 id='phpflickr'>PHPFlickr (PHP Class)</h3>
+<div class='submenu'><a href='http://www.phpflickr.com/'>Home Page</a> &mdash; <a href='http://www.dancoulter.com/'>Dan Coulter</a></div>
+<p>phpFlickr is a class written by Dan Coulter in PHP4 to act as a wrapper for Flickr's  API. Methods process the response XML and return a friendly array of data to make development simple and intuitive.</p>	
+
+<h2 id="games">Games</h2>
+<h3 id='fastr'>Fastr</h3>
+<div class='submenu'><a href='http://randomchaos.com/games/fastr/'>Home Page</a> &mdash; <a href='http://randomchaos.com/'>Scott</a></div>
+<p>Fastr is a game that uses flickr images. It loads ten images that all share a common tag, one by one, and you guess what the tag is. When you guess right, the tag will turn blue, and you'll get points. The faster you guess, the more points you get. The points are reset every six minutes. You'll need to choose a player name before you can play. You can play using tags for multiple languages and for specific flickr groups</p><h3 id='flickrball'>Flickr Ball</h3>
+<div class='submenu'><a href='http://www.mindsack.com/flickrball/'>Home Page</a> &mdash; <a href=''></a></div>
+<p>Flickrball is a six-degrees-of-separation scavenger-hunt game, using Flickr thumbnails and tags for clues.</p><h3 id='slidr'>Flickr Slidr</h3>
+<div class='submenu'><a href='http://www.africastudios.com/games/slidr.php'>Home Page</a> &mdash; <a href='http://eljaysun.com/'>Jason Gardner</a></div>
+<p>A sliding block puzzle which uses Flickr photos as the base for each puzzle.</p><h3 id='tagman'>TagMan</h3>
+<div class='submenu'><a href='http://apogee-web-consulting.com/cgi-bin/tagman_flickr.pl'>Home Page</a> &mdash; <a href='http://www.apogee-web-consulting.com/founder.html'>Richard Ball</a></div>
+<p>TagMan is a game that combines the classic hangman game with tags. </p>
+<h2 id="javaapps">Java Applications</h2>
+<h3 id='flickrfaves'>FlickrFaves</h3>
+<div class='submenu'><a href='http://www.vonkoeller.de/archives/2006/07/28/software-flickrfaves/'>Home Page</a> &mdash; <a href='http://www.vonkoeller.de/'>Magnus von Koeller</a></div>
+<p>FlickrFaves is a small, cross-platform Java tool that downloads high-res versions of your Flickr favorites to use as wallpapers -- or whatever else you have in mind with them. You can set a minimum resolution, limit the number of photos downloaded, etc. It's easy to use and free!</p>
+
+<h2 id="linapps">Linux Applications</h2>
+<h3 id='flickruploadforgnome'>Flickr Upload for Gnome’s Nautilus</h3>
+<div class='submenu'><a href='http://nozell.com/blog/archives/2004/09/04/flickr-upload-for-gnomes-nautilus/'>Home Page</a> &mdash; <a href='http://nozell.com/'>Marc Nozell</a></div>
+<p>A Nautilus script to integrate Flickr.com uploads with the Gnome file manager.</p><h3 id='flickruploadr'>FlickrUploadr</h3>
+<div class='submenu'><a href='http://micampe.it/uploadr.html'>Home Page</a> &mdash; <a href='http://micampe.it/'>Michele Campeotto</a></div>
+<p>FlickrUploadr is a tool to upload your pictures to Flickr. There are some official tools for this task, but they aren't available on Linux, so I wrote my own.</p><h3 id='flickr_upload'>flickr_upload</h3>
+<div class='submenu'><a href='http://search.cpan.org/~cpb/Flickr-Upload/flickr_upload'>Home Page</a> &mdash; <a href='#'>Christophe Beauregard</a></div>
+<p>Uploads images to the Flickr.com service from the command line.</p><h3 id='juploadr'>jUploadr</h3>
+<div class='submenu'><a href='http://www.scohen.org/scohen/archives/2005/01/02/juploadr-alpha/'>Home Page</a> &mdash; <a href='http://www.scohen.org/'>Steve Cohen</a></div>
+<p>A flickr uploader for Linux:<br><br>jUploadr is a cross-platform uploader for both linux and windows. It supports uploading photos to flickr, changing privacy settings, and editing all other properties of a photo (description, title, tags). To help with bulk uploading, you can edit several photos at once. see jUploadr's webpage (http://juploadr.sourceforge.net) for updates.</p>
+
+
+<h2 id="macapps">Mac applications</h2>
+<h3 id='1001'>1001</h3>
+<div class='submenu'><a href='http://1001.kung-foo.tv/'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/44124475712@N01/'>Adriaan Tijsseling</a></div>
+<p>"1001 is a desktop client to be used in conjunction with Flickr, the online photo-sharing website. 1001 not only uploads photos to your Flickr account, it notifies you anytime new photos from either your contacts, everyone, or your favorite tags are uploaded. 1001 allows you to step into the stream of photos passing through Flickr and to quickly see what's new at the moment. Just run the app in the background and if triggered, 1001 pops up a small unobtrusive window to notify you of new photos.<br><br>1001 comes with a Flickr screensaver that will incrementally display the latest image from Flickr. You must have run 1001 at least once to get the Flickr screensaver going. "</p><h3 id='flickrfinder'>Flickr Finder</h3>
+<div class='submenu'><a href='http://gragsie.com/FlickrFinder/'>Home Page</a> &mdash; <a href='http://gragsie.com/'>Graham Gragsie</a></div>
+<p>For Mac OS X Tiger. Navigate Your Flickr World.</p><h3 id='flidget'>Flidget</h3>
+<div class='submenu'><a href='http://fecklessmind.com/main/10/flidget---the-flickr-widget'>Home Page</a> &mdash; <a href='http://flickr.com/people/tiranis/'>Anatoly Papirovsky</a></div>
+<p>Flidget is a dashboard widget for tiger that allows you to upload your photos. The biggest advantage of Flidget over any uploading app is that it's there in a snap and does what you want it to do &emdash; upload in a snap.</p><h3 id='picturesync'>PictureSync</h3>
+<div class='submenu'><a href='http://holocore.com/?PictureSync'>Home Page</a> &mdash; <a href='http://flickr.com/people/verseguru/'>Jacob Jay</a></div>
+<p>Upload your images, with metadata, from iPhoto, iView MediaPro, and files with or without IPTC fields. Includes resizing and metadata options.</p>	
+<h2 id="mobileapps">Mobile Phone Applications </h2>
+<h3 id='spahk'>Spahk</h3>
+<div class='submenu'><a href='http://spahk.com/pc/'>Home Page</a> &mdash; <a href=''></a></div>
+<p>View photographs from Flickr.com based on keywords (tags) or a random sampling of interesting photographs.  Works on most Java-enabled phones with MIDP 2.0 support. </p><h3 id='zonetag'>Zone tag</h3>
+<div class='submenu'><a href='http://zonetag.research.yahoo.com/zonetag/'>Home Page</a> &mdash; <a href='http://zonetag.research.yahoo.com/zonetag/'>Zone Tag</a></div>
+<p>ZoneTag can automatically tag your photos with the location, based on the cell tower, in which they were taken. The location of the cell tower is not known until our user community updates the city, state, or zip code of their photos on Flickr. ZoneTag is then able to map the cell tower to the location. Nokia only.</p>
+	
+<h2 id="plugins">Plugins/extensions</h2>
+<h3 id='bigscreenphotos'>Big Screen Photos</h3>
+<div class='submenu'><a href='http://www.mobilewares.net/mce/bphtm.htm'>Home Page</a> &mdash; <a href='http://www.mobilewares.net/'>Niall Ginsbourg</a></div>
+<p>This product is deployed as an addin that runs inside Windows Media Center (upcoming Vista version) – and can also be run inside a browser (as it uses Microsoft WinFX technologies – which can be run in a similar way to Macromedia Flash files). The UI is optimized for usage with a remote control (and TV or large display panel).</p><h3 id='exo'>Exo Visualizer</h3>
+<div class='submenu'><a href='http://www.fraktus.com/exo/exo.php'>Home Page</a> &mdash; <a href='http://www.fraktus.com/'>Marco Hinic</a></div>
+<p>A visualizer for iTunes under Mac OS. Flikr pics are used to created the visual effects on screen.</p><h3 id='fireflix'>Fireflix</h3>
+<div class='submenu'><a href='http://kin.klever.net/fireflix/'>Home Page</a> &mdash; <a href='http://kin.klever.net/'>Michael Krelin</a></div>
+<p>An extension for Firefox which allows you to upload pics to Flickr.</p><h3 id='flickengr'>Flickengr</h3>
+<div class='submenu'><a href='http://johndunning.com/ym/plugins/flickengr/'>Home Page</a> &mdash; <a href='http://johndunning.com/'>John Dunning</a></div>
+<p>A plugin for Yahoo! Messenger 8.0 which displays photos from your Flickr contacts along the bottom of your Messenger.</p><h3 id='flickit'>Flickit (WordPress)</h3>
+<div class='submenu'><a href='http://chancecube.com/flickit/'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/cdevroe/'>Colin Devroe</a></div>
+<p>Flickit is a WordPress plugin that'll help you post photos to your weblog easily. Flickit gives you the ability to search through your own Flickr Photos and all public photos based on tags. Run a search for your own username, and pull up a list of your contacts and see their images, you can insert these images into your blog post. <br><br>Currently it only works with WordPress, but releases for Movable Type and Textpattern are coming soon.</p><h3 id='export'>Flickr Export</h3>
+<div class='submenu'><a href='http://www.speirs.org/flickrexport/'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/fraserspeirs/'>Fraser Speirs</a></div>
+<p>FlickrExport is a plugin for iPhoto 4 which provides a direct export interface to Flickr.com.</p><h3 id='mtphotosets'>Flickr Photosets (Movable Type)</h3>
+<div class='submenu'><a href='http://twiki.tensegrity.net/bin/view/Main/MovableTypeFlickrPhotosets'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/abulafia/'>Jim Flanagan</a></div>
+<p>Flickr Photosets is a Movable Type plugin that'll help you list your Flickr photo sets on your Movable Type blog.</p><h3 id='ffsearch'>Flickr Search (Firefox Extension)</h3>
+<div class='submenu'><a href='http://christian-heindel.de/projects/flickr/search/'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/cheindel/'>Christian Heindel</a></div>
+<p>" This is a simple search plugin for your Firefox browser, that allows you to quickly search the public available Flickr tags."</p><h3 id='flickrsets'>Flickr sets (Textpattern)</h3>
+<div class='submenu'><a href='http://www.rvdh.net/vdh_flickr/'>Home Page</a> &mdash; <a href='http://flickr.com/people/43973976@N00/'>Ralph von der Heyden</a></div>
+<p>This Textpattern plugin enables you to display your photo sets on your weblog.</p><h3 id='flickrfox'>Flickrfox (Firefox Extension)</h3>
+<div class='submenu'><a href='http://philmccluskey.com/projects/flickrfox/'>Home Page</a> &mdash; <a href='http://flickr.com/people/ditto/'>Phil McCluskey</a></div>
+<p>"Flickrfox is an extension for Firefox (version 1.0) that lets you browse your Flickr photostreams in a sidebar. You can find development updates on my <a href="http://philmccluskey.com/archive/flickrfox/">blog</a>."</p><h3 id='flickrpress'>Flickrpress (WordPress)</h3>
+<div class='submenu'><a href='http://redune.com/wp/index.php?p=515'>Home Page</a> &mdash; <a href='http://flickr.com/people/redune/'>William Spaetzel</a></div>
+<p>This script will get all of the photos uploaded to flickr by a specific user in the last 24 hours. It will then post the thumbnails to a Wordpress blog.</p><h3 id='galleryr'>Galleryr (Blojsom Plugin)</h3>
+<div class='submenu'><a href='http://wiki.blojsom.com/wiki/display/blojsom/Galleryr+Plugin'>Home Page</a> &mdash; <a href='http://mbledug.com/'>Cliffano Subagio</a></div>
+<p>A <a href="http://blojsom.com/">Blojsom<a/> plugin used to retrieve image / image sets from Flickr.</p><h3 id='kubrickr'>Kubrickr (WordPress)</h3>
+<div class='submenu'><a href='http://www.redalt.com/Tools/kubrickr.php'>Home Page</a> &mdash; <a href='http://flickr.com/people/94632485@N00/'>Owen Winkler</a></div>
+<p>Since the release of WordPress 1.5 with <a href="http://binarybonsai.com/kubrick">Kubrick</a> as the default theme, an awful lot of weblogs look the same. Owen Winkler has built an application that lets you use images from Flickr to replace that big blue blob header in your WordPress 1.5 Default theme.</p><h3 id='twaingle'>Twaingle (TWAIN)</h3>
+<div class='submenu'><a href='http://www.twaingle.com/about.html'>Home Page</a> &mdash; <a href='http://www.twaingle.com/about.html'>Brian Brown</a></div>
+<p>App plugin which uses the TWAIN interface to allow the insertion of photos direct from Flickr into an application of your choice.</p>	
+<h2 id="webapps">Web Applications</h2>
+<h3 id='picker'>'Color Fields' Color Picker</h3>
+<div class='submenu'><a href='http://www.krazydad.com/colorfields/'>Home Page</a> &mdash; <a href='http://flickr.com/people/krazydad/'>Jim Bumgardner</a></div>
+<p>This widget finds photos from the group pool that match a color of your choice. Also available for Flickr Central and Squared Circle.</p><h3 id='interesting05'>An interesting 2005</h3>
+<div class='submenu'><a href='http://kelvinluck.com/assets/flickr_api/0.5/interesting4.php'>Home Page</a> &mdash; <a href='http://kelvinluck.com/'>Kelvin Luck</a></div>
+<p>A web application showing the most interesting photos on flickr from 2005 in a slick flash interface.</p><h3 id='bubblr'>Bubblr</h3>
+<div class='submenu'><a href='http://www.pimpampum.net/bubblr/'>Home Page</a> &mdash; <a href='http://www.pimpampum.net'>Daniel and Anna</a></div>
+<p>Add comic strip bubbles to Flickr photos of your choice.</p><h3 id='clockr'>Clockr</h3>
+<div class='submenu'><a href='http://www.quasimondo.com/clockr.php'>Home Page</a> &mdash; <a href='http://incubator.quasimondo.com/'>Mario Klingemann</a></div>
+<p>Clockr uses random digit images from Flickr to display the current time.</p><h3 id='favcol'>Favcol</h3>
+<div class='submenu'><a href='http://favcol.com/'>Home Page</a> &mdash; <a href='http://www.paulhammond.org/'>Paul Hammond</a></div>
+<p>Determine Flickr's favourite colour by tagging photos with the tag "favcol".</p><h3 id='fd'>FD's Flickr Toys</h3>
+<div class='submenu'><a href='http://flagrantdisregard.com/flickr/'>Home Page</a> &mdash; <a href='http://flagrantdisregard.com/flickr/'>John Watson</a></div>
+<p>The best and biggest collection of free photo tools and toys on the internet to help you get the most out of your digital camera. Make posters, calendars, badges, picture frames, comic books, slideshows, mosaics, magazine covers, and a whole lot more.</p><h3 id='findr'>Findr</h3>
+<div class='submenu'><a href='http://www.forestandthetrees.com/findr/'>Home Page</a> &mdash; <a href='http://www.forestandthetrees.com/findr/'>Doug</a></div>
+<p>Find photos on flickr by browsing and refining related tags.</p><h3 id='flappr'>Flappr</h3>
+<div class='submenu'><a href='http://www.bcdef.org/flappr/'>Home Page</a> &mdash; <a href='http://bcdef.org/?page_id=2'>Flappr</a></div>
+<p>Flappr is an entirely Flash-based interface to Flickr.</p><h3 id='kaleidoscope'>Flash-based Kaleidoscope</h3>
+<div class='submenu'><a href='http://www.krazydad.com/defacement/squirclescope.php'>Home Page</a> &mdash; <a href='http://flickr.com/people/krazydad/'>Jim Bumgardner</a></div>
+<p>A Flash-based Kaleidoscope using recent thumbnails from the Squared Circle group.</p><h3 id='flickeur'>Flickeur</h3>
+<div class='submenu'><a href='http://incubator.quasimondo.com/flash/flickeur.php'>Home Page</a> &mdash; <a href='http://incubator.quasimondo.com/'>Mario Klingemann</a></div>
+<p>Flickeur creates a film by merging randomly retrieved Flickr images into a stream which "can vary between stream-of-consciousness, documentary or video clip".</p><h3 id='chia'>Flickr Chia Pet</h3>
+<div class='submenu'><a href='http://www.krazydad.com/defacement/'>Home Page</a> &mdash; <a href='http://flickr.com/people/krazydad/'>Jim Bumgardner</a></div>
+<p>a collaborative defacement software toy that grows green hair on photographs. Submit your photos of hairless cats, bald husbands, humvees and other things in need of a little chia goodness to the Naked Chia Pet group.</p><h3 id='flickrcolorselector'>Flickr Color Selectr</h3>
+<div class='submenu'><a href='http://color.slightlyblue.com/'>Home Page</a> &mdash; <a href='http://www.slightlyblue.com/'> O Masakazu</a></div>
+<p>Check out Creative Commons Licensed Photographs from Flickr! Find photos by their colors and rate them!</p><h3 id='flickrfont'>Flickr Font</h3>
+<div class='submenu'><a href='http://ghill.customer.netspace.net.au/flickrfont/'>Home Page</a> &mdash; <a href='http://ghill.customer.netspace.net.au'>G Hill</a></div>
+<p>You can turn boring text elements into fun and exciting graphics using photographs of letters, digits and punctuation marks from Flickr. You can you generate your own FlickrFont text as a once-off, or you can cut and paste some code into your pages to convert any text to images, fresh each time the page loads! Perfect for spicing up headings and instant ransom notes.</p><h3 id='graph'>Flickr Graph</h3>
+<div class='submenu'><a href='http://www.marumushi.com/apps/flickrgraph/index.cfm'>Home Page</a> &mdash; <a href='http://www.marumushi.com/'>Marcos</a></div>
+<p>"Flickr Graph is an application that explores the social relationships inside flickr.com. It makes use of the classic attraction-repulsion algorithm for graphs. Start exploring your contacts by entering your flickr username or the email address you used to register there."</p><h3 id='flickrleech'>Flickr Leech</h3>
+<div class='submenu'><a href='http://www.flickrleech.net/'>Home Page</a> &mdash; <a href='http://houserdesign.com'>Andrew Houser</a></div>
+<p>Download thumbnails of all the "interesting" Flickr uploads for a date of your choice.</p><h3 id='flickrleech'>Flickr Leech</h3>
+<div class='submenu'><a href='http://www.houserdesign.com/flickr/'>Home Page</a> &mdash; <a href=''></a></div>
+<p>Retrieves "interesting" photos for a certain date.</p><h3 id='flickrlogomakr'>Flickr Logo Makr</h3>
+<div class='submenu'><a href='http://flickr.nosv.org/'>Home Page</a> &mdash; <a href=''></a></div>
+<p>Create Flickr style logos for any word you enter.</p><h3 id='finder'>Flickr People Finder</h3>
+<div class='submenu'><a href='http://krazydad.com/gustavog/poster/finder.html'>Home Page</a> &mdash; <a href='http://flickr.com/people/lachie/'>Lachie Cox</a></div>
+<p>A way of easily locating people on <a href="http://flickr.com/people/gustavog/">GustavoG</a>'s <A href="http://krazydad.com/gustavog/poster/">poster</a> of the FlickrVerse.</p><h3 id='reader'>Flickr RSS Reader</h3>
+<div class='submenu'><a href='http://www.jhey.com/rssreader_v1/'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/jhey/'>J Hey</a></div>
+<p>"Flickr RSS Reader is an application built in Macromedia Flash MX 2004 Professional. This application reads RSS Feeds from www.flickr.com. It can run on your computers' hard drive or on your website."</p><h3 id='flickrsetsrss'>Flickr Sets RSS</h3>
+<div class='submenu'><a href='http://erlang.no/?p=154'>Home Page</a> &mdash; <a href='http://erlang.no'>Andreas Åkre Solberg</a></div>
+<p>Create RSS streams from your Flickr sets.</p><h3 id='flickr2photocast'>Flickr2Photocast</h3>
+<div class='submenu'><a href='http://snosrap.com/photocast/'>Home Page</a> &mdash; <a href='http://snosrap.com/photocast/'>Flickr2Photocast</a></div>
+<p>Flickr2Photocast is a tool that generates an iPhoto-compatible photocast feed from Flickr containing up to 500 images in their original format/resolution (i.e. this is better than the standard Flickr RSS feed).</p><h3 id='flickrfling'>FlickrFling</h3>
+<div class='submenu'><a href='http://www.nastypixel.com/prototype/cms/myfiles/pages/flickrfling/'>Home Page</a> &mdash; <a href='http://www.nastypixel.com/'>Ofer Luft/Yaniv Steiner</a></div>
+<p>Renders newsfeeds as images from Flickr. The application will choose for each in-coming word an image from flickr’s database tagged with corresponding keywords. Since the application searches and browses through the whole of flickr’s database, the results can be quite amusing and unpredictable…</p><h3 id='flickrfly'>FlickrFly</h3>
+<div class='submenu'><a href='http://www.roblog.com/flickrfly-docs/'>Home Page</a> &mdash; <a href='http://www.roblog.com/'>Rob Roy</a></div>
+<p>FlickrFly is a script that can be linked from the description or comment of a geotagged Flickr Photo to fly you that location in Google Earth.</p><h3 id='flickrlilli'>FlickrLilli</h3>
+<div class='submenu'><a href='http://flickrlilli.org.uk/'>Home Page</a> &mdash; <a href='http://townx.org/'>Elliot Smith</a></div>
+<p>Search Flickr using the Creative Commons licenses attached to photos.</p><h3 id='flickrnews'>FlickrNews</h3>
+<div class='submenu'><a href='http://www.jakeliefer.com/flickrnews/'>Home Page</a> &mdash; <a href='http://www.jakeliefer.com/'>Jake Liefer</a></div>
+<p>Nifty web application which matches Flickr photos by relevance to current news stories from Yahoo! News.</p><h3 id='replacr'>FlickrReplacr</h3>
+<div class='submenu'><a href='http://www.kokogiak.com/flickreplacr.html'>Home Page</a> &mdash; <a href='http://www.kokogiak.com/'>kokogiak</a></div>
+<p>"You can highlight any word on any web page, click the flickReplacr bookmarklet, and the word gets swapped out with a random image from flickr that was tagged with that word."</p><h3 id='flicktionary'>Flicktionary</h3>
+<div class='submenu'><a href='http://imagine-it.org/flickr/flicktionary.htm'>Home Page</a> &mdash; <a href='http://imagine-it.org'>Pamela Fox</a></div>
+<p>Play compound word games against Flickr until you guess the word it is thinking...</p><h3 id='fotocrib'>Fotocrib</h3>
+<div class='submenu'><a href='http://www.fotocrib.com/'>Home Page</a> &mdash; <a href=''>Martin Okorodudu</a></div>
+<p>A web application which allows Flickr users to edit their photos.</p><h3 id='h4ppierphotos'>h4ppierphotos</h3>
+<div class='submenu'><a href='http://www.h4ppy.com/h4ppier-photos.php'>Home Page</a> &mdash; <a href='http://www.h4ppy.com'>Christian S</a></div>
+<p>Alternative interface for viewing pics in you photostream between set dates.</p><h3 id='islands'>Islands of Consciousness</h3>
+<div class='submenu'><a href='http://incubator.quasimondo.com/flash/islands_of_consciousness.php'>Home Page</a> &mdash; <a href='http://incubator.quasimondo.com/'>Mario Klingemann</a></div>
+<p>Very cool abstract film creator based on flickr photos, similar to <a href="#flickeur">Flickeur</a>.</p><h3 id='mappr'>Mappr (US only)</h3>
+<div class='submenu'><a href='http://mappr.com/'>Home Page</a> &mdash; <a href='http://stamen.com/'>Stamen</a></div>
+<p>A web-based application which uses tag information to place thumbnails of photostream images on a map of the US.</p><h3 id='matchr'>Matchr</h3>
+<div class='submenu'><a href='http://photomesh.cs.northwestern.edu/matchr/'>Home Page</a> &mdash; <a href='http://photomesh.cs.northwestern.edu/matchr/'>Ryan and Bryan</a></div>
+<p>Flickr puzzle game.</p><h3 id='printkillr'>Printr Killr</h3>
+<div class='submenu'><a href='http://www.darwah-group.com/ppp/concept/spiel/phpflickr/index.php?lang=uk'>Home Page</a> &mdash; <a href='http://www.darwah-group.com'>Peter Cserba</a></div>
+<p>Simple tool that let's you generate calendars directly from Flickr</p><h3 id='retrievr'>Retrievr</h3>
+<div class='submenu'><a href='http://labs.systemone.at/retrievr/'>Home Page</a> &mdash; <a href='http://labs.systemone.at/retrievr/about'>Christian Langreiter</a></div>
+<p>Retrievr is an experimental service which lets you search and explore in a selection of Flickr images by drawing a rough sketch.</p><h3 id='rss2pdf'>RSS 2 PDF</h3>
+<div class='submenu'><a href='http://rss2pdf.com/flickr/'>Home Page</a> &mdash; <a href='http://rss2pdf.com/flickr/'>Tom Churm</a></div>
+<p>Create PDF pages from Flickr RSS Feeds.</p><h3 id='selfportraitr'>Selfportraitr</h3>
+<div class='submenu'><a href='http://www.pacemacgill.com/exhibitions.php'>Home Page</a> &mdash; <a href='http://kelvinluck.com/article/selfportraitr-an-interactive-exhibition-curating-the-flickr-community'>Kelvin Luck</a></div>
+<p>A web application letting you view self portraits on Flickr. See <a href="http://kelvinluck.com/article/selfportraitr-an-interactive-exhibition-curating-the-flickr-community">author link</a>.</p><h3 id='splashr'>Splashr</h3>
+<div class='submenu'><a href='http://splashr.com/'>Home Page</a> &mdash; <a href='http://splashr.com/'>Splashr</a></div>
+<p>Splashr is a tool for creating web-based presentations of Flickr photos in myriad different formats.</p><h3 id='sprinklr'>Sprinklr</h3>
+<div class='submenu'><a href='http://ericappel.net/sprinklr'>Home Page</a> &mdash; <a href='http://ericappel.net'>Eric Appel</a></div>
+<p>An alternative interface for adding your pictures to groups.</p><h3 id='tagnautica'>Tagnautica</h3>
+<div class='submenu'><a href='http://www.quasimondo.com/tagnautica.php'>Home Page</a> &mdash; <a href='http://incubator.quasimondo.com/'>Mario Klingemann</a></div>
+<p>Tagnautica is an experimental navigation tool built to explore the space of related Flickr tags.</p><h3 id='tiltomo'>Tiltomo</h3>
+<div class='submenu'><a href='http://www.tiltomo.com'>Home Page</a> &mdash; <a href='http://www.tiltomo.com/blog.php'>The Tiltomo Team</a></div>
+<p>Search for images similar to one if your choice using a Visual Search interface.</p><h3 id='travelr'>Travelr</h3>
+<div class='submenu'><a href='http://grant.robinson.name/projects/travelr/'>Home Page</a> &mdash; <a href='http://grant.robinson.name'>Grant Robinson</a></div>
+<p>Travelr is a free photo gallery viewer that you can put on your own site. Travelr lets you display your Flickr photos geographically on a world map. It takes the hassle out of supplying geographic coordinates by only requiring them once for each location - not for each photo. Click here to see an <a href="http://weavedigital.com/travephotos/">example of Travelr in action</a>.</p><h3 id='wemapflickr'>We Map Flickr</h3>
+<div class='submenu'><a href='http://wemapflickr.com/site/'>Home Page</a> &mdash; <a href='http://wemapflickr.com/ublog/blog_commento.asp?blog_id=1'>MastaBaba  </a></div>
+<p>Mixes Flickr with Google Maps</p>	
+	
+<h2 id="winapps">Windows Applications</h2>
+<h3 id='aquarius'>Aquarius Screensaver</h3>
+<div class='submenu'><a href='http://radicalpixels.com/'>Home Page</a> &mdash; <a href='http://radicalpixels.com/'>Callum Prentice</a></div>
+<p>Aquarius is an OpenGL™ based Windows™ screensaver that displays images, video and Web pages on a variety of moving objects. Many different media formats are supported including, most recently, images from the photo sharing Web site Flickr™.</p><h3 id='backgroundswitcher'>Background Switcher</h3>
+<div class='submenu'><a href='http://www.johnsadventures.com/backend/BackgroundSwitcher/'>Home Page</a> &mdash; <a href='http://www.johnsadventures.com'>John Conners</a></div>
+<p>John's Background Switcher periodically changes the background image on your computer (like every hour or every day). You can specify which pictures to choose from Flickr.</p><h3 id='flickrandwebimager'>Flickr and Webimager</h3>
+<div class='submenu'><a href='http://phpspot.net/php/flickr/'>Home Page</a> &mdash; <a href=''></a></div>
+<p>Capture screen shots and upload them straight to Flickr.</p><h3 id='screensaver'>Flickr Screensaver v3</h3>
+<div class='submenu'><a href='http://www.wackylabs.net/articles/flickr_screensaver_v3.php'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/samjudson/'>Sam Judson</a></div>
+<p>Turns your computer into a slideshow of Flickr photos when you're not using it. You can configure it to display photos from a particular person, from a particular group, photos with a certain tag, and more.</p><h3 id='flickrdown'>FlickrDown</h3>
+<div class='submenu'><a href='http://greggman.com/pages/flickrdown.htm'>Home Page</a> &mdash; <a href='http://flickr.com/people/greggman/'>Gregg Tavares</a></div>
+<p>A program that makes downloading photos from Flickr to save locally easier.</p><h3 id='kaleidoscopescr'>Kaleidoscope Screensaver</h3>
+<div class='submenu'><a href='http://www.krazydad.com/sware/SquaredCircleScope.zip'>Home Page</a> &mdash; <a href='http://www.flickr.com/people/krazydad/'>Jim Bumgardner</a></div>
+<p>A kaleidoscopic screensaver which uses images from the squared circle Flickr group.</p><h3 id='loopy'>Loopy</h3>
+<div class='submenu'><a href='http://www.hottoast.org/archives/2005/08/flickrbased_end.html'>Home Page</a> &mdash; <a href='http://www.hottoast.org/'>Hot Toast</a></div>
+<p>Loopy is the desktop screensaver application that is looping and showing the pictures at random for good. The most imperactive key ingredient of this application is the integration between the flash technology and RSS, that is provided by Flickr.</p><h3 id='photocaster'>My Photocaster</h3>
+<div class='submenu'><a href='http://www.myphotocaster.com/'>Home Page</a> &mdash; <a href='http://www.myphotocaster.com/'>Sean Naghibi</a></div>
+<p>My Photocaster is the user-friendly way to edit and upload photos: get creative with your snaps, then share them with the world through Flickr - without ever leaving the program.</p><h3 id='screensvr'>ScreenSvr</h3>
+<div class='submenu'><a href='http://screensvr.rubyforge.org/'>Home Page</a> &mdash; <a href='http://www.saush.com/blog/'>Chang Sau Sheong</a></div>
+<p>ScreenSvr! is a simple but fun screen saver for Windows PCs. The premise is simple -- ScreenSvr grabs photos from Flickr, based on your selection criteria, and displays them in a repeating slideshow as a screensaver.</p><h3 id='wickr'>Wickr</h3>
+<div class='submenu'><a href='http://shiraz.zeeblo.com/wickr_intro.html'>Home Page</a> &mdash; <a href='http://shiraz.zeeblo.com/wickr_about.html'>Shiraz</a></div>
+<p>A Konfabulator widget for browsing Flickr from your desktop.</p>    
+  </div>
+<br class="break" />
+  
+ <div id="menu">
+ <a href="/" title="Plugins and cool Apps built around the Flickr API">Home</a>
+ &bull; <a href="/docs/" title="Tutorials and other useful Flickr docs">Docs</a> 
+ &bull; <a href="mailto:nico.morgan&#64;gmail.com">Contact</a>
+ </div></div>
+</body>
+</html>

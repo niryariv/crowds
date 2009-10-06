@@ -1,0 +1,57 @@
+<div style="text-align: center;"><h3 style="display:inline;"><%= @crowd.title -%></h3>
+	&nbsp;&nbsp;&nbsp;<%= link_to 'Recent items',  crowd_items_path(@crowd) %>
+	&nbsp;&nbsp;&nbsp;<tt><%= link_to 'opml', formatted_crowd_feeds_path(@crowd, :xml) -%></tt>
+</div>
+
+<% if @feeds.size < 5 %>
+<p>To get your crowd working, add sources - websites or RSS feeds that you find valuable.</p> 
+<p>You can add one URL at a time (the bookmarklet is especially convenient for that) or import 
+many at once with an OPML file. Best way to start would usually be to get an OPML of your
+feeds from your RSS reader.</p>
+<p>There's no limit on number of sources - the more, the better, as long as these are sources you value.</p>
+<% end %>
+
+<% if current_user %>
+	<table align="center">
+		<tr>
+			<td>
+				Add a source URL:
+				<% form_for :feed, Feed.new, :url => crowd_feeds_path(@crowd) do |f| %>
+					<%= f.text_field :url %>
+					<%= f.submit 'Add URL' %>
+				<% end %>
+			</td>	
+			<td>&nbsp;&nbsp;&nbsp;&nbsp; Or &nbsp;&nbsp;&nbsp;&nbsp;</td>
+			<td>
+				Upload OPML File:
+				<% form_for :feed, Feed.new, :url => crowd_feeds_path(@crowd.id), :html => { :multipart => true } do |f| %>
+					<%= f.file_field :opml %>
+					<%= f.submit 'Import OPML' %>
+				<% end %>
+			</td>
+		</tr>
+	</table>
+		
+	<p align="center">
+		Add source with a single click using the Crowds bookmarklet - drag this to your bookmarks toolbar: 
+		<a href="javascript:location.href='<%= root_url %>crowd/<%= @crowd.id %>/import?url='+encodeURIComponent(location.href)">+<%= @crowd.title %></a>
+	</p>
+<% else %>
+	<p align="center">
+		<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, 
+		<%= link_to "log in", new_user_session_path %>  to add or remove sources.
+	</p>
+<% end %>
+
+<table cellpadding="5" align="center">
+<% for feed in @feeds %>
+  <tr>
+		<td><%= link_to feed.title, feed.home_url  %></td>
+	<% if current_user and current_user.owns?(@crowd) %>
+		<td><%= link_to 'Delete', crowd_feed_url(@crowd, feed), :method => :delete  %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />

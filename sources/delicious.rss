@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:cc="http://web.resource.org/cc/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://del.icio.us/popular">
+<title>del.icio.us/popular</title>
+<link>http://del.icio.us/popular</link>
+<description></description>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://www.templateworld.com/free_templates.html" />
+  <rdf:li rdf:resource="http://www.thinkvitamin.com/features/design/wake-up-and-smell-the-ie7" />
+  <rdf:li rdf:resource="http://www.glumbert.com/media/multiply" />
+  <rdf:li rdf:resource="http://stufffromkevin.blogspot.com/2006/11/embarassing-moments-on-tv-news-very.html" />
+  <rdf:li rdf:resource="http://www.imagini.net/giftfinder/" />
+  <rdf:li rdf:resource="http://www.googleguide.com/favorite_shortcuts.html" />
+  <rdf:li rdf:resource="http://3quarksdaily.blogs.com/3quarksdaily/2006/11/i_challenge_you.html" />
+  <rdf:li rdf:resource="http://blog.smaldone.com.ar/2006/11/21/tutorial-sobre-tcpip/" />
+  <rdf:li rdf:resource="http://gaia.serezhkin.com/" />
+  <rdf:li rdf:resource="http://www.artfaceoff.com/" />
+  <rdf:li rdf:resource="http://news.independent.co.uk/world/science_technology/article2007490.ece" />
+  <rdf:li rdf:resource="http://blogs.securiteam.com/index.php/archives/746" />
+  <rdf:li rdf:resource="http://www.facelessart.com/" />
+  <rdf:li rdf:resource="http://www.infoq.com/presentations/effective-api-design" />
+  <rdf:li rdf:resource="http://www.floppyhead.com/2006/11/19/5-alternatives-to-help-you-ditch-cable-television/" />
+ </rdf:Seq>
+</items>
+</channel>
+
+<item rdf:about="http://www.templateworld.com/free_templates.html">
+<title>FREE Website Templates</title>
+<link>http://www.templateworld.com/free_templates.html</link>
+<dc:creator>quakenul</dc:creator>
+<dc:date>2006-11-22T12:49:53Z</dc:date>
+</item>
+
+<item rdf:about="http://www.thinkvitamin.com/features/design/wake-up-and-smell-the-ie7">
+<title>Vitamin Features » Wake up and smell the IE7!</title>
+<link>http://www.thinkvitamin.com/features/design/wake-up-and-smell-the-ie7</link>
+<dc:creator>activists</dc:creator>
+<dc:date>2006-11-23T12:03:36Z</dc:date>
+</item>
+
+<item rdf:about="http://www.glumbert.com/media/multiply">
+<title>glumbert.com | Math Lesson: A new way to multiply</title>
+<link>http://www.glumbert.com/media/multiply</link>
+<dc:creator>sapphoq</dc:creator>
+<dc:date>2006-11-16T23:36:29Z</dc:date>
+</item>
+
+<item rdf:about="http://stufffromkevin.blogspot.com/2006/11/embarassing-moments-on-tv-news-very.html">
+<title>Embarassing Moments on TV News (Very funny!)</title>
+<link>http://stufffromkevin.blogspot.com/2006/11/embarassing-moments-on-tv-news-very.html</link>
+<dc:creator>KDern</dc:creator>
+<dc:date>2006-11-23T03:59:46Z</dc:date>
+</item>
+
+<item rdf:about="http://www.imagini.net/giftfinder/">
+<title>Imagini™ Gift finder</title>
+<link>http://www.imagini.net/giftfinder/</link>
+<dc:creator>denis09</dc:creator>
+<dc:date>2006-11-21T23:14:16Z</dc:date>
+</item>
+
+<item rdf:about="http://www.googleguide.com/favorite_shortcuts.html">
+<title>Google Guide: My Favorite Shortcuts by Nancy Blachman</title>
+<link>http://www.googleguide.com/favorite_shortcuts.html</link>
+<dc:creator>darrellk2000</dc:creator>
+<dc:date>2006-05-23T03:49:20Z</dc:date>
+</item>
+
+<item rdf:about="http://3quarksdaily.blogs.com/3quarksdaily/2006/11/i_challenge_you.html">
+<title>3quarksdaily - Logic Puzzles</title>
+<link>http://3quarksdaily.blogs.com/3quarksdaily/2006/11/i_challenge_you.html</link>
+<dc:creator>intranation</dc:creator>
+<dc:date>2006-11-13T12:52:36Z</dc:date>
+</item>
+
+<item rdf:about="http://blog.smaldone.com.ar/2006/11/21/tutorial-sobre-tcpip/">
+<title>Blog de Javier Smaldone » Tutorial sobre TCP/IP</title>
+<link>http://blog.smaldone.com.ar/2006/11/21/tutorial-sobre-tcpip/</link>
+<dc:creator>Hulkthebeast</dc:creator>
+<dc:date>2006-11-22T19:27:31Z</dc:date>
+</item>
+
+<item rdf:about="http://gaia.serezhkin.com/">
+<title>gaia - opensource 3D interface to the planet</title>
+<link>http://gaia.serezhkin.com/</link>
+<dc:creator>schee</dc:creator>
+<dc:date>2006-11-13T16:54:24Z</dc:date>
+</item>
+
+<item rdf:about="http://www.artfaceoff.com/">
+<title>Art Face Off</title>
+<link>http://www.artfaceoff.com/</link>
+<dc:creator>rachelyra</dc:creator>
+<dc:date>2006-09-04T22:46:09Z</dc:date>
+</item>
+
+<item rdf:about="http://news.independent.co.uk/world/science_technology/article2007490.ece">
+<title>Genetic breakthrough that reveals the differences between humans.</title>
+<link>http://news.independent.co.uk/world/science_technology/article2007490.ece</link>
+<dc:creator>c.dric</dc:creator>
+<dc:date>2006-11-23T01:31:08Z</dc:date>
+</item>
+
+<item rdf:about="http://blogs.securiteam.com/index.php/archives/746">
+<title>SecuriTeam Blogs » Anonymizing RFI Attacks Through Google</title>
+<link>http://blogs.securiteam.com/index.php/archives/746</link>
+<dc:creator>merkelens</dc:creator>
+<dc:date>2006-11-23T14:30:41Z</dc:date>
+</item>
+
+<item rdf:about="http://www.facelessart.com/">
+<title>Facelees Art</title>
+<link>http://www.facelessart.com/</link>
+<dc:creator>pizzaguy234</dc:creator>
+<dc:date>2006-11-23T10:43:33Z</dc:date>
+</item>
+
+<item rdf:about="http://www.infoq.com/presentations/effective-api-design">
+<title>InfoQ: How to Design a Good API &amp; Why it Matters</title>
+<link>http://www.infoq.com/presentations/effective-api-design</link>
+<dc:creator>lucabastos</dc:creator>
+<dc:date>2006-11-21T17:14:23Z</dc:date>
+</item>
+
+<item rdf:about="http://www.floppyhead.com/2006/11/19/5-alternatives-to-help-you-ditch-cable-television/">
+<title>6 alternatives to help you ditch cable television » FloppyHead - A Media Center, Digital Video Recorder, and HTPC Resource</title>
+<link>http://www.floppyhead.com/2006/11/19/5-alternatives-to-help-you-ditch-cable-television/</link>
+<dc:creator>raoultg</dc:creator>
+<dc:date>2006-11-20T12:49:58Z</dc:date>
+</item>
+
+</rdf:RDF>

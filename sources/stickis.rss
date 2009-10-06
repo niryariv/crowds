@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="wordpress/2.0.3" -->
+<rss version="2.0" 
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	>
+
+<channel>
+	<title>Stickis: social + web + overlay</title>
+	<link>http://blog.stickis.com</link>
+	<description>thoughts, musings, ramblings and more about our service</description>
+	<pubDate>Wed, 29 Nov 2006 18:29:57 +0000</pubDate>
+	<generator>http://wordpress.org/?v=2.0.3</generator>
+	<language>en</language>
+			<item>
+		<title>Subetha and me&#8230;</title>
+		<link>http://blog.stickis.com/2006/11/29/subetha-and-me/</link>
+		<comments>http://blog.stickis.com/2006/11/29/subetha-and-me/#comments</comments>
+		<pubDate>Wed, 29 Nov 2006 18:01:18 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/29/subetha-and-me/</guid>
+		<description><![CDATA[Quick post.
+Thanks to a couple of folks who&#8217;ve pointed out that our &#8220;Invite a Friend&#8221; icon is Subetha&#8217;s old one.
+We&#8217;re talking to Codemonkeys, the parent company who owns the graphic and are resolving the issue ASAP.
+We were under the impression that this was a public graphic.  Unfortunately it isn&#8217;t easy to track down whether [...]]]></description>
+			<content:encoded><![CDATA[<p>Quick post.</p>
+<p>Thanks to a couple of folks who&#8217;ve pointed out that our &#8220;Invite a Friend&#8221; icon is Subetha&#8217;s old one.</p>
+<p>We&#8217;re talking to Codemonkeys, the parent company who owns the graphic and are resolving the issue ASAP.</p>
+<p>We were under the impression that this was a public graphic.  Unfortunately it isn&#8217;t easy to track down whether something may be derived from copyrighted work.  Not until one gets thousands of fresh eyeballs going, &#8220;hey, isn&#8217;t that my Uncle Alvarez [(c) <a href="http://www.lizphair.com">Liz Phair</a>] &#8230;.?&#8221;</p>
+<p>We&#8217;re in a friendly exchange with the copyright holders and are going to be replacing this in a timeframe they&#8217;ve kindly agreed to.
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/29/subetha-and-me/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Launch day reactions&#8230;</title>
+		<link>http://blog.stickis.com/2006/11/28/launch-day-reactions/</link>
+		<comments>http://blog.stickis.com/2006/11/28/launch-day-reactions/#comments</comments>
+		<pubDate>Wed, 29 Nov 2006 02:03:55 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+	<category>blogging</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/28/launch-day-reactions/</guid>
+		<description><![CDATA[Half day after our launch and I want to get down some of the impressions from what we&#8217;ve seen.
+First, some very nicely done press by Nick Gonzalez at Techcrunch, and also by Rafe Needleman at Webware.   Interestingly, they focus on slightly different ways of looking at what we do, but they&#8217;re both quite [...]]]></description>
+			<content:encoded><![CDATA[<p>Half day after our launch and I want to get down some of the impressions from what we&#8217;ve seen.</p>
+<p><img width="159" height="166" align="left" style="border: 3px solid black; margin-right: 4px" src="http://static.flickr.com/117/272042307_c35bd76528_m.jpg" />First, some very nicely done press by Nick Gonzalez at <a target="_blank" href="http://www.techcrunch.com">Techcrunch</a>, and also by Rafe Needleman at <a href="http://webware.com">Webware</a>.   Interestingly, they focus on slightly different ways of looking at what we do, but they&#8217;re both quite positive.  Kudos to both of them for getting pretty deeply into Stickis and understanding it well.</p>
+<p>Nick calls us a <a target="_blank" href="http://www.techcrunch.com/2006/11/28/stickis-launches-syndicated-web-note-taker/">&#8220;Syndicated Blog Annotator&#8221;</a>, and his article focuses on the way we allow users to annotate the web using a WYSIWYG editor, <em>in-place</em> on the websites they&#8217;re annotating, and how we bring in web services and content from informational channels to which you subscribe.</p>
+<p>Rafe says we&#8217;ll help you <a href="http://webware.com/8301-1_109-9665274-2.html">&#8220;Take your favorite blogs for a walk&#8221;</a> and particularly likes the ability to see what ones preferred bloggers have to say about whatever is being browsed.</p>
+<p>Observing both the reactions from our new users (not surprisingly, today&#8217;s been our largest user acquisition day ever), and the comments people have left in various places, it seems to me the one thing that we ought to be messaging clearer is the individually personalized nature of Stickis as a communications medium. The central idea here is that:</p>
+<ul>
+<li>You care about what <strong>your community</strong> has to say about the web.</li>
+<li>Your community is <strong>different from mine</strong>.</li>
+<li>Stickis lets your read and write to<strong> your community</strong>.</li>
+</ul>
+<p>What you publish in Stickis get seen only by those who subscribe to what your <em>channel</em> of notes.  Its like a blog, though it is read in-place anywhere on the web it relates.   You can invite people to subscribe to your notes, they can find you through a reply you leave for someone, or by seeing a URL to a note or channel which you can embed in a blog entry or email anywhere.</p>
+<p>This is what makes us most different from the other &#8220;annotation&#8221; tools, including Google Weblog Comments, and Third Voice, which some commentators have mentioned.</p>
+<p style="padding-left: 20px">With Stickis, you&#8217;re not seeing what everyone writes, but only what your chosen sources write.  And you&#8217;re writing only for those who care about what you have to say.</p>
+<p>The power to decide what to consume is in your hands, and it is as easy to block a note or unsubscribe to a source who no longer provides compelling value as it is to add one.</p>
+<p>As Stickis users invite more of their friends to connect up, we&#8217;re looking to see groups of people converge around shared channels of notes, to annotate the web for one another, monitoring what one another is interested in using Alerts.  Facilitating that is one of our main goals with Stickis.</p>
+<p style="font-size: 8px">* Another picture from <a target="_blank" href="http://flickr.com/people/jurvetson/">Steve Jurvetson</a></p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/28/launch-day-reactions/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Party details&#8230;</title>
+		<link>http://blog.stickis.com/2006/11/28/party-details/</link>
+		<comments>http://blog.stickis.com/2006/11/28/party-details/#comments</comments>
+		<pubDate>Tue, 28 Nov 2006 19:27:02 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/28/party-details/</guid>
+		<description><![CDATA[Guests at our party on Thursday should keep in mind that some of the street parking is only one hour and checked until 10PM.
+We&#8217;ve reserved underground parking at a lot on Federal Street, which is accessible off Bryant St, from either 1st or 2nd Streets.  Turn at Bryant Place (tiny street, the other way [...]]]></description>
+			<content:encoded><![CDATA[<p><img width="104" height="78" align="left" class="reflect" style="border: 2px solid black; margin-right: 4px" src="http://static.flickr.com/31/57629984_e136e88849.jpg?v=0" />Guests at our party on Thursday should keep in mind that some of the street parking is only one hour and checked until 10PM.<br />
+We&#8217;ve reserved underground parking at a lot on Federal Street, which is accessible off Bryant St, from either 1st or 2nd Streets.  Turn at Bryant Place (tiny street, the other way is an on-ramp to the Bay Bridge), and then take a right.  The first ramp down on your left is the garage.  They&#8217;re open till midnight and will charge $10.</p>
+<p><strong>A Challenge</strong></p>
+<p>We&#8217;re going to have whiteboards for people to write on here, and we&#8217;re going to challenge you to annotate these with an interesting use of Stickis.   Each novel Stickis use wins a Stickis T-shirt, until we run out.</p>
+<p>I&#8217;m going to start you out thinking by putting down my use to get the T-shirt I&#8217;ll be wearing to the party:</p>
+<p style="margin-left: 20px">It&#8217;s the season of Peace.  The news we&#8217;re Stickiing makes it clear there&#8217;s not a whole lot Peace around.</p>
+<p>I&#8217;m going to put together a Sticki note with some well-chosen pictures in it on the homepages of major retailers where we&#8217;re all going to be spending money this season.  In it, I&#8217;m going to suggest some places where you can spend some of that money on <strong>other</strong> people who don&#8217;t already have too much.</p>
+<p style="margin-left: 20px">My friends will get to see that note when they go shopping.  If they like they can forward it to their friends, who can reply, add to the list, share their perspectives and opinions.   We can watch to see how this idea grows.
+</p>
+<p style="font-size: 8px">*photo courtesy <a target="_blank" title="party pic." href="http://flickr.com/photos/fabiovenni/">Fabio</a></p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/28/party-details/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Stickis Open Beta launches noon Tuesday, November 28th.</title>
+		<link>http://blog.stickis.com/2006/11/27/stickis-open-beta-launches-noon-tuesday-november-28th/</link>
+		<comments>http://blog.stickis.com/2006/11/27/stickis-open-beta-launches-noon-tuesday-november-28th/#comments</comments>
+		<pubDate>Tue, 28 Nov 2006 06:39:29 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/27/stickis-open-beta-launches-noon-tuesday-november-28th/</guid>
+		<description><![CDATA[Our beta is about to launch!
+The last few weeks at Activeweave have been hectic.  We&#8217;ve been focusing on two major things: improving reliability (squashing bugs) and increasing the social power of this first widely released version of Stickis to connect people up and mediate conversation.
+This beta will be the first time that the Stickis [...]]]></description>
+			<content:encoded><![CDATA[<p><img align="left" style="border: 3px solid black; margin-right: 4px" title="telstar launch by Steve Jurvetson" alt="telstar launch by Steve Jurvetson" src="http://static.flickr.com/31/102843540_2ee0c84e03_m.jpg" /><a href="http://www.stickis.com">Our </a>beta is about to launch!</p>
+<p>The last few weeks at Activeweave have been hectic.  We&#8217;ve been focusing on two major things: improving reliability (squashing bugs) and increasing the <em>social</em> power of this first widely released version of Stickis to connect people up and mediate conversation.</p>
+<p>This beta will be the first time that the Stickis website will be open to anyone who registers.  Up to now, we&#8217;ve gated entry by invitation or special request, to keep things small and controlled. Tomorrow&#8217;s release marks the first time we open the system to unreferred registrants.</p>
+<p>In our small initial beta community we&#8217;ve been seeing Stickis used for many of the kinds of conversations that today take place in chat or email.  We&#8217;re also seeing frequent uses of Stickis to form &#8220;catalogs&#8221; or media-rich, shareable, <em>in-place (</em>on the webpage they talk about) bookmarks or collection of material &#8220;gleaned&#8221; from the web and then editorialized.</p>
+<p>In the coming weeks and months we&#8217;ll work to improve Stickis&#8217; use as a rich commentary and communication medium, and will be introducing features to increase support for Stickis mediated collaboration and the building and creation of community.<br />
+Our goal is that Stickis bring into your browser &#8220;what you care about, wherever you are on the web&#8221;, which of course entails our facilitating you and your community&#8217;s authoring much of that content and making it available to one another.<br />
+We look forward to hearing your impressions.  You can always reach us, by tagging a Stickis note <strong>feedback</strong>, or by sending email to feedback at stickis.com.</p>
+<p style="font-size: 8px">*Photo by <a href="http://flickr.com/people/jurvetson/">Steve Jurvetson</a></p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/27/stickis-open-beta-launches-noon-tuesday-november-28th/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Fleck&#8230;</title>
+		<link>http://blog.stickis.com/2006/11/16/fleck/</link>
+		<comments>http://blog.stickis.com/2006/11/16/fleck/#comments</comments>
+		<pubDate>Fri, 17 Nov 2006 01:43:23 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/16/fleck/</guid>
+		<description><![CDATA[Marshall Kirkpatrick just wrote up a great new tool, Fleck.  A great idea, very much in the line of Diigo or MyStickies.  He suggests that the interface is &#8220;easier on the eyes&#8221; than these.  I found Mystickies to be very simple to use, and liked the interface a lot too.
+What these guys [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.techcrunch.com/2006/11/16/fleck-offers-zero-friction-web-annotation/"><img align="left" title="fleck!" alt="fleck!" src="http://www.techcrunch.com/wp-content/flecklogo.jpg" />Marshall Kirkpatrick</a> just wrote up a great new tool, Fleck.  A great idea, very much in the line of Diigo or MyStickies.  He suggests that the interface is &#8220;easier on the eyes&#8221; than these.  I found Mystickies to be very simple to use, and liked the interface a lot too.<br />
+What these guys do is very cool.  They create a sharable URL that a group can congregate around at which there&#8217;s an annotatable copy of a web page, and then mark it up collaboratively.   Fleck introduces some nice Wiki like concepts for the collaboration too.</p>
+<p>Marshall mentions that we&#8217;re just around the corner.  Definitely!  Zero friction&#8230; we won&#8217;t be that tomorrow, as we can&#8217;t deliver our mission of &#8220;<span style="font-style: italic">what you care about, where you are</span>&#8221; without being &#8220;where you are&#8221; with you, as a part of the browser.  There&#8217;ll be a download and it&#8217;ll be worth it.<br />
+We think that there&#8217;s a huge value in being able to see a meta-web of annotations from your personally chosen sources, social, commercial, web services, blogs, all dealing with what you&#8217;re looking at, in-place <span style="font-weight: bold">where you&#8217;re looking</span>.  For that we&#8217;ve created a platform that lets people rendezvous anywhere on the web without any explicit action on their part.</p>
+<p>As they say in Thailand, &#8220;same same but different.&#8221;
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/16/fleck/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Great Talk by Mike Arrington and Guy Kawasaki</title>
+		<link>http://blog.stickis.com/2006/11/09/great-talk-by-mike-arrington-and-guy-kawasaki/</link>
+		<comments>http://blog.stickis.com/2006/11/09/great-talk-by-mike-arrington-and-guy-kawasaki/#comments</comments>
+		<pubDate>Thu, 09 Nov 2006 07:13:50 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/09/great-talk-by-mike-arrington-and-guy-kawasaki/</guid>
+		<description><![CDATA[at the Art of the Start conference today, Guy and Mike got down on what matters to them in the startups they see (video on Guy&#8217;s blog) and &#8220;how to get into Techcrunch.&#8221;  Both very funny and engaging speakers, and Mike projects savvy, passion, and integrity.
+Also taste, as he asks me for an exclusive [...]]]></description>
+			<content:encoded><![CDATA[<p>at the Art of the Start conference today, Guy and Mike got down on what matters to them in the startups they see (video on <a href="http://blog.guykawasaki.com/2006/11/how_to_get_in_t.html">Guy&#8217;s blog</a>) and &#8220;how to get into Techcrunch.&#8221;  Both very funny and engaging speakers, and Mike projects savvy, passion, and integrity.</p>
+<p>Also taste, as he asks me for an exclusive on the upcoming Stickis launch about 90% of the way through. <img src='http://blog.stickis.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /><br />
+Now I have to excise all those &#8220;dramatic&#8221; and &#8220;revolutionary&#8221; adjectives out of my description!
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/09/great-talk-by-mike-arrington-and-guy-kawasaki/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Stickis Launch Party Nov. 30, 6:30 PM.</title>
+		<link>http://blog.stickis.com/2006/11/07/stickis-launch-party-nov-30-630-pm/</link>
+		<comments>http://blog.stickis.com/2006/11/07/stickis-launch-party-nov-30-630-pm/#comments</comments>
+		<pubDate>Tue, 07 Nov 2006 19:51:15 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/11/07/stickis-launch-party-nov-30-630-pm/</guid>
+		<description><![CDATA[Leave a comment for an invitation.  Click on the picture to go the evite:
+
+
+
+
+]]></description>
+			<content:encoded><![CDATA[<p>Leave a comment for an invitation.  Click on the picture to go the evite:</p>
+<p><a href="http://www.evite.com/app/publicUrl/evite@marcmeyer.com/stickilaunch"><img id="image94" alt="tmp.png" src="http://blog.stickis.com/wp-content/uploads/2006/11/tmp.png" /></a><br />
+<a title="Come to our launch party!" target="_blank" href="http://www.evite.com/app/publicUrl/evite@marcmeyer.com/stickilaunch"><br />
+</a>
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/11/07/stickis-launch-party-nov-30-630-pm/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Stickis is open for a limited beta, so here&#8217;s a bit more about what we do</title>
+		<link>http://blog.stickis.com/2006/10/13/stickis-is-open-for-a-limited-beta-so-heres-a-bit-more-about-what-we-do/</link>
+		<comments>http://blog.stickis.com/2006/10/13/stickis-is-open-for-a-limited-beta-so-heres-a-bit-more-about-what-we-do/#comments</comments>
+		<pubDate>Sat, 14 Oct 2006 00:12:19 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/10/13/stickis-is-open-for-a-limited-beta-so-heres-a-bit-more-about-what-we-do/</guid>
+		<description><![CDATA[What if, wherever you browsed, you could immediately see what the sources you personally choose and trust, social, commercial, journalistic, say about what you’re browsing in-place?  What if you could easily express yourself on any web page, contributing to the conversation and building your community all over the web?  
+
+ 
+Stickis provides the [...]]]></description>
+			<content:encoded><![CDATA[<p class="MsoNormal"><img width="287" height="287" align="left" src="http://stickis.com/skin/img/values.png" /><span style="color: purple">What if, wherever you browsed, you could immediately see what the sources you personally choose and trust, social, commercial, journalistic, say about what you’re browsing<em> in-place</em>?  What if you could easily express yourself on any web page, contributing to the conversation and building your community all over the web?  </span></p>
+<p class="MsoNormal">
+<p class="MsoNormal"><span style="color: purple"> </span></p>
+<p class="MsoNormal" style="margin-left: 0.5in"><span style="color: purple">Stickis provides the tools users need to “<strong>express</strong>” themselves about the web wherever they browse, “<strong>share</strong>” their expressions with whomever they choose, “<strong>monitor</strong>” their community’s interests, actively “<strong>watch</strong>” topics that especially interest them, and “<strong>discover</strong>” what their trusted sources say about what they’re browsing. </span></p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/10/13/stickis-is-open-for-a-limited-beta-so-heres-a-bit-more-about-what-we-do/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>New feature: anti-social tags&#8230;</title>
+		<link>http://blog.stickis.com/2006/10/13/new-feature-anti-social-tags/</link>
+		<comments>http://blog.stickis.com/2006/10/13/new-feature-anti-social-tags/#comments</comments>
+		<pubDate>Fri, 13 Oct 2006 23:57:07 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/10/13/new-feature-anti-social-tags/</guid>
+		<description><![CDATA[Up to now, any sticki note you created was either private to you or visible to anyone who subscribed to your channel and so had your notes in their network.
+We&#8217;ve just added a cool way of targeting just a select audience with any individual sticki note: we call it anti-social tags.
+In the Your Notes page [...]]]></description>
+			<content:encoded><![CDATA[<p><img align="left" title="antisocial tags" alt="antisocial tags" src="http://stickis.com/skin/img/marks/antisocial.png" />Up to now, any sticki note you created was either private to you or visible to anyone who subscribed to your channel and so had your notes in their network.</p>
+<p>We&#8217;ve just added a cool way of targeting just a select audience with any individual sticki note: we call it <em>anti-social tags</em>.</p>
+<p>In the <a title="Your Notes" href="http://www.stickis.com/notes/">Your Notes</a> page you&#8217;ll find a section on the right which reads <a target="_blank" href="http://www.stickis.com/settings/tags">&#8220;Manage Your Antisocial Tags&#8221;</a>.  <img align="left" style="margin-right: 4px" title="notes1.png" id="image85" alt="notes1.png" src="http://blog.stickis.com/wp-content/uploads/2006/10/notes1.png" />You set up any tag there with a list of email addresses of people who are allowed to see notes with tagged with it.</p>
+<p>You could use anti-social tags to define categories like <strong>friends </strong>or <strong>co-workers</strong>. A note tagged with several anti-social tags can be seen by anyone in any of the included groups.</p>
+<p>For now you designate people by their email address, but we&#8217;ll soon be recognizing Stickis usernames and channel names and helping you with auto-completion.</p>
+<p>Try it out, it is a really cool way to target a particular audience.
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/10/13/new-feature-anti-social-tags/feed/</wfw:commentRSS>
+		</item>
+		<item>
+		<title>Our Closed Beta has Launched!</title>
+		<link>http://blog.stickis.com/2006/10/13/our-beta-has-launched/</link>
+		<comments>http://blog.stickis.com/2006/10/13/our-beta-has-launched/#comments</comments>
+		<pubDate>Fri, 13 Oct 2006 23:27:57 +0000</pubDate>
+		<dc:creator>marc</dc:creator>
+		
+	<category>news</category>
+		<guid isPermaLink="false">http://blog.stickis.com/2006/10/13/our-beta-has-launched/</guid>
+		<description><![CDATA[
+On September 26th, we quietly launched the Stickis beta for Internet Explorer to a handful of users and have been expanding it carefully since.
+For now we&#8217;re measuring our users&#8217; behavior and taking note of what is working and what&#8217;s causing difficulty.
+Thanks to all of you who&#8217;ve written copious stickis on what you like, the problems [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.stickis.com/download/install/stickis.exe"><img align="left" src="http://stickis.com/skin/img/ie-download.png" /></a></p>
+<p>On September 26th, we quietly launched the Stickis beta for Internet Explorer to a handful of users and have been expanding it carefully since.</p>
+<p>For now we&#8217;re measuring our users&#8217; behavior and taking note of what is working and what&#8217;s causing difficulty.</p>
+<p>Thanks to all of you who&#8217;ve written copious stickis on what you like, the problems you&#8217;ve found, and invited your friends.</p>
+<p><img align="left" src="http://stickis.com/skin/img/ff-comingsoon-download.png" />We&#8217;re waiting to open to a wider audience until we release our Firefox version which should happen in the next two weeks, as we don&#8217;t want to dissapoint people who&#8217;re invited to join but are turned away because there isn&#8217;t a firefox version available yet.</p>
+<p>To all of your early participants: welcome and thanks for the feedback!
+</p>
+]]></content:encoded>
+			<wfw:commentRSS>http://blog.stickis.com/2006/10/13/our-beta-has-launched/feed/</wfw:commentRSS>
+		</item>
+	</channel>
+</rss>

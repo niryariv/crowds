@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+  <head>
+    <title>Planet RubyOnRails</title>
+    <dateCreated>2006-11-27T20:13:47-06:00</dateCreated>
+    <dateModified>2006-05-29T12:45:14-05:00</dateModified>
+    <ownerName>jim ray</ownerName>
+    <ownerEmail>jim@mosaicglobe.com</ownerEmail>
+  </head>
+  <body>
+    <outline text="" xmlUrl="http://feeds.feedburner.com/rufytech"/>
+    <outline text="" xmlUrl="http://ryandaigle.com/pebble/categories/tech/ruby/rss.xml"/>
+    <outline text="" xmlUrl="http://www.mattmccray.com/feed/rss2/"/>
+    <outline text="(24)slash7" xmlUrl="http://slash7.com/xml/rss20/feed.xml"/>
+    <outline text="*scottstuff*" xmlUrl="http://scottstuff.net/blog/xml/rss/feed.xml"/>
+    <outline text="@Lathi.net" xmlUrl="http://blog.lathi.net/xml/rss20/feed.xml"/>
+    <outline text="Anarchogeek" xmlUrl="http://www.anarchogeek.com/xml/rss"/>
+    <outline text="Approaching Normal" xmlUrl="http://feeds.feedburner.com/ApproachingNormal"/>
+    <outline text="BenCurtis.com" xmlUrl="http://www.bencurtis.com/feed/atom/"/>
+    <outline text="bleything.blog(:stuff)" xmlUrl="http://feeds.feedburner.com/bleything/blog"/>
+    <outline text="blog.talbott.ws" xmlUrl="http://blog.talbott.ws/xml/rss20/feed.xml"/>
+    <outline text="BlogFish" xmlUrl="http://blog.innerewut.de/xml/rss/feed.xml"/>
+    <outline text="Busy As Hell" xmlUrl="http://feeds.feedburner.com/BusyAsHell"/>
+    <outline text="but she's a girl..." xmlUrl="http://www.rousette.org.uk/blog/feed/rss2/"/>
+    <outline text="ChadFowler.com" xmlUrl="http://feeds.feedburner.com/Chadfowlercom"/>
+    <outline text="codefluency" xmlUrl="http://codefluency.com/xml/atom/feed.xml"/>
+    <outline text="conaltradh" xmlUrl="http://blog.lavalamp.ca/xml/rss20/feed.xml"/>
+    <outline text="convergent arts" xmlUrl="http://convergentarts.com/xml/rss/feed.xml"/>
+    <outline text="Curt's Comments" xmlUrl="http://feeds.feedburner.com/curthibbs"/>
+    <outline text="David's Blog of DOOM" xmlUrl="http://david.planetargon.us/xml/rss20/feed.xml"/>
+    <outline text="def euler(x); cos(x) + i*sin(x); end" xmlUrl="http://feeds.feedburner.com/defeulerxcosxisinxend"/>
+    <outline text="EncyteMedia" xmlUrl="http://feeds.feedburner.com/encytemedia"/>
+    <outline text="futuretrack5" xmlUrl="http://feeds.feedburner.com/Futuretrack5"/>
+    <outline text="Gluttonous" xmlUrl="http://glu.ttono.us/xml/rss20/feed.xml"/>
+    <outline text="has_many :through" xmlUrl="http://blog.hasmanythrough.com/xml/atom10/feed.xml"/>
+    <outline text="HyperionReactor - Ruby On Rails" xmlUrl="http://www.hyperionreactor.net/taxonomy/term/12/0/feed"/>
+    <outline text="I am rice" xmlUrl="http://feeds.feedburner.com/mongoo/CTIN"/>
+    <outline text="iBrasten" xmlUrl="http://ibrasten.com/xml/rss/feed.xml"/>
+    <outline text="interblah.net - Home" xmlUrl="http://interblah.net/feed/atom.xml"/>
+    <outline text="Jason Watkins" xmlUrl="http://blog.jasonwatkins.net/xml/rss20/feed.xml"/>
+    <outline text="Jason Wong" xmlUrl="http://www.jasonwong.org/xml/rss20/feed.xml"/>
+    <outline text="jlaine.net" xmlUrl="http://feeds.feedburner.com/jlainenet"/>
+    <outline text="jutopia" xmlUrl="http://feeds.feedburner.com/jutopia"/>
+    <outline text="jvoorhis" xmlUrl="http://feeds.feedburner.com/jvoorhis"/>
+    <outline text="Late to the Party" xmlUrl="http://cwilliams.textdriven.com/xml/rss/feed.xml"/>
+    <outline text="Loud Thinking" xmlUrl="http://feeds.feedburner.com/LoudThinking"/>
+    <outline text="Luke Redpath" xmlUrl="http://www.lukeredpath.co.uk/index.php/feed/"/>
+    <outline text="mir.aculo.us" xmlUrl="http://mir.aculo.us/rss/master"/>
+    <outline text="monkey in the middle" xmlUrl="http://samuelk.info/xml/atom10/feed.xml"/>
+    <outline text="MyOwnDB Blog" xmlUrl="http://www.myowndb.com/blog/?feed=rss2"/>
+    <outline text="Nimble Code" xmlUrl="http://www.nimblecode.com/xml/rss20/feed.xml"/>
+    <outline text="Notes from a messy desk" xmlUrl="http://feeds.feedburner.com/wossname"/>
+    <outline text="Nuby on Rails" xmlUrl="http://nubyonrails.topfunky.com/xml/rss/feed.xml"/>
+    <outline text="oobablog: Blog of Paul Ingles" xmlUrl="http://feeds.feedburner.com/oobaloo"/>
+    <outline text="overstimulate" xmlUrl="http://overstimulate.com/xml/rss/feed.xml"/>
+    <outline text="pdx.rb" xmlUrl="http://blog.pdxruby.org/xml/rss20/feed.xml"/>
+    <outline text="PJ Hyett" xmlUrl="http://pjhyett.com/xml/rss/feed.xml"/>
+    <outline text="PluginAWeek" xmlUrl="http://www.pluginaweek.org/feed/atom"/>
+    <outline text="Ponderings...: Category Ruby On Rails" xmlUrl="http://www.eric-stewart.com/blog/xml/rss/category/rubyonrails/feed.xml"/>
+    <outline text="poocs.net" xmlUrl="http://feeds.poocs.net/poocsnet"/>
+    <outline text="Projectionist" xmlUrl="http://feeds.feedburner.com/projectionist"/>
+    <outline text="Rails Tips" xmlUrl="http://feeds.feedburner.com/railstips"/>
+    <outline text="Railsdevelopment" xmlUrl="http://feeds.feedburner.com/Railsdevelopment"/>
+    <outline text="Relevance" xmlUrl="http://www.relevancellc.com/blogs/wp-rss2.php"/>
+    <outline text="Richard Livsey @ Livsey.org" xmlUrl="http://livsey.org/feed/atom/"/>
+    <outline text="Riding Rails" xmlUrl="http://weblog.rubyonrails.com/xml/rss20/feed.xml"/>
+    <outline text="Robby on Rails" xmlUrl="http://www.robbyonrails.com/xml/rss/feed.xml"/>
+    <outline text="Ruby on Rails Podcast" xmlUrl="http://podcast.rubyonrails.com/podcast.xml"/>
+    <outline text="Running with Rails !" xmlUrl="http://typo.in/xml/rss/feed.xml"/>
+    <outline text="Ryan's Scraps" xmlUrl="http://feeds.feedburner.com/RyansScraps"/>
+    <outline text="Scott Raymond" xmlUrl="http://scottraymond.net/xml/atom/feed.xml"/>
+    <outline text="Shugo's Blog" xmlUrl="http://blog.shugo.net/xml/rss/feed.xml"/>
+    <outline text="Sporkmonger" xmlUrl="http://sporkmonger.com/xml/atom10/feed.xml"/>
+    <outline text="Stake Ventures" xmlUrl="http://feeds.feedburner.com/StakeVentures"/>
+    <outline text="The Exciter" xmlUrl="http://theexciter.com/feed/"/>
+    <outline text="the { buckblogs :here }" xmlUrl="http://jamis.jamisbuck.org/xml/rss20/feed.xml"/>
+    <outline text="TinyScience Blog" xmlUrl="http://tinyscience.com/blog/xml-rss2.php"/>
+    <outline text="too-biased - home" xmlUrl="http://feeds.feedburner.com/too-biased/xml"/>
+    <outline text="tourb.us blog" xmlUrl="http://feeds.feedburner.com/TourbusRubyRailsBlog"/>
+    <outline text="TupleShop" xmlUrl="http://blog.tupleshop.com/feed/feed.xml"/>
+    <outline text="Typo Theme Contest" xmlUrl="http://typogarden.com/xml/rss/feed.xml"/>
+    <outline text="Waste of Time" xmlUrl="http://kasparov.skife.org/blog/index.rss"/>
+    <outline text="When in Doubt" xmlUrl="http://journal.schubert.cx/xml/rss20/feed.xml"/>
+    <outline text="xml-blog" xmlUrl="http://feeds.feedburner.com/Xml-blog"/>
+  </body>
+</opml>

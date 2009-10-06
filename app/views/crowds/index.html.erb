@@ -1,0 +1,23 @@
+<% if current_user.nil? %>
+<p><%= AppName %> takes any number of sources - blogs, news sites, Twitter streams etc - and tracks their RSS/Atom feeds for recurring links. If a link to a page appears in two or more of your sources, or if one source links to an item in another source, that link is considered interesting and is added to the "Items" list.</p>
+	
+<p><%= link_to "Register", new_account_path %> or <%= link_to "log in", new_user_session_path %> to start creating your own crowd, or take a look at a sample crowd's <%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and current <%= link_to '<b>items</b>', crowd_items_path(1) %>.
+</p>
+
+<% elsif current_user.crowds.size == 0 %>
+	<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
+		Welcome! To start off, name your crowd:<br />
+		<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
+		<%= f.text_field :title %>
+		<%= f.submit "Create" %>
+	<% end %>
+<% else %>
+	Your crowds: 
+	<% for crowd in @crowds -%>
+	<li>
+		<%= link_to crowd.title, crowd_items_path(crowd) -%>	&nbsp;&nbsp;&nbsp;
+		<%= link_to "Show Feeds", crowd_feeds_path(crowd) -%>	&nbsp;&nbsp;&nbsp;
+		<%= link_to "Delete", crowd_path(crowd), :method => :delete -%>
+	</li>
+	<% end -%>
+<% end %>	

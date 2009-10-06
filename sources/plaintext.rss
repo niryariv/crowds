@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="wordpress/MU" -->
+<rss version="2.0" 
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	>
+
+<channel>
+	<title>plaintext</title>
+	<link>http://niryariv.wordpress.com</link>
+	<description></description>
+	<pubDate>Mon, 03 Jul 2006 10:26:08 +0000</pubDate>
+	<generator>http://wordpress.org/?v=MU</generator>
+	<language></language>
+			<item>
+		<title>RSS, XML, Microformats IV - Yahoo!</title>
+		<link>http://niryariv.wordpress.com/2006/06/22/rss-xml-microformats-iv-yahoo/</link>
+		<comments>http://niryariv.wordpress.com/2006/06/22/rss-xml-microformats-iv-yahoo/#comments</comments>
+		<pubDate>Thu, 22 Jun 2006 04:34:50 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>RSS</category>
+
+		<category>Links</category>
+
+		<guid isPermaLink="false">https://niryariv.wordpress.com/2006/06/22/rss-xml-microformats-iv-yahoo/</guid>
+		<description><![CDATA[Yahoo! Local will now have full support for microformats. Together with serialized PHP results, RSS everywhere, the new Yahoo! Messenger SDK etc it seems like Yahoo! is really serious about opening up their data - it will be interesting to watch how/if these moves will affect the company&#8217;s business results in the longer run.
+
+]]></description>
+			<content:encoded><![CDATA[<p>Yahoo! Local will now have full support for microformats. Together with <a href="http://developer.yahoo.com/common/phpserial.html">serialized PHP results</a>, <a href="http://developer.yahoo.com/rss/index.html#biglist">RSS everywhere</a>, the new <a href="http://developer.yahoo.com/messenger/">Yahoo! Messenger SDK</a> <a href="http://developer.yahoo.com/">etc</a> it seems like Yahoo! is really serious about opening up their data - it will be interesting to watch how/if these moves will affect the company&#8217;s business results in the longer run.
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/06/22/rss-xml-microformats-iv-yahoo/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>RSS, XML, Microformats III: Amazon Pricefeed</title>
+		<link>http://niryariv.wordpress.com/2006/05/18/rss-xml-microformats-iii-amazon-pricefeed/</link>
+		<comments>http://niryariv.wordpress.com/2006/05/18/rss-xml-microformats-iii-amazon-pricefeed/#comments</comments>
+		<pubDate>Thu, 18 May 2006 20:10:38 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>RSS</category>
+
+		<category>User Interface</category>
+
+		<category>RSS Tap</category>
+
+		<category>pricefeed</category>
+
+		<guid isPermaLink="false">https://niryariv.wordpress.com/2006/05/18/rss-xml-microformats-iii-amazon-pricefeed/</guid>
+		<description><![CDATA[I put up a new small project now, pricefeed. Basically it creates an RSS 2.0 feed of an Amazon product price, so it can be used for tracking price changes - for example, you want to get a 60GB video iPod but it&#8217;s too expensive for you, you use pricefeed to create a feed for [...]]]></description>
+			<content:encoded><![CDATA[<p>I put up a new small project now, <a href="http://niryariv.net/pricefeed/index.php"><strong>pricefeed</strong></a>. Basically it creates an RSS 2.0 feed of an <a href="http://amazon.com/">Amazon</a> product price, so it can be used for tracking price changes - for example, you want to get a <a href="http://www.amazon.com/gp/product/B000A3WS8O/sr=1-4/qid=1147980294/ref=sr_1_4/104-5989095-1919921?%5Fencoding=UTF8&amp;s=pc">60GB video iPod</a> but it&#8217;s too expensive for you, you use pricefeed to create a <a href="http://niryariv.net/pricefeed/index.php?ASIN=B000A3WS8O">feed</a> for this price and then get alerted when it changes. </p>
+<p>The RSS &lt;description&gt; field contains a microformatted text (sort of, I just hacked it out since there&#8217;s no standard microformat for product information yet) that can be read by the user or parseable by another app. The user sees: </p>
+<blockquote><p>
+Amazon price for Apple 60 GB iPod with Video Playback Black is now $379.95</p>
+<p><a href="http://www.amazon.com/exec/obidos/redirect?tag=niryarivnet-20%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=B000A3WS8O%2526tag=niryarivnet-20%2526lcode=xm2%2526cID=2025%2526ccmID=165953%2526location=/o/ASIN/B000A3WS8O%25253FSubscriptionId=1CT3AJ9HV6EQ0AG1RZ82">Go to Amazon product page</a>
+</p></blockquote>
+<p>And to a parser it would look like:</p>
+<blockquote><p>
+&lt;span class=&quot;amazon&quot;&gt;<br />
+&lt;p&gt;Amazon price for &lt;span class=&quot;title&quot;&gt;Apple 60 GB iPod with Video Playback Black&lt;/span&gt; is now $&lt;span class=&quot;price usd&quot;&gt;379.95&lt;/span&gt;&lt;/p&gt;<br />
+&lt;p&gt;&lt;a class=&quot;url&quot; href=&quot;http://www.amazon.com/exec/obidos/redirect?tag=niryarivnet-20%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=B000A3WS8O%2526tag=niryarivnet-20%2526lcode=xm2%2526cID=2025%2526ccmID=165953%2526location=/o/ASIN/B000A3WS8O%25253FSubscriptionId=1CT3AJ9HV6EQ0AG1RZ82&quot;&gt;Go to Amazon product page&lt;/a&gt;&lt;/p&gt;<br />
+&lt;/span&gt;
+</p></blockquote>
+<p>The idea is to delegate as much as possible to the feed reader. For example, there is no database - the price is checked and feed generated when the feed readers access it. Thus no need for cron jobs either. To guarantee new content appears only if the price has changed, the item GUID is based on the price - so the feed reader will only display a new item if the price has changed. A user can look at previous items of the feed and get price history. </p>
+<p>Since this is sort of an <a href="http://niryariv.wordpress.com/2006/03/04/rss-tap/">RSS Tap</a> where new content is quite infrequent, I figured it made sense to allow easy sign up to get notifications via email with <a href="http://rssfwd.com/">RssFwd</a> (my own <a href="http://notifyr.com/">RSS-&gt;Email</a> is running out of quota, and wanted to stick to &#8220;no database&#8221; ;)). I like being able to sign up and then forget about it, just get an email when there&#8217;s new information.</p>
+<p>Well, just a little app. Hopefully it demonstrates what I meant in the last few posts and might even be a useful service for some people. I put it up now - please let me know if you run into any issues. (PS: it&#8217;s a little rough usablity/looks-wise, it&#8217;s more of a proof of concept - so no rounded corners here, yet ;))
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/05/18/rss-xml-microformats-iii-amazon-pricefeed/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>RSS as the new XML, II: Microformats</title>
+		<link>http://niryariv.wordpress.com/2006/05/14/rss-as-the-new-xml-ii-microformats/</link>
+		<comments>http://niryariv.wordpress.com/2006/05/14/rss-as-the-new-xml-ii-microformats/#comments</comments>
+		<pubDate>Sun, 14 May 2006 14:15:49 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<guid isPermaLink="false">https://niryariv.wordpress.com/2006/05/14/rss-as-the-new-xml-ii-microformats/</guid>
+		<description><![CDATA[Another technology I think might be instrumental in making RSS (yes, and/or Atom) the standard for Web Services is Microformats. Microformats is a really neat idea that basically means having display data and semantic data in the same document - so that the data is both machine readable as in XML and human-readable (or rather, [...]]]></description>
+			<content:encoded><![CDATA[<p>Another technology I think might be instrumental in making RSS (yes, and/or Atom) the standard for Web Services is <strong>Microformats</strong>. <a href="http://microformats.org/">Microformats</a> is a really neat idea that basically means having display data and semantic data in the same document - so that the <strong>data is both machine readable as in XML and human-readable (or rather, browser-readable) as in HTML</strong>. </p>
+<p>It is pretty simple, actually. For example, with the microformat for <a href="http://microformats.org/wiki/hcalendar">hCalendar</a> you take an event description like &#8220;Web 2.0 Conference: October 5-7, at the Argent Hotel, San Francisco, CA&#8221; and format it as follows:</p>
+<p>&lt;span class=&quot;vevent&quot;&gt;<br />
+ &lt;a class=&quot;url&quot; href=&quot;http://www.web2con.com/&quot;&gt;<br />
+  &lt;span class=&quot;summary&quot;&gt;Web 2.0 Conference&lt;/span&gt;:<br />
+  &lt;abbr class=&quot;dtstart&quot; title=&quot;2005-10-05&quot;&gt;October 5&lt;/abbr&gt;-<br />
+  &lt;abbr class=&quot;dtend&quot; title=&quot;2005-10-08&quot;&gt;7&lt;/abbr&gt;,<br />
+ at the &lt;span class=&quot;location&quot;&gt;Argent Hotel, San Francisco, CA&lt;/span&gt;<br />
+ &lt;/a&gt;<br />
+&lt;/span&gt;</p>
+<p>What you get is an XHTML document that contains the text you want the user to see together with elements that make it possible for another app to figure out what&#8217;s the date, location, URL etc. Yet the same data, viewed in a browser, would look just like the original text &#8220;Web 2.0 Conference: October 5-7, at the Argent Hotel, San Francisco, CA&#8221;.</p>
+<p>Most interesting for me, as the hCalendar wiki page says (apparently they thought of this before me ;)) this is suitable for embedding in RSS. That&#8217;s especially useful since RSS is different than many other XML grammars in that it is often more or less sent directly to display - the &lt;description&gt; part of it, at least (and you can usually make a good guess on where the &lt;link&gt; and &lt;title&gt; parts go as well) so it can pretty nice to be able to format the description text so that it can be either parsed by a machine or read by a human. </p>
+<p>(Actually, writing this made me wonder about having the feed itself as a microformat, so that the HTML pages of a website can be parsed by a feed reader without requiring a dedicated RSS feed - and apparently the microformats guys are already working on <a href="http://microformats.org/wiki/hatom">that</a>, too. It might not be the best option, because of traffic issues, but I think it may still be a good idea in certain cases)</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/05/14/rss-as-the-new-xml-ii-microformats/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>RSS as the new XML</title>
+		<link>http://niryariv.wordpress.com/2006/05/09/rss-is-the-new-xml/</link>
+		<comments>http://niryariv.wordpress.com/2006/05/09/rss-is-the-new-xml/#comments</comments>
+		<pubDate>Tue, 09 May 2006 13:36:46 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>RSS</category>
+
+		<guid isPermaLink="false">https://niryariv.wordpress.com/2006/05/09/rss-is-the-new-xml/</guid>
+		<description><![CDATA[Well, everyone knows RSS is basically a grammar of XML. But I think that it&#8217;s becoming more than this. That is, it&#8217;s a subset of XML in the same way that XML is a subset of text: When XML started getting attention, some people I knew didn&#8217;t understand why - after all, it&#8217;s just text. [...]]]></description>
+			<content:encoded><![CDATA[<p>Well, everyone knows RSS is basically a grammar of XML. But I think that it&#8217;s becoming more than this. That is, it&#8217;s a subset of XML in the same way that XML is a subset of text: When XML started getting attention, some people I knew didn&#8217;t understand why - after all, it&#8217;s just text. You can define your own formats for passing data in text, and if you know what you&#8217;re doing it would result in smaller payloads and probably faster parsing as well, yet be at least as readable for humans and machines as XML.</p>
+<p>But the real power of XML is that it&#8217;s a <em>standard</em> for how the text looks - tags, attributes inside them and text between them, basically. This made it possible to write standard XML export/import libraries, and, indeed, in most programming environments today you can handle XML as easily as native data without giving much thought to the actual text structure.</p>
+<p>Yet, XML was not the ultimate solution, because you still use different grammars for different data, and people have built pretty complex ones - <a href="http://en.wikipedia.org/wiki/SOAP">SOAP</a> springs to mind. Thus, an XML query to the Google search engine API looks something like this:</p>
+<p><code><br />
+&lt;?xml version='1.0' encoding='UTF-8'?&gt;</p>
+<p>&lt;soap11:Envelope<br />
+   xmlns=&quot;urn:GoogleSearch&quot;<br />
+   xmlns:soap11=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;<br />
+  &lt;soap11:Body&gt;<br />
+    &lt;doGoogleSearch&gt;<br />
+      &lt;key&gt;1234&lt;/key&gt;<br />
+      &lt;q&gt;soap&lt;/q&gt;<br />
+      &lt;start&gt;0&lt;/start&gt;<br />
+      &lt;maxResults&gt;10&lt;/maxResults&gt;<br />
+      &lt;filter&gt;true&lt;/filter&gt;<br />
+      &lt;restrict&gt;&lt;/restrict&gt;<br />
+      &lt;safeSearch&gt;false&lt;/safeSearch&gt;<br />
+      &lt;lr&gt;&lt;/lr&gt;<br />
+      &lt;ie&gt;latin1&lt;/ie&gt;<br />
+      &lt;oe&gt;latin1&lt;/oe&gt;<br />
+    &lt;/doGoogleSearch&gt;<br />
+  &lt;/soap11:Body&gt;<br />
+&lt;/soap11:Envelope&gt;<br />
+</code></p>
+<p>At this stage, you better have a SOAP library on top of the XML library, and preferrably a special Google SOAP API library on top of that (and while Google is interesting to enough people that you can easily find a decent existing library, that is not always the case for other resources).</p>
+<p>An equivalent RSS query might look like this:</p>
+<p><code><br />
+rss.google.com?key=1234&amp;q=soap&amp;start=0&amp;maxResults=10&amp;filter=true<br />
+&amp;safeSearch=false&amp;ie=latin1&amp;oe=latin1<br />
+</code></p>
+<p>Parsing or publishing a response is also easier in RSS - the grammar is small and simple, thus has plenty of libraries to handle it (and you can manage quite easily without them, too). Although you can add your own tags like in the <a href="http://www.apple.com/itunes/podcasts/techspecs.html">iTunes RSS feed</a>, few publishers do that, and even when then it&#8217;s usually not a requirement for using the feed. (BTW, <a href="http://microformats.org/">microformats</a> can be interesting in this space, particularly since many apps take RSS straight to output. More on this in a future post.)</p>
+<p>RSS (note that in this blog, &#8220;RSS&#8221;==&#8221;RSS and/or Atom&#8221;) is definitely optimized for reading data rather than writing. I think this is a feature rather than an issue. In the Web, reading is more important than writing - witness your connection&#8217;s upload vs. download speeds, or MySql SELECT vs UPATE. Same goes with RSS&#8217;s simplicity - simple technologies usually succeed over more evolved ones in the Web, even if their design is somewhat crude (PHP? ;) ).</p>
+<p>I&#8217;d bet that Web Services, as in getting data via HTTP in machine readable format, will be done mostly via RSS and Atom in the coming years. In my opinion, they just fit the mindset and skillset of people making the Web better than any similar technology so far.
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/05/09/rss-is-the-new-xml/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>The Long Now Talks</title>
+		<link>http://niryariv.wordpress.com/2006/04/27/the-long-now-talks/</link>
+		<comments>http://niryariv.wordpress.com/2006/04/27/the-long-now-talks/#comments</comments>
+		<pubDate>Thu, 27 Apr 2006 19:35:40 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Life</category>
+
+		<category>Links</category>
+
+		<guid isPermaLink="false">https://niryariv.wordpress.com/2006/04/27/the-long-now-talks/</guid>
+		<description><![CDATA[The Long Now Foundation was set up in 1996, to promote thinking in really long timeframes: its most well known project is to build a clock that will run for 10,000 years. 
+I recently discovered the Long Now Seminars - free mp3s of talks about long term thinking, presented by truly brilliant, thoughtful people. It [...]]]></description>
+			<content:encoded><![CDATA[<p>The <a href="http://www.longnow.org/">Long Now Foundation</a> was set up in 1996, to promote thinking in really long timeframes: its most well known project is to build a <a href="http://www.longnow.org/projects/clock/">clock</a> that will run for 10,000 years. </p>
+<p>I recently discovered the <a href="http://www.longnow.org/projects/seminars/">Long Now Seminars</a> - free mp3s of talks about long term thinking, presented by truly brilliant, thoughtful people. It is really really good stuff. I feel especially lucky, being able to hear these talks while walking with <a href="http://www.flickr.com/photos/inbal_nir/3661933/in/set-133841/">our dog</a> through a landscape that looks like this: :)</p>
+<p><img src="http://static.flickr.com/3/3650699_0025bf294e.jpg" alt="Judea Desert" />
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/04/27/the-long-now-talks/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>The RSS Tap</title>
+		<link>http://niryariv.wordpress.com/2006/03/04/rss-tap/</link>
+		<comments>http://niryariv.wordpress.com/2006/03/04/rss-tap/#comments</comments>
+		<pubDate>Sat, 04 Mar 2006 18:14:42 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>RSS</category>
+
+		<category>User Interface</category>
+
+		<category>Notifyr</category>
+
+		<category>RSS Tap</category>
+
+		<guid isPermaLink="false">http://niryariv.wordpress.com/2006/03/04/rss-tap/</guid>
+		<description><![CDATA[It just occured to me that many things I been thinking about feeds can be summarized as &#8220;RSS Tap&#8220;, and so I&#8217;m rushing to coin this phrase (hey, it worked nicely for the guy who came up with &#8220;AJAX&#8221; ;))
+&#8220;RSS Tap&#8221; (or, well, &#8220;RSS/Atom Tap&#8221;) is like RSS push, but more gentle. For example, you&#8217;re [...]]]></description>
+			<content:encoded><![CDATA[<p>It just occured to me that many things I been thinking about feeds can be summarized as &#8220;<strong>RSS Tap</strong>&#8220;, and so I&#8217;m rushing to coin this phrase (hey, it worked nicely for the guy who came up with &#8220;AJAX&#8221; ;))</p>
+<p>&#8220;RSS Tap&#8221; (or, well, &#8220;RSS/Atom Tap&#8221;) is like RSS push, but more gentle. For example, you&#8217;re subscribing to some article&#8217;s comment feed: you want to read future comments, but you don&#8217;t really need each comment delivered immediatley to your aggregator as it&#8217;s published. Probably you don&#8217;t even want to make a new feed subscription in your aggregator just for these comments. You just want to be notified when there&#8217;s some new comments to read there - but not every hour, and without having to register anywhere, and without getting any future spam. </p>
+<p>So RSS tap is like a kinder, gentler RSS push. But it <em>is</em> a tap - it does actively get to you, rather than you having to pull the info yourself (what we used to call, in less sophisticated times, &#8220;visit the web page again&#8221;). </p>
+<p>As phrase coiner of &#8220;RSS Tap&#8221; - verified by a <a href="http://www.google.com/search?q=%22RSS+Tap%22">Google search</a>! - I hereby declare <a href="http://notifyr.com/">Notifyr</a> an RSS tap application: you don&#8217;t need to register. You don&#8217;t need to use a feed aggregator at all. You get messages only if there&#8217;s new content, and not more than once a day. You turn it off by one click on the link at the bottom of the email, and switch it on again at another place with one click of the bookmarklet (by now I achieved about 3:1 blog-to-code lines ratio on that little app)</p>
+<p>(BTW, being non-native English speaker I might be missing something here: when I say tap I&#8217;m thinking of someone tapping your shoulder to get your attention in a crowded place. Maybe also an old water tap that releases a few drops every now and then. Is there a more fitting word I should use?)
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/03/04/rss-tap/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Site Referrers Utility</title>
+		<link>http://niryariv.wordpress.com/2006/02/26/site-referrers-utility/</link>
+		<comments>http://niryariv.wordpress.com/2006/02/26/site-referrers-utility/#comments</comments>
+		<pubDate>Sun, 26 Feb 2006 15:29:13 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>get_referer</category>
+
+		<guid isPermaLink="false">http://niryariv.wordpress.com/2006/02/26/site-referrers-utility/</guid>
+		<description><![CDATA[Hacked together a little PHP command line tool for extracting HTTP referer (sp - but not mine ;) data from Apache log file. Might be useful for people hosting with TextDrive, or other hosts that don&#8217;t have a stats UI built in. The data returned shows, for each referrer URL, the total number of accesses [...]]]></description>
+			<content:encoded><![CDATA[<p>Hacked together a little PHP command line tool for extracting HTTP referer (sp - but not mine ;) data from Apache log file. Might be useful for people hosting with TextDrive, or other hosts that don&#8217;t have a stats UI built in. The data returned shows, for each referrer URL, the total number of accesses and date of the last one. </p>
+<p>To install, <a href="http://niryariv.net/referer/get_referer.tar.gz">download get_referer.tar.gz</a>  and unpack it in your log files&#8217; directory. Make <code>get_referer.php</code> and <code>referers</code> executable. </p>
+<p>Usage:</p>
+<p>1. Get referrer stats from current access log:</p>
+<p><code>./get_referers.php access_log</code></p>
+<p>2. Get referrers stats overall:</p>
+<p><code>(gunzip -c access_log.*.gz ; cat access_log) | ./get_referer.php</code></p>
+<p>(This line is included in the tar also, in the <code>referers</code> file)</p>
+<p>3. Get referrers stats for 2006:<br />
+<code>(gunzip -c access_log.2006*.gz ; cat access_log) | ./get_referer.php</code></p>
+<p>And so on&#8230; </p>
+<p>Hopefully would be useful for someone out there ;)</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/02/26/site-referrers-utility/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Finding the Interesting Posts</title>
+		<link>http://niryariv.wordpress.com/2006/01/22/post-ranking/</link>
+		<comments>http://niryariv.wordpress.com/2006/01/22/post-ranking/#comments</comments>
+		<pubDate>Sun, 22 Jan 2006 21:41:24 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>RSS</category>
+
+		<guid isPermaLink="false">http://niryariv.wordpress.com/2006/01/22/post-ranking/</guid>
+		<description><![CDATA[I&#8217;m subscribed to lots of RSS feeds. And the messages keep pouring in. There&#8217;s no way I could read all of them. And of course some of them are about the cute thing the writer&#8217;s dog did yesterday, when I&#8217;m really more into their PHP hacks.
+But if some post is really good, it usually gets [...]]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m subscribed to lots of RSS feeds. And the messages keep pouring in. There&#8217;s no way I could read all of them. And of course some of them are about the cute thing the writer&#8217;s dog did yesterday, when I&#8217;m really more into their PHP hacks.</p>
+<p>But if some post is really good, it usually gets linked to. And since the feeds I read are more or less within a few areas of interest, good chance that there will be links within the feeds that I read to that good post.</p>
+<p>So, wouldn&#8217;t it be nice to have some way to rank posts&#8217; values by the number of links they got <strong>within the feeds I&#8217;m reading</strong>? I wonder if something like this exists already&#8230;</p>
+<p><strong>UPDATE:</strong> Well, apparently it actually does exist :) - that&#8217;s what <a href="http://tailrank.com/">TailRank</a> is all about. I just uploaded my OPML - we&#8217;ll see how it works out&#8230;
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/01/22/post-ranking/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>Tag This</title>
+		<link>http://niryariv.wordpress.com/2006/01/14/wankr/</link>
+		<comments>http://niryariv.wordpress.com/2006/01/14/wankr/#comments</comments>
+		<pubDate>Sat, 14 Jan 2006 21:06:52 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<guid isPermaLink="false">http://niryariv.wordpress.com/2006/01/14/wankr/</guid>
+		<description><![CDATA[Wankr is hilarious. It&#8217;s not that there aren&#8217;t some good apps &#38; ideas in &#8220;Web 2.0&#8243;, but the hype accompanying it all is just too much. I think there&#8217;s going to be a backlash, though - it&#8217;s becoming too easy to score coolness points by attacking it. 
+Eventually the hype moves away and the valid [...]]]></description>
+			<content:encoded><![CDATA[<p><a href="http://www.parm.net/web2.0/">Wankr</a> is hilarious. It&#8217;s not that there aren&#8217;t some good apps &amp; ideas in &#8220;Web 2.0&#8243;, but the hype accompanying it all is just too much. I think there&#8217;s going to be a backlash, though - it&#8217;s becoming too easy to score coolness points by attacking it. </p>
+<p>Eventually the hype moves away and the valid stuff stays, hopefully sooner rather than later.
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/01/14/wankr/feed/</wfw:commentRss>
+		</item>
+		<item>
+		<title>On Notifyr</title>
+		<link>http://niryariv.wordpress.com/2006/01/12/on-notifyr/</link>
+		<comments>http://niryariv.wordpress.com/2006/01/12/on-notifyr/#comments</comments>
+		<pubDate>Thu, 12 Jan 2006 22:58:59 +0000</pubDate>
+		<dc:creator>Nir</dc:creator>
+		
+		<category>Web</category>
+
+		<category>Programming</category>
+
+		<category>RSS</category>
+
+		<category>User Interface</category>
+
+		<category>Notifyr</category>
+
+		<guid isPermaLink="false">http://niryariv.wordpress.com/2006/01/12/on-notifyr/</guid>
+		<description><![CDATA[I built Notifyr couple months ago. I actually got off my ass and did it in order to learn Ruby on Rails, and at the same opportunity scratch a little itch (no pun please) I had about sharing Flickr photos.
+I was travelling a bit at the time and was getting tired of emailing friends &#38; [...]]]></description>
+			<content:encoded><![CDATA[<p>I built <strong><a href="http://notifyr.com">Notifyr</a></strong> couple months ago. I actually got off my ass and did it in order to learn <a href="http://rubyonrails.com/">Ruby on Rails</a>, and at the same opportunity scratch a little itch (no pun please) I had about sharing <a href="http://flickr.com/">Flickr</a> photos.</p>
+<p>I was travelling a bit at the time and was getting tired of emailing friends &amp; family whenever I returned and uploaded new trip photos to <a href="http://www.flickr.com/photos/inbal_nir/">my Flickr page</a>. RSS could have solved this, but almost no one (that&#8217;s among people <em>with</em> a life) uses RSS. I considered RSS to email gateways, like <a href="http://rssfwd.com/">RssFwd</a>, but these usually send an email for every new item - 20 new photos from my last trip would mean 20 emails to each contact.</p>
+<p>So, I wrote a simple app which monitors a Flickr page&#8217;s RSS once a day and, if new images were published, sends one email per contact: &#8220;I got new photos in my Flickr page&#8221;.</p>
+<p>Next was the registration issue. I really dislike having to register to use sites - there&#8217;s probably no way around this for email services or banks, but for tiny apps like Notifyr it&#8217;s absurd to have to register, wait for confirmation mail, remember a password etc. My solution was basically adapted (read &#8220;lifted&#8221;) straight from RssFwd - <strong>no registration</strong> at all, every email sent contains an easily-filterable sender address and an unsubscribe link with a unique string.</p>
+<p>No one can find out what pages you&#8217;re monitoring without breaking into your email account (or into notifyr.com), or subscribe you to something you don&#8217;t want without being easily deleted, nor unsubscribe you without figuring out the hash string. I believe this is <strong>good-enough-security</strong>: obviously it can be compromised, just like your bank&#8217;s website can. I believe the Evil Genius Cracker would rather concentrate her powers on the latter first.</p>
+<p>An added bonus of having no registration is <strong>solving the &#8220;Grandma Case&#8221;:</strong> I wanted people to be able to send a link to their non-geek contacts that will subscribe them to their Flickr page, or even subscribe them without sending a link so that, for example, you could have your grandmother get an email whenever new family pictures are uploaded. You enter her email and your photo page URL, and it starts working. She never has to register or even visit notifyr.com at all.</p>
+<p>Building these links is quite easy - the <a href="http://notifyr.com/using/">examples</a> show you how to <strong>build URLs</strong> (or &#8220;Access Via REST API&#8221; if you like that sort of stuff) by yourself. I&#8217;m work on the assumption here that, while Notifyr users may not be computer geeks, they can figure how to alter a URL by themselves. Happily, it seems to have worked out well so far, and indeed people have been creating their own Notifyr links on their blogs or Flickr profiles etc.</p>
+<p>Finally, you might wonder about spammers using Notifyr. This is simply handled by making it a lousy tool for spamming. Emails get sent at most once a day. Emails don&#8217;t contain the actual photos are other content (text etc) that can be influenced by the photo page&#8217;s owner. Emails do contain an unsubscribe link. A spammer would have to publish his content as Flickr images - and be vulnerable to Flickr&#8217;s own content editing. So, <strong>rather than make it hard for spammer, I just made it useless for them</strong>. If this is not Zen I do not know what is.</p>
+<p>Well, that&#8217;s <strong><a href="http://notifyr.com/">Notifyr</a></strong>. Hope you might find it useful. There&#8217;s probably more text here than in the actual code already, but that&#8217;s how it goes - us lazy people know that talking a lot about what we&#8217;ve done keeps us from having to do more of it.
+</p>
+]]></content:encoded>
+			<wfw:commentRss>http://niryariv.wordpress.com/2006/01/12/on-notifyr/feed/</wfw:commentRss>
+		</item>
+	</channel>
+</rss>
