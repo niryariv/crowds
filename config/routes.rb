@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   # 
   # map.resources :items
   # 
-  # map.resources :crowds
+  map.resources :crowds
   # 
   map.resources :password_resets
 
