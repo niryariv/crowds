@@ -40,5 +40,5 @@ production:
   adapter: mysql
   database: bottomfeeder_production
   username: root
-  password: bhrbhr
+  password: 
   host: localhost

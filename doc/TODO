@@ -1,6 +1,6 @@
 
 * disable delete/entry for unauthorized users (or handle it cleanly)
-* 1 crowd per user?
+* limit 1 crowd per user?
 
 * remove unused views/controllers
 
@@ -10,12 +10,8 @@
 
 * clean old tags (SellByDate = Gaps.max ??)
 
-* undo messages
-
 * hover bg color/delete icon for feeds
 
 * let non-logged in users see feeds/items
 
 * DB migrations
-
-* RoR 2.x -> allow .format
