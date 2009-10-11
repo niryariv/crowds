@@ -1,6 +1,33 @@
 
-* Scan feeds into DB and remove expired items:
+URLs
+=======
+Home: 						http://crowdwhisper.com/
+Feeds for crowd #1: 		http://crowdwhisper.com/crowd/1/feeds (add .xml for OPML of feeds)
+Recent items for crowd #1: 	http://crowdwhisper.com/crowd/1/items (add.xml for RSS of items)
 
-script/feedread_daemon.rb start
+Register: http://crowdwhisper.com/account/new
+Log in	: http://crowdwhisper.com/user_session/new
+Reset pass: http://crowdwhisper.com/password_resets/new
 
-Daemon output is written into log/feedread_daemon_<environment>.output
+
+Gems
+====
+daemons			http://daemons.rubyforge.org/
+htmlentities	http://htmlentities.rubyforge.org/
+feedtools		http://sporkmonger.com/projects/feedtools/
+
+
+Cron Tasks
+==========
+- Daily:
+	script/feedread_daemon.rb start
+
+Scans feeds into DB and removes expired items. Daemon output is written into log/feedread_daemon_<environment>.output
+
+
+TODO
+====
+- fix "forgot password" bug (cannot login with new password)
+- make pretty
+- improve the 'real url' system (maybe switch to TheRealURL, or just implement it internally)
+- (?) switch from feedtools to feedzirra
