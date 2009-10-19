@@ -1,4 +1,4 @@
-# CREATE TABLE trueurls (id INT NOT NULL AUTO_INCREMENT, host varchar(255), clean tinyint(1), PRIMARY KEY(id), INDEX(host));
+######## THIS IS UNUSED NOW (since discovering open-uri returns the real URL in base_uri, after open()) ########
 
 class Trueurl < ActiveRecord::Base
     
