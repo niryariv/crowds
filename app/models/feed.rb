@@ -41,7 +41,7 @@ class Feed < ActiveRecord::Base
 
     self.update_attribute(:last_read_at, Time.now)
   rescue Exception=>e
-    logger.error "Feed/refresh - UKNOWN ERROR: #{e.message} on #{self.url}"
+    logger.error "Feed/refresh - ERROR: #{e.message} on #{self.url}"
     false
   ensure
 #    rss = nil
