@@ -29,6 +29,7 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 
   config.gem "htmlentities"
+#  config.gem "ruby-openid"
 #  config.gem "feed_tools"
   
   # Only load the plugins named here, in the order given. By default, all plugins 

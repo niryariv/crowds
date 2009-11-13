@@ -22,7 +22,8 @@ Daemons.run_proc("feedread_daemon_#{RAILS_ENV}", {:dir_mode => :normal,
                                         }) do # {}
 
   # here we go..
-  require "#{ROOT}/config/environment"
+  require "#{ROOT}/config/environment.rb"
+  require "#{ROOT}/config/crowds.rb"
   GC.start
   
   ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
