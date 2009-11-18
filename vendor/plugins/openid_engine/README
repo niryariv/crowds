@@ -1,0 +1,67 @@
+
+Prerequisites
+=============
+
+Provides a thin wrapper around the excellent ruby-openid gem from JanRan. Be sure to install that first:
+
+  gem install ruby-openid
+
+To understand what OpenID is about and how it works, it helps to read the documentation for lib/openid/consumer.rb
+from that gem.
+
+The specification used is http://openid.net/specs/openid-authentication-2_0.html.
+
+First Steps
+===========
+
+After installing this plugin, you need to:
+
+	rake open_id_authentication:db:create
+
+Then, you need a default route:
+
+  map.root :controller => 'welcome'
+
+Then, anywhere you want users to be authenticated in your controller, just do:
+
+	before_filter :signin_required
+
+And you're done!
+
+Helpers
+=======
+
+The following helpers are available in your controller and views:
+	
+	* current_user - returns the current authenticated user
+	* signed_in? - tells you whether or not the current session is authenticated
+
+Routes
+======
+
+This engine adds a session resource to your routes, as well as two handy URLs, 
+"/signin" and "/signout", which do what they sound like they should.
+
+Assumptions
+===========
+
+This engine currently assumes the existence of a User model. I know, that's a 
+little dumb, but as a first pass, it seems like a reasonable assumption. As 
+such, the migration adds an identity_url to the users table. 
+
+Also, it assumes you're treating your users as RESTful resources, so if you 
+have validations on your user model, upon account creation, if the user model 
+isn't valid, the user will be redirected to edit_user_url.
+
+I hope to get both of those assumptions moved to a yaml or something soon.
+
+Credits
+=======
+
+This is actually mostly a repackaging/following of the steps from the actual
+open_id_authentication plugin, found here: 
+	http://github.com/rails/open_id_authentication/tree/master
+
+I didn't know anything about Rails engines until I heard a talk by Mike
+Perham, whose github profile you can find here:
+	http://github.com/mperham

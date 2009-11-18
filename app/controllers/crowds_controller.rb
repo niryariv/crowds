@@ -1,21 +1,22 @@
 class CrowdsController < ApplicationController
   
-  before_filter :require_user, :except => :index
-  
+  # before_filter :require_user, :except => :index
+  before_filter :signin_required, :except => :index
+
   # GET /crowds
   # GET /crowds.xml
   def index
     if current_user
       @crowds = current_user.crowds
-      logger.info "CROWDS: #{@crowds}"
-      if @crowds.size == 1
-        redirect_to crowd_items_url(@crowds.first) #:action=>:items, :id=>current_user.crowds.first
-      else        
-        respond_to do |format|
-          format.html # index.html.erb
-          format.xml  { render :xml => @crowds }
-        end
+      # logger.info "CROWDS: #{@crowds}"
+      # if @crowds.size == 1
+      #   redirect_to crowd_items_url(@crowds.first) #:action=>:items, :id=>current_user.crowds.first
+      # else        
+      respond_to do |format|
+        format.html # index.html.erb
+        format.xml  { render :xml => @crowds }
       end
+      # end
     end
   end
     

@@ -2,7 +2,9 @@ class FeedsController < ApplicationController
   # GET /feeds
   # GET /feeds.xml
   
-  before_filter :require_user, :only => [:create, :destroy]
+  # before_filter :require_user, :only => [:create, :destroy]
+  before_filter :signin_required, :only => [:create, :destroy]
+  
   def index
     @crowd = Crowd.find(params[:crowd_id])
     @feeds = @crowd.feeds #Feeds.find(:all)
