@@ -39,7 +39,7 @@ feeds from your RSS reader.</p>
 <% else %>
 	<p align="center">
 		<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, 
-		<%= link_to "log in", new_user_session_path %>  to add or remove sources.
+		<%= link_to "sign in", '/signin' %>  to add or remove sources.
 	</p>
 <% end %>
 
