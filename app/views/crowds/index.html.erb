@@ -10,13 +10,9 @@
 	<%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and <%= link_to '<b>current items</b>', crowd_items_path(1) %>.
 </p>
 
+<p>
 <% elsif current_user.crowds.size == 0 %>
-	<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
-		Welcome! To start off, name your crowd:<br />
-		<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
-		<%= f.text_field :title %>
-		<%= f.submit "Create" %>
-	<% end %>
+	Welcome! To start off, name your crowd:<br />
 <% else %>
 	Your crowds: 
 	<% for crowd in @crowds -%>
@@ -25,4 +21,15 @@
 		[<%= link_to "Delete", crowd_path(crowd), :method => :delete -%>]
 	</li>
 	<% end -%>
-<% end %>	
+<% end -%>
+</p>
+
+<p>&nbsp;</p>
+
+<p>
+<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
+	<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
+	<%= f.text_field :title %>
+	<%= f.submit "Create New Crowd" %>
+<% end %>
+</p>
