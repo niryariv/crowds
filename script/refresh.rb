@@ -11,7 +11,8 @@ begin
   # end
 
   ROOT = File.expand_path(File.dirname(__FILE__)+'/../')
-  require "#{ROOT}/config/environment"
+  require "#{ROOT}/config/environment.rb"
+  require "#{ROOT}/config/crowds.rb"
   
   ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
 
