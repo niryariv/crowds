@@ -18,7 +18,7 @@
 <% ctr = 0 ; current_period = -1 -%>
 <% @items.each do |url, data| -%>
 	<% if data[:period] != current_period -%>
-		<br /><u><i><%= data[:period] %></i></u><br />
+		<br /><i><%= data[:period] %></i><br />
 		<% current_period = data[:period] %>
 	<% end -%>
 	<%= link_to_function "<tt>[+]</tt>", "Element.toggle('context-#{ctr}')" %>
