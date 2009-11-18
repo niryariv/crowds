@@ -79,3 +79,6 @@ Rails::Initializer.run do |config|
   # Please note that observers generated using script/generate observer need to have an _observer suffix
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 end
+
+ENV['GEM_PATH'] = "/usr/lib/ruby/gems/1.8:#{ENV['GEM_PATH']}" # for passenger at slicehost..
+Gem.clear_paths
