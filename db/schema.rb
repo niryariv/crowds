@@ -18,24 +18,6 @@ ActiveRecord::Schema.define(:version => 20091117165948) do
 
   add_index "crowds", ["user_id"], :name => "user_id"
 
-  create_table "crowds_bak", :force => true do |t|
-    t.string  "title",   :null => false
-    t.integer "user_id", :null => false
-  end
-
-  create_table "delayed_jobs", :force => true do |t|
-    t.integer  "priority",   :default => 0
-    t.integer  "attempts",   :default => 0
-    t.text     "handler"
-    t.text     "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string   "locked_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "feeds", :force => true do |t|
     t.string   "title",        :null => false
     t.string   "url",          :null => false
@@ -57,13 +39,6 @@ ActiveRecord::Schema.define(:version => 20091117165948) do
   add_index "items", ["created_at"], :name => "items_created_at_index"
   add_index "items", ["feed_id", "url"], :name => "feed_id_2", :unique => true
   add_index "items", ["feed_id"], :name => "feed_id"
-
-  create_table "items_old", :force => true do |t|
-    t.integer  "feed_id",    :null => false
-    t.string   "title",      :null => false
-    t.text     "url",        :null => false
-    t.datetime "created_at", :null => false
-  end
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
@@ -91,23 +66,9 @@ ActiveRecord::Schema.define(:version => 20091117165948) do
     t.datetime "created_at",                :null => false
   end
 
-  create_table "trueurls", :force => true do |t|
-    t.string  "host"
-    t.boolean "clean"
-  end
-
-  add_index "trueurls", ["host"], :name => "host"
-
   create_table "users", :force => true do |t|
-    t.string   "title"
-    t.string   "email"
-    t.string   "crypted_password",            :limit => 256
-    t.string   "salt",                        :limit => 256
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "perishable_token"
-    t.datetime "perishable_token_expires_at"
-    t.string   "persistence_token"
     t.string   "identity_url"
   end
 
