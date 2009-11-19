@@ -1,4 +1,4 @@
-require 'htmlentities/string'
+#require 'htmlentities/string'
 require 'feed_tools'
 
 class Feed < ActiveRecord::Base
