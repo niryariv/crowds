@@ -21,7 +21,7 @@
 		<br /><i><%= data[:period] %></i><br />
 		<% current_period = data[:period] %>
 	<% end -%>
-	<%= link_to_function "<tt>[+]</tt>", "Element.toggle('context-#{ctr}')" %>
+	<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
 	<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
 	<span id="context-<%= ctr %>" style="display: none">
 		<ul>
