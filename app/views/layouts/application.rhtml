@@ -24,10 +24,7 @@
 				<% if current_user -%>
 					<% if current_user.crowds.size > 0 %>
 						<% user_crowd = current_user.crowds.first %>
-						Your
-						<%= link_to "sources", crowd_feeds_path(user_crowd) %>
-						and 
-						<%= link_to "recent items", crowd_items_path(user_crowd) %>
+						<%= link_to "My crowds", '/' %>
 						&nbsp;&nbsp;&nbsp;&nbsp;
 					<% end %>
 						<%= link_to "Sign Out", '/signout' %>
