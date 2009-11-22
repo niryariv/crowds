@@ -34,7 +34,7 @@ feeds from your RSS reader.</p>
 		
 	<p align="center">
 		Add source with a single click using the Crowds bookmarklet - drag this to your bookmarks toolbar: 
-		<a href="javascript:location.href='<%= root_url %>crowd/<%= @crowd.id %>/import?url='+encodeURIComponent(location.href)">+<%= @crowd.title %></a>
+		<a href="javascript:location.href='<%= root_url %>crowd/<%= @crowd.id %>/import?url='+encodeURIComponent(location.href)">&raquo;<%= @crowd.title %></a>
 	</p>
 <% else %>
 	<p align="center">
