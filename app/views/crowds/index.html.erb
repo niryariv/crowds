@@ -7,8 +7,8 @@
 <% end %>
 
 <% if current_user.nil? %>
-	<p>
-		<%= link_to "Sign in", "/signin" %> with OpenID to start creating your own crowd, or take a look at a sample crowd's 
+	<p style="display: inline">
+		Sign in with your <% login_button -%> account to create your own crowds, or take a look at a sample crowd's 
 		<%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and <%= link_to '<b>current items</b>', crowd_items_path(1) %>.
 	</p>
 

@@ -2,13 +2,11 @@
 <head>
   <title><%= AppName %></title>
   <%= stylesheet_link_tag 'scaffold' -%>
- 	<%= stylesheet_link_tag 'openid-selector' -%>
+ 	<!-- %= stylesheet_link_tag 'openid-selector' -% -->
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.openid.js"></script>
 
-
-	<!-- <%= javascript_include_tag 'prototype' -%> -->
 	<% if controller.controller_name=='items' and controller.action_name=='index' -%>
 		<%= auto_discovery_link_tag(:rss, {:controller => :items, :action => :index, :crowd_id => @crowd.id, :format => :xml}) %>
 	<% end -%>
@@ -29,7 +27,7 @@
 					<% end %>
 						<%= link_to "Sign Out", '/signout' %>
 				<% else -%>
-					<%= link_to "Sign In with OpenID", '/signin' %>
+					Sign in with <% login_button -%>
 				<% end -%>
 			</td>
 		</tr>

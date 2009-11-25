@@ -6,6 +6,10 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+form {
+    display: inline;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -97,7 +101,7 @@ b.headline {
 
 
 /**** Open ID plugin ****/
-
+/*
 fieldset {border-style:none;}
 img {border-style:none;}
 
@@ -119,3 +123,4 @@ form.openid input[type='submit'] {margin-left:1em;}
 #openid_login{float:left; font-size:larger; width:30%; margin:2em 1em; text-align:center}
 #openid_login div{margin-top:0.5em}
 #openid_login div+span{font-size:smaller}
+*/

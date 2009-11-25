@@ -45,3 +45,10 @@
 <% end %>
 
 <script type="text/javascript">  $(function() { $("form.openid:eq(0)").openid(); });</script>
+
+<hr>
+
+<% form_tag(session_url) do %>
+	<input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id" /> 
+	<input type="submit" value="Login via google" />
+<% end %>
