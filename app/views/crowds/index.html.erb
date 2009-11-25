@@ -1,12 +1,12 @@
 <% if current_user.nil? or current_user.crowds.size == 0 %>
 	<p>
 		<%= AppName %> takes any number of sources - blogs, news sites, Twitter streams etc - and tracks their RSS/Atom feeds for recurring links. 
-		If a link to a page appears in two or more of your sources, or if one source links to an item in another source, that link is considered interesting 
-		and is added to the "Items" list.
+		A link that appears in more than one source, or links from one source you follow to another, it is added to the "Current Items" list.
 	</p>
 <% end %>
 
 <% if current_user.nil? %>
+	<br />
 	<p style="display: inline">
 		Sign in with your <% login_button -%> account to create your own crowds, or take a look at a sample crowd's 
 		<%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and <%= link_to '<b>current items</b>', crowd_items_path(1) %>.
