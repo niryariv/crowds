@@ -1,12 +1,16 @@
 <% if current_user.nil? or current_user.crowds.size == 0 %>
 	<p>
-		<b><%= AppName %> is an application for finding the items that would interest you amongst all the blogs, websites, Twitter streams etc that you read.</b>
+		<b><%= AppName %> helps you find the items that would interest you amongst all the blogs, websites, Twitter streams and so on that you read.</b>
+	</p>
+	<p>
+		You might think of it as your own Digg or Reddit, that includes only users that <i>you</i> pick.
 	</p>
 	<p style="display: inline">
-		Here's how it works: You sign in with your <% login_button -%> account, and create your first crowd. You can then upload an OPML file into it with all 
-		the feeds you read (for example, from <a href="http://isiria.wordpress.com/2009/01/10/how-to-export-google-reader-feeds-into-opml/">Google Reader</a> 
-		or <a href="http://www.bloglines.com/help/faq#export">Bloglines</a>), or just add them manually. Add as many sources as you like - the more sources, the better, as long as these 
-		are sources you're interested in. <%= AppName %> then tracks these sources every day for recurring links. When it finds links that appears in more than one source, it adds them to the "Current Items" list.
+		Here's how it works: Sign in with your <% login_button -%> account to create your first crowd. Then, populate this crowd with sites that you read 
+		(an easy way to start is to upload an OPML of all the feeds you read in 
+		<a href="http://isiria.wordpress.com/2009/01/10/how-to-export-google-reader-feeds-into-opml/">Google Reader</a>). Add as many sites as you like - 
+		the more the better, as long as these are sites you're interested in. <%= AppName %> will then monitor these sources every day for recurring links. 
+		When it finds links that appears in more than one source, it adds them to the "Current Items" list.
 	</p>
 	<p style="display: inline">
 		Confused? Take a look at an <a href="http://twitter.com/crowds" target="_blank">example crowd</a>'s 
