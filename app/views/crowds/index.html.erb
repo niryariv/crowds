@@ -1,14 +1,15 @@
 <% if current_user.nil? or current_user.crowds.size == 0 %>
 	<p>
-		<%= AppName %> takes any number of sources - blogs, news sites, Twitter streams etc - and tracks their RSS/Atom feeds for recurring links. 
-		A link that appears in more than one source, or links from one source you follow to another, it is added to the "Current Items" list.
+		<b><%= AppName %> is an application for finding the items that would interest you amongst all the blogs, websites, Twitter streams etc that you read.</b>
 	</p>
-<% end %>
-
-<% if current_user.nil? %>
-	<br />
 	<p style="display: inline">
-		Sign in with your <% login_button -%> account to create your own crowds, or take a look at a sample crowd's 
+		Here's how it works: You sign in with your <% login_button -%> account, and create your first crowd. You can then upload an OPML file into it with all 
+		the feeds you read (for example, from <a href="http://isiria.wordpress.com/2009/01/10/how-to-export-google-reader-feeds-into-opml/">Google Reader</a> 
+		or <a href="http://www.bloglines.com/help/faq#export">Bloglines</a>), or just add them manually. Add as many sources as you like - the more sources, the better, as long as these 
+		are sources you're interested in. <%= AppName %> then tracks these sources every day for recurring links. When it finds links that appears in more than one source, it adds them to the "Current Items" list.
+	</p>
+	<p style="display: inline">
+		Confused? Take a look at an <a href="http://twitter.com/crowds" target="_blank">example crowd</a>'s 
 		<%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and <%= link_to '<b>current items</b>', crowd_items_path(1) %>.
 	</p>
 
