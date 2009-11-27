@@ -2,14 +2,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => :crowds, :action => :index
 
+  #FIXTHIS
   map.resources :crowds
 
   # The priority is based upon order of creation: first created -> highest priority.
   
   map.resources :crowd, :has_many => [:feeds, :items], :belongs_to => :user
-  map.resources :user, :has_many => :crowds
-  map.resources :feed, :belongs_to => :crowd
-  map.resources :item, :belongs_to => :crowd
+  map.resources :user,  :has_many => :crowds
+  map.resources :feed,  :belongs_to => :crowd
+  map.resources :item,  :belongs_to => :crowd
   
   
   map.import '/crowd/:crowd_id/import', :controller => "feeds", :action => "create"
