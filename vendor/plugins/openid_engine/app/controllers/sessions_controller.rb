@@ -31,7 +31,8 @@ private
     if needs_info
       redirect_to edit_user_url(@current_user)
     else
-      redirect_to(root_url)
+      # redirect_to(root_url)
+      redirect_back_or_default(root_url)
     end
   end
 

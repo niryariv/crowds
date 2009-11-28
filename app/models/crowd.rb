@@ -1,3 +1,5 @@
+require 'feed_tools'
+
 class Crowd < ActiveRecord::Base
 
   has_many :ownerships, :dependent => :destroy

@@ -4,6 +4,7 @@ class FeedsController < ApplicationController
   
   # before_filter :require_user, :only => [:create, :destroy]
   before_filter :signin_required, :only => [:create, :destroy]
+  after_filter :store_location, :only => [:create]
   
   def index
     @crowd = Crowd.find(params[:crowd_id])
