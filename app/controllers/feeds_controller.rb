@@ -31,6 +31,8 @@ class FeedsController < ApplicationController
       raise "cant_save_url" unless new_f
     else # import OPML
       new_feed_count = 0
+      raise "no_opml" if params[:feed].nil?
+
       doc = REXML::Document.new(params[:feed][:opml].read)
       doc.root.each_element('//outline') do |e| 
         title = e.attributes['title']
@@ -54,13 +56,14 @@ class FeedsController < ApplicationController
     end
     
   rescue Exception => e
-    logger.info "EXC: #{e.to_yaml}"
+    logger.error "IMPORT ERROR: #{e.message} #{e.to_yaml}"
     respond_to do |format|
       format.html { 
         flash[:notice] = case e.message
           when 'cant_save_url': "Cannot find feed for: '#{url}'"
           when 'unauthorized' : "Sorry, you're not allowed to edit this crowd"
-          else "Error importing OPML: #{e.message}"
+          when 'no_opml'      : "No OPML file to upload"
+          else "Can't import this file - are you sure this is OPML?"
         end
         redirect_to crowd_feeds_path(crowd) 
       }

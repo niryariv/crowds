@@ -1,6 +1,6 @@
 <div style="text-align: center;"><h3 style="display:inline;"><%= @crowd.title -%></h3>
 	&nbsp;&nbsp;&nbsp;<%= link_to 'Recent items',  crowd_items_path(@crowd) %>
-	&nbsp;&nbsp;&nbsp;<tt><%= link_to 'opml', formatted_crowd_feeds_path(@crowd, :xml) -%></tt>
+	&nbsp;&nbsp;&nbsp;<tt><%= link_to 'opml', crowd_feeds_path(@crowd, :xml) -%></tt>
 </div>
 
 <% if @feeds.size < 5 %>

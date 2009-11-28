@@ -4,11 +4,15 @@ require 'feed_tools'
 class Feed < ActiveRecord::Base
 
   has_many :ownerships #, :dependent => :destroy #true
-  has_many :crowds, :through => :ownerships, :dependent => :destroy
+  has_many :crowds, :through => :ownerships #, :dependent => :destroy
   
   has_many :items, :dependent => :destroy
 
   attr_accessor :known_urls
+  
+  # TODO
+  # validates_url_format_of :url
+  
   
   
   def self.hash_all
@@ -43,8 +47,6 @@ class Feed < ActiveRecord::Base
   rescue Exception=>e
     logger.error "Feed/refresh - ERROR: #{e.message} on #{self.url}"
     false
-  ensure
-#    rss = nil
   end
 
 
