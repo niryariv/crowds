@@ -17,11 +17,14 @@
 		Confused? Take a look at an <a href="http://twitter.com/crowds" target="_blank">example crowd</a>'s 
 		<%= link_to '<b>sources</b>', crowd_feeds_path(1) %> and <%= link_to '<b>current items</b>', crowd_items_path(1) %>.
 	</p>
+<% end -%>
 
-<% else -%>
+<p>&nbsp;</p>
+
+<% if current_user -%>
 	<% if current_user.crowds.size == 0 -%>
 		<p>
-			Welcome! To start off, name your crowd:<br />
+			<span style="background-color: #fdd75c; padding: 10px">Welcome to <%= AppName %>! To start off, name your first crowd:</span><br />
 		</p>
 	<% else -%>
 		<p>
@@ -33,17 +36,15 @@
 			</li>
 			<% end -%>
 		</p>
-
 	<% end -%>
 
-		<p>&nbsp;</p>
+	<p>&nbsp;</p>
 
-		<p>
-		<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
-			<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
-			<%= f.text_field :title %>
-			<%= f.submit "Create New Crowd" %>
-		<% end -%>
-	</p>
-	
+	<p>
+	<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
+		<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
+		<%= f.text_field :title %>
+		<%= f.submit "Create New Crowd" %>
+	<% end -%>
+</p>
 <% end -%>
