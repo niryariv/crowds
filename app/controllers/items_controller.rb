@@ -24,7 +24,8 @@ class ItemsController < ApplicationController
     end
 
   rescue ActiveRecord::RecordNotFound
-    redirect_to :action=>:index
+    render :status=>404
+    #redirect_to :action=>:index
     false
   end
   
