@@ -12,7 +12,11 @@
 <% else -%>	
 	<p align="center">
 		Recent links from <b><%= @crowd.title %></b>
-		&nbsp;&nbsp;&nbsp;<%= link_to 'Sources',  crowd_feeds_url(@crowd.id) %>
+		&nbsp;&nbsp;&nbsp;
+		<%= link_to 'Sources',  crowd_feeds_url(@crowd.id) %>
+		&nbsp;&nbsp;&nbsp;		
+		<a href="http://fusion.google.com/add?source=atgs&feedurl=<%= crowd_items_url(@crowd, :format=>:xml) %>"><img style="vertical-align: bottom;" src="http://gmodules.com/ig/images/plus_google.gif" border="0" alt="Add to Google"></a>
+		&nbsp;&nbsp;&nbsp;
 	</p>
 <% end -%> 
 <% ctr = 0 ; current_period = -1 -%>
