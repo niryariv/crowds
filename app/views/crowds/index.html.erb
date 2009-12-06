@@ -8,7 +8,7 @@
 	<p style="display: inline">
 		Here's how it works: Sign in with your <% login_button -%> account to create your first crowd. Then, populate this crowd with sites that you read 
 		(an easy way to start is to upload an 
-		<a href="http://isiria.wordpress.com/2009/01/10/how-to-export-google-reader-feeds-into-opml/">OPML of all your Google Reader feeds </a>). 
+		<a href="http://isiria.wordpress.com/2009/01/10/how-to-export-google-reader-feeds-into-opml/">OPML of all your Google Reader feeds</a>). 
 		Add as many sites as you like - the more the better, as long as these are sites you're interested in. 
 		<%= AppName %> will then monitor these sources every day for recurring links. 
 		When it finds links that appears in more than one site, it will add them to the "Current Items" list.
@@ -23,6 +23,7 @@
 
 <% if current_user -%>
 	<% if current_user.crowds.size == 0 -%>
+	<div class="new-crowd">
 		<p>
 			<span style="background-color: #fdd75c; padding: 10px">Welcome to <%= AppName %>! To start off, name your first crowd:</span><br />
 		</p>
@@ -46,5 +47,6 @@
 		<%= f.text_field :title %>
 		<%= f.submit "Create New Crowd" %>
 	<% end -%>
-</p>
+	</p>
+	</div>
 <% end -%>

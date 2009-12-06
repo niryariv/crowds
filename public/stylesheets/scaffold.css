@@ -1,4 +1,7 @@
-body { background-color: #fff; color: #333; }
+body { 
+    background-color: #aaccdd; /*#fff; */
+    color: #664433; 
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -10,14 +13,24 @@ form {
     display: inline;
 }
 
+.new-crowd {
+    margin-left: 20%;
+}
+
+
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
+
+.item a:link { color: #000; }
+.item a:visited { color: #666; }
+
+
 a { color: #000; }
-a:visited { color: #666; }
+a:visited { color: #000; }
 a:hover { color: #fff; background-color:#000; }
 
 .fieldWithErrors {
@@ -85,6 +98,7 @@ b.headline {
   font-size:   17px;
   line-height: 18px;
   padding: 5px 5px 5px 15px;
+  color: #000;
 }
 
 #footer {
@@ -98,3 +112,10 @@ b.headline {
 	border-top: 1px solid #333;
 	color: #000;
 	}
+	
+#main {
+    background-color: #7799bb; 
+    padding: 5px;
+    height: 40px;
+    color: #000;
+}
