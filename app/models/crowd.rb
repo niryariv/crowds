@@ -105,11 +105,12 @@ class Crowd < ActiveRecord::Base
     cache_fresh = false
     
     if File.exist?(cachefile)
-      items = Marshal.load(File.read(cachefile))
       last_updated = File.mtime(cachefile).utc
       cache_fresh = (last_updated > CacheLifetime.hours.ago)
-      
+
+      items = Marshal.load(File.read(cachefile))
       items = popular_items_since(last_updated, threshold, limit) + items unless cache_fresh
+
     else
       logger.info "calling popular_items_since(#{1.month.ago}, #{threshold}, #{limit})"
       items = popular_items_since(1.month.ago, threshold, limit)
