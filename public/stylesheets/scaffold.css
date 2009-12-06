@@ -1,6 +1,14 @@
 body { 
-    background-color: #aaccdd; /*#fff; */
-    color: #664433; 
+    background-color: #FFFFFF;
+    color: #6B5245; 
+}
+
+
+#main {
+    background-color: #A1B2B1; 
+    padding: 5px;
+    height: 40px;
+    color: #000;
 }
 
 body, p, ol, ul, td {
@@ -112,10 +120,3 @@ b.headline {
 	border-top: 1px solid #333;
 	color: #000;
 	}
-	
-#main {
-    background-color: #7799bb; 
-    padding: 5px;
-    height: 40px;
-    color: #000;
-}
