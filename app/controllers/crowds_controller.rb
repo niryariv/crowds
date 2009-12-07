@@ -43,7 +43,7 @@ class CrowdsController < ApplicationController
   # DELETE /crowds/1.xml
   def destroy
     crowd = Crowd.find(params[:id])
-    if current_user.crowds.include?(crowds) and crowd.destroy
+    if current_user.crowds.include?(crowd) and crowd.destroy
       flash[:notice] = "Crowd Deleted"
     else 
       flash[:notice] = "Can't touch this"
