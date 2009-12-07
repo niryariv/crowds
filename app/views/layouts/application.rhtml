@@ -3,48 +3,45 @@
   <title><%= AppName %></title>
   <%= stylesheet_link_tag 'scaffold' -%>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.always_at_bottom.js"></script>
+	
 
 	<% if controller.controller_name=='items' and controller.action_name=='index' -%>
 		<%= auto_discovery_link_tag(:rss, {:controller => :items, :action => :index, :crowd_id => @crowd.id, :format => :xml}) %>
 	<% end -%>
 </head>
 <body>
-<table width="%90" height="%100"  cellpadding="5" cellspacing="5" align="center" border="0">
-<tr>
-	<td valign="top" height="50">
-		<table id="main" width="%100"><!-- My God! A table?! -->
-		<tr>
-			<td><b class="headline"><%= link_to AppName, root_url %></b></td>
-			<td align="right">
-				<% if current_user -%>
-					<% if current_user.crowds.size > 0 %>
-						<% user_crowd = current_user.crowds.first %>
-						<%= link_to "My crowds", '/' %>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-					<% end %>
-						<%= link_to "Sign Out", '/signout' %>
-				<% else -%>
-					Sign in with <% login_button -%>
-				<% end -%>
-			</td>
-		</tr>
-		</table><!-- fetch the smelling salts! -->
-		<tr>
-			<td style="color: green"><%= flash[:notice] %></td>
-		</tr>
-		<tr>
-			<td valign="top"><%= yield  %></td>
-		</tr>
-		<tr>
-			<td align="center" height="50" valign="bottom">
-				By <a href="http://niryariv.wordress.com/">Nir Yariv</a>
+<div id="header">
+	<span class="title"><%= link_to AppName, root_url %></span>
+	<span class="login">
+		<% if current_user -%>
+			<% if current_user.crowds.size > 0 %>
+				<% user_crowd = current_user.crowds.first %>
+				<%= link_to "My crowds", '/' %>
 				&nbsp;&nbsp;&nbsp;&nbsp;
-				Questions / Feedback? <a href="mailto:niryariv@gmail.com">niryariv@gmail.com</a>
-			</td>
-		</tr>
-	</td>
-</tr>
-</table>
+			<% end %>
+				<%= link_to "Sign Out", '/signout' %>
+		<% else -%>
+			Sign in with <% login_button -%>
+		<% end -%>
+	</span>
+</div>
+
+<div style="clear: both"></div>
+
+<div id="main">
+	<%= yield  %>
+</div>
+
+<div id="footer">
+	By <a href="http://niryariv.wordress.com/">Nir Yariv</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	Questions / Feedback? <a href="mailto:niryariv@gmail.com">niryariv@gmail.com</a>
+</div>
+
+<script type="text/javascript">
+	$('#footer').always_at_bottom();
+</script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

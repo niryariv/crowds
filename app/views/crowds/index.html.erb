@@ -23,7 +23,7 @@
 
 <% if current_user -%>
 	<% if current_user.crowds.size == 0 -%>
-	<div class="new-crowd">
+	<div class="centered">
 		<p>
 			<span style="background-color: #fdd75c; padding: 10px">Welcome to <%= AppName %>! To start off, name your first crowd:</span><br />
 		</p>
@@ -42,11 +42,11 @@
 	<p>&nbsp;</p>
 
 	<p>
-	<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
-		<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
-		<%= f.text_field :title %>
-		<%= f.submit "Create New Crowd" %>
-	<% end -%>
+		<% form_for(@crowd.nil? ? Crowd.new : @crowd) do |f| %>
+			<%= f.text_field :title %>
+			<span style="color: green"><%= @crowd.errors['title'] unless @crowd.nil? %></span>
+			<%= f.submit "Create New Crowd" %>
+		<% end -%>	
 	</p>
 	</div>
 <% end -%>

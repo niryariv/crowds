@@ -19,25 +19,27 @@
 		&nbsp;&nbsp;&nbsp;
 	</p>
 <% end -%> 
-<% ctr = 0 ; current_period = -1 -%>
-<% @items.each do |url, data| -%>
-	<% if data[:period] != current_period -%>
-		<br /><i><%= data[:period] %></i><br />
-		<% current_period = data[:period] %>
-	<% end -%>
-	<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
-	<a href="<%= url %>" target="_blank" class="item"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
-	<span id="context-<%= ctr %>" style="display: none">
-		<ul>
-		  <% data[:feeds].each do |f| -%>
-			<li><% if url==f.url -%>
-					<a href="<%= f.feed.home_url -%>"><%= f.feed.title -%></a></li>
-				<% else -%>
-					<%= f.feed.title %> : <a href="<%= f.url -%>"><%= f.title -%></a></li>
-				<% end -%></li>
-		  <% end %>
-		</ul>
-	</span>
-	<br />
-	<% ctr += 1%>
-<% end %>
+<div id="items">
+	<% ctr = 0 ; current_period = -1 -%>
+	<% @items.each do |url, data| -%>
+		<% if data[:period] != current_period -%>
+			<br /><i><%= data[:period] %></i><br />
+			<% current_period = data[:period] %>
+		<% end -%>
+		<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
+		<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
+		<span id="context-<%= ctr %>" style="display: none">
+			<ul>
+			  <% data[:feeds].each do |f| -%>
+				<li><% if url==f.url -%>
+						<a href="<%= f.feed.home_url -%>"><%= f.feed.title -%></a></li>
+					<% else -%>
+						<%= f.feed.title %> : <a href="<%= f.url -%>"><%= f.title -%></a></li>
+					<% end -%></li>
+			  <% end %>
+			</ul>
+		</span>
+		<br />
+		<% ctr += 1%>
+	<% end %>
+</div>

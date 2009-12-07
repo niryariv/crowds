@@ -1,15 +1,82 @@
 body { 
-    background-color: #FFFFFF;
-    color: #6B5245; 
+    background-color: #fff;
+    color: #000; 
+    margin:0;
+    padding:0;
 }
 
+body, p{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
 
+#header {
+        background-color: #bbd9ee; 
+        padding: 1% 5% 0%;
+        height: 50px;
+        color: #000;   
+        vertical-align: bottom;
+        padding-bottom: 0px; 
+}
+
+.title {
+    margin-top: 25px; 
+    font-size:   17px;
+    float:left;
+    font-weight: bold;
+}
+
+.login {
+    margin-top: 25px; 
+    float: right;
+    display:inline;
+}
+
+#main{
+    background-color: #fff; 
+    padding: 1% 5%;
+    color: #000;    
+}
+
+#footer {
+    text-align: center;
+    height: 30px;
+    background-color: #ebf4fa; 
+}
+
+.centered {
+    margin-left: auto ;
+    margin-right: auto ;
+    text-align: center;
+}
+
+a:link { color: #000; }
+a:visited { color: #000; }
+
+/*#items a:link{ color: #6B5245; }*/
+#items a:visited { color: #6b5245; }
+
+form { display: inline; }
+.new-crowd { text-align: center; }
+
+
+
+/*********************************************************************************/
+/*
 #main {
-    background-color: #A1B2B1; 
-    padding: 5px;
-    height: 40px;
+    margin: 0; padding: 0;
+    background-color: #bbd9ee; 
+    height: 50px;
     color: #000;
 }
+
+a:link { color: #000; }
+a:visited { color: #000; }
+
+.item a:link{ color: #6B5245; }
+.item a:visited { color: blue; }
+
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -32,75 +99,6 @@ pre {
   font-size: 11px;
 }
 
-
-.item a:link { color: #000; }
-.item a:visited { color: #666; }
-
-
-a { color: #000; }
-a:visited { color: #000; }
-a:hover { color: #fff; background-color:#000; }
-
-.fieldWithErrors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#errorExplanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
-
-.errorMessage {
-  color: red;
-}
-
-div.uploadStatus {
-  margin: 5px;
-}
-
-div.progressBar {
-  margin: 5px;
-}
-
-div.progressBar div.border {
-  background-color: #fff;
-  border: 1px solid grey;
-  width: 100%;
-}
-
-div.progressBar div.background {
-  background-color: #333;
-  height: 18px;
-  width: 0%;
-}
-
 b.headline {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   17px;
@@ -110,13 +108,14 @@ b.headline {
 }
 
 #footer {
-	clear: both;
-	width: 95%;
-	margin: 10px;
-	text-align: center;
-	font-family: Verdana;
-	font-size: 11px;
-	padding: 3px;
-	border-top: 1px solid #333;
-	color: #000;
-	}
+    clear: both;
+    width: 95%;
+    margin: 10px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 11px;
+    padding: 3px;
+    border-top: 1px solid #333;
+    color: #000;
+    }
+*/
