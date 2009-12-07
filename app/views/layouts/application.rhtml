@@ -18,28 +18,32 @@
 	<% end -%>
 </head>
 <body>
-<div id="header">
-	<span class="title"><%= link_to AppName, root_url %></span>
-	<span class="login">
-		<% if current_user -%>
-			<% if current_user.crowds.size > 0 %>
-				<% user_crowd = current_user.crowds.first %>
-				<%= link_to "My crowds", '/' %>
-				&nbsp;&nbsp;&nbsp;&nbsp;
-			<% end %>
-				<%= link_to "Sign Out", '/signout' %>
-		<% else -%>
-			Sign in with <% login_button -%>
-		<% end -%>
-	</span>
+<div id="top"></div>
+<div id="container">
+	<div id="header">
+		<span class="title"><%= link_to AppName, root_url %></span>
+		<span class="login">
+			<% if current_user -%>
+				<% if current_user.crowds.size > 0 %>
+					<% user_crowd = current_user.crowds.first %>
+					<%= link_to "My crowds", '/' %>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+				<% end %>
+					<%= link_to "Sign Out", '/signout' %>
+			<% else -%>
+				Sign in with <% login_button -%>
+			<% end -%>
+		</span>
+	</div>
+
+	<div style="clear: both"></div>
+
+	<div id="main">
+		<%= yield  %>
+		<div id="footer-spacer"></div>
+	</div>
+
 </div>
-
-<div style="clear: both"></div>
-
-<div id="main">
-	<%= yield  %>
-</div>
-
 <div id="footer">
 	By <a href="http://niryariv.wordress.com/">Nir Yariv</a>
 	&nbsp;&nbsp;&nbsp;&nbsp;

@@ -1,4 +1,4 @@
-body { 
+html, body { 
     background-color: #fff;
     color: #000; 
     margin:0;
@@ -9,6 +9,16 @@ body, p{
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+}
+
+#top { position:absolute; }
+
+#container {
+    min-height: 100%;
+    margin-bottom: -30px;
+}
+* html #container {
+    height: 100%;
 }
 
 #header {
@@ -37,6 +47,10 @@ body, p{
     background-color: #fff; 
     padding: 1% 5%;
     color: #000;    
+}
+
+#footer-spacer {
+    height: 30px;
 }
 
 #footer {
