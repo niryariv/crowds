@@ -5,6 +5,13 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
 	<script type="text/javascript" src="/javascripts/jquery.always_at_bottom.js"></script>
 	
+	<script type="text/javascript">
+	  $(document).ready(function() {
+			$('#footer').always_at_bottom();
+	  });
+	</script>
+
+  
 
 	<% if controller.controller_name=='items' and controller.action_name=='index' -%>
 		<%= auto_discovery_link_tag(:rss, {:controller => :items, :action => :index, :crowd_id => @crowd.id, :format => :xml}) %>
@@ -39,9 +46,6 @@
 	Questions / Feedback? <a href="mailto:niryariv@gmail.com">niryariv@gmail.com</a>
 </div>
 
-<script type="text/javascript">
-	$('#footer').always_at_bottom();
-</script>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
