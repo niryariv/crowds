@@ -68,68 +68,18 @@ body, p{
 a:link { color: #000; }
 a:visited { color: #000; }
 
-/*#items a:link{ color: #6B5245; }*/
 #items a:visited { color: #6b5245; }
 
 form { display: inline; }
 .new-crowd { text-align: center; }
 
-
-
-/*********************************************************************************/
-/*
-#main {
-    margin: 0; padding: 0;
-    background-color: #bbd9ee; 
-    height: 50px;
-    color: #000;
+#feeds-list {
+    margin-left:20%
 }
 
-a:link { color: #000; }
-a:visited { color: #000; }
-
-.item a:link{ color: #6B5245; }
-.item a:visited { color: blue; }
-
-
-body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
+.feed-item {
+    width: 500px;
+    line-height: 30px;
+    margin: 5px;
+    padding: 5px;
 }
-
-form {
-    display: inline;
-}
-
-.new-crowd {
-    margin-left: 20%;
-}
-
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-b.headline {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   17px;
-  line-height: 18px;
-  padding: 5px 5px 5px 15px;
-  color: #000;
-}
-
-#footer {
-    clear: both;
-    width: 95%;
-    margin: 10px;
-    text-align: center;
-    font-family: Verdana;
-    font-size: 11px;
-    padding: 3px;
-    border-top: 1px solid #333;
-    color: #000;
-    }
-*/

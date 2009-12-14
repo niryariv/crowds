@@ -14,38 +14,53 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 <% end %>
 
 <% if current_user %>
-
-
 	<div class="centered">
 		Add a source URL:
+
 		<% form_for :feed, Feed.new, :url => crowd_feeds_path(@crowd) do |f| %>
 			<%= f.text_field :url %>
 			<%= f.submit 'Add URL' %>
 		<% end %>
+
 		&nbsp;or upload OPML File:
+
 		<% form_for :feed, Feed.new, :url => crowd_feeds_path(@crowd.id), :html => { :multipart => true } do |f| %>
 			<%= f.file_field :opml %>
 			<%= f.submit 'Import OPML' %>
 		<% end %>
+
 		<p>
 			<b>Add source with a single click using the Crowds bookmarklet</b> - drag this to your bookmarks toolbar: 
 			<a href="javascript:location.href='<%= root_url %>crowd/<%= @crowd.id %>/import?url='+encodeURIComponent(location.href)">&raquo;<%= @crowd.title %></a>
 		</p>
-	<% else %>
+<% else %>
 		<p align="center">
 			<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, 
 			<%= link_to "sign in", '/signin' %>  to add or remove sources.
 		</p>
-	<% end %>
-	</div>
+<% end %>
+</div>
 
-	<div style="margin-left:40%">
-		<% for feed in @feeds %>
-		  <br />
-			<% if current_user and current_user.owns?(@crowd) %>
-				<%= link_to 'Delete', crowd_feed_url(@crowd, feed), :method => :delete  %>
-			<% end %>
+<div id="feeds-list">
+	<% for feed in @feeds %>
+	<span class="feed-item">
+		<%= link_to feed.title, feed.home_url %>
+		<span class="feed-details" style="display: none"> 
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<%= link_to feed.title, feed.home_url  %>
+			<tt><%= feed.url %></tt>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<% if current_user and current_user.owns?(@crowd) %>
+				<%= link_to 'Delete', crowd_feed_url(@crowd, feed), :method => :delete  %>
 		<% end %>
-	</div>
+		</span>
+	</span>
+	<br />
+	<% end %>
+</div>
+
+<script>
+$(".feed-item").hover( 
+	function() { $(this).css('background-color', '#ebf4fa') ; $('.feed-details', this).show() },
+	function() { $(this).css('background-color', '#fff') ; $('.feed-details', this).hide() }
+	);
+</script>
