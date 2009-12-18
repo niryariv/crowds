@@ -36,7 +36,9 @@
 				<%= link_to "<b>#{crowd.title}</b>", crowd_items_path(crowd) -%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				<%= link_to "Delete", crowd_path(crowd), :method => :delete -%>
 				<p style="margin-left:20px">
-					<% crowd.recent_items[0..5].each do |url, data| %>
+					<% recent_items = crowd.recent_items %>
+					<% show_recent = 5 %>
+					<% recent_items[0..(show_recent-1)].each do |url, data| %>
 					<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
 					<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
 					<span id="context-<%= ctr %>" style="display: none">
@@ -53,7 +55,9 @@
 					<br />
 					<% ctr += 1%>
 					<% end %>
-					<%= link_to "More...", crowd_items_path(crowd) -%>
+					<% if recent_items.size > show_recent %>
+						<%= link_to "More...", crowd_items_path(crowd) -%>
+					<% end %>
 				</p>
 			</p>
 			<% end -%>
