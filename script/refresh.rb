@@ -29,6 +29,7 @@ begin
   puts "#{Time.now} [Feedread Daemon] Ending feed cycle. Took #{(Time.now - cycle_start).round} seconds."
 
   Item.delete_old
+  Crowd.remove_deleted
 
   `rm #{CacheDir}/*`
 

@@ -42,5 +42,6 @@ Daemons.run_proc("feedread_daemon_#{RAILS_ENV}", {:dir_mode => :normal,
     puts "#{Time.now} [Feedread Daemon] Ending feed cycle. Took #{(Time.now - cycle_start).round} seconds."
     
     Item.delete_old
+    Crowd.remove_deleted
 #  end
 end

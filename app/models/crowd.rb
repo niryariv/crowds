@@ -123,61 +123,11 @@ class Crowd < ActiveRecord::Base
     logger.info "FOUND #{items.size} items"
     items
   end
-
-
-  # def popular_items(threshold = DefaultThreshold, limit = DefaultItemLimit)
-  #   
-  #   items = {} ; items.default = {} ; filt = [] ; item_counter = {}
-  #   last_time = 0
-  #   
-  #   (Item.find_by_sql "SELECT url FROM items GROUP BY url HAVING count(*)>=#{threshold}").each do |i|
-  #     filt << i.url
-  #   end
-  #   
-  #   Gaps.each do |cur_time|
-  #     sql = "SELECT items.url as url, items.id as id, items.title as title, items.feed_id as feed_id, items.source_id as source_id,
-  #                      UNIX_TIMESTAMP(items.created_at) as created
-  #             FROM items, ownerships
-  #             WHERE 
-  #               items.feed_id = ownerships.feed_id
-  #               AND ownerships.crowd_id=#{self.id}
-  #               AND (to_days(now()) - to_days(items.created_at)) BETWEEN #{last_time} AND #{cur_time}
-  #             LIMIT 5000"
-  #     
-  #     (Item.find_by_sql sql).each do |res|
-  #       url = res.url
-  #       next unless filt.include?(url)
-  #       
-  #       res.source_id ||= res.id
-  #       source = Item.find(res.source_id)
-  #       
-  #       f = items[url].has_key?(:feeds) ? items[url][:feeds] << source : [source]
-  #       items[url] = { :title => res.title, :feeds => f, :period => cur_time }
-  #       
-  #       item_counter[url] = true if items[url][:feeds].size >= threshold
-  #       break if item_counter.size >= limit
-  #     end
-  # 
-  #     last_time = cur_time+1;
-  #   end
-  #   
-  #   items.delete_if {|url, data| data[:feeds].length < threshold }
-  #   items.each_key { |url| items[url][:tags] = Tag.get_for(url) }
-  #   items.sort_by { |a| [a[1][:period], 0-a[1][:feeds].size] }
-  # end
-  # 
-  # 
-  # def popular_items_cached(threshold = DefaultThreshold, limit = DefaultItemLimit)
-  #   cachefile = CacheDir + "/Item.popular.crowd-#{self.id}.thres-#{threshold}.limit-#{limit}.cache"
-  #   
-  #   return Marshal.load(File.read(cachefile)) if File.exist?(cachefile) and File.mtime(cachefile) > CacheLifetime.hours.ago
-  # 
-  #   @items = self.popular_items(threshold)
-  #   File.open(cachefile, 'w') {|f| f.puts Marshal.dump(@items); f.close}
-  #   @items
-  # rescue Exception=>e
-  #   logger.error "Something bad happened in Item.popular_cache!! #{e}"
-  #   self.popular_items
-  # end
-
+  
+  # Housekeeping: remove crowds marked for deletion over a week ago (allow for delete undo, up to a week)
+  
+  def self.remove_deleted
+    self.delete_all "deleted_at < '#{1.week.ago.to_s(:db)}'"
+  end
+  
 end

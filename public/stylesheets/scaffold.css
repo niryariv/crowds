@@ -83,3 +83,7 @@ form { display: inline; }
     margin: 5px;
     padding: 5px;
 }
+
+.grey-area *{
+    color: grey;
+}

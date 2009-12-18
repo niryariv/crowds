@@ -7,11 +7,9 @@ class CrowdsController < ApplicationController
   # GET /crowds.xml
   def index
     if current_user
-      @crowds = current_user.crowds
-      # logger.info "CROWDS: #{@crowds}"
-      # if @crowds.size == 1
-      #   redirect_to crowd_items_url(@crowds.first) #:action=>:items, :id=>current_user.crowds.first
-      # else        
+      @crowds = current_user.crowds.all(:conditions => {:delete_at => nil})
+      @deleted_crowds = current_user.crowds.all(:conditions => ['delete_at > 1'])
+      
       respond_to do |format|
         format.html # index.html.erb
         format.xml  { render :xml => @crowds }
@@ -29,7 +27,7 @@ class CrowdsController < ApplicationController
 
     respond_to do |format|
       if @crowd.save
-        format.html { redirect_to crowd_feeds_path(@crowd) } #redirect_to(@crowds) }
+        format.html { redirect_to crowd_feeds_path(@crowd) }
         format.xml  { render :xml => @crowd, :status => :created, :location => @crowd }
       else
         format.html { render :action => :index }
@@ -43,8 +41,10 @@ class CrowdsController < ApplicationController
   # DELETE /crowds/1.xml
   def destroy
     crowd = Crowd.find(params[:id])
-    if current_user.crowds.include?(crowd) and crowd.destroy
-      flash[:notice] = "Crowd Deleted"
+    if current_user.crowds.include?(crowd)
+      crowd.delete_at = 1.week.from_now
+      crowd.save
+      flash[:notice] = "Removed #{crowd.title}."
     else 
       flash[:notice] = "Can't touch this"
     end
@@ -56,22 +56,24 @@ class CrowdsController < ApplicationController
   end
 
 
-  # # PUT /crowds/1
-  # # PUT /crowds/1.xml
-  # def update
-  #   @crowds = Crowds.find(params[:id])
-  # 
-  #   respond_to do |format|
-  #     if @crowds.update_attributes(params[:crowds])
-  #       flash[:notice] = 'Crowds was successfully updated.'
-  #       format.html { redirect_to(@crowds) }
-  #       format.xml  { head :ok }
-  #     else
-  #       format.html { render :action => "edit" }
-  #       format.xml  { render :xml => @crowds.errors, :status => :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  # This only does Un-delete for now
+  # PUT /crowds/1
+  # PUT /crowds/1.xml
+  def update
+    crowd = Crowd.find(params[:id])
+    crowd.delete_at = nil
+    respond_to do |format|
+      if crowd.save
+        flash[:notice] = "Restored <b>#{crowd.title}</b>"
+        format.html { redirect_to(crowds_url) }
+        format.xml  { head :ok }
+      else
+        flash[:notice] = "Couldn't restore <b>#{crowd.title}</b> :("
+        format.html { redirect_to(crowds_url) }
+        format.xml  { render :xml => crowd.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
 
   # # GET /crowds
   # # GET /crowds.xml

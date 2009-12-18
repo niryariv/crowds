@@ -61,6 +61,23 @@
 				</p>
 			</p>
 			<% end -%>
+			<% if @deleted_crowds.size > 0 %>
+				<div class="grey-area">
+				<p>&nbsp;</p>
+				<p>
+					<i>Crowds marked for removal:</i>
+					<ul>
+					<% for crowd in @deleted_crowds -%>
+						<li>
+							<%= link_to "<b>#{crowd.title}</b>", crowd_items_path(crowd) -%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							Will be removed in <%= distance_of_time_in_words(crowd.delete_at - Time.now) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<%= link_to "Undelete", crowd_path(crowd), :method => :put -%>
+						</li>
+					<% end %>
+					</ul>
+				</p>
+				</div>
+			<% end %>
 		</p>
 	<% end -%>
 

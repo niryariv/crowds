@@ -9,14 +9,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091117165948) do
+ActiveRecord::Schema.define(:version => 20091218163624) do
 
   create_table "crowds", :force => true do |t|
-    t.string  "title",   :null => false
-    t.integer "user_id", :null => false
+    t.string   "title",     :null => false
+    t.integer  "user_id",   :null => false
+    t.datetime "delete_at"
   end
 
   add_index "crowds", ["user_id"], :name => "user_id"
+
+  create_table "delayed_jobs", :force => true do |t|
+    t.integer  "priority",   :default => 0
+    t.integer  "attempts",   :default => 0
+    t.text     "handler"
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "feeds", :force => true do |t|
     t.string   "title",        :null => false
@@ -60,13 +74,20 @@ ActiveRecord::Schema.define(:version => 20091117165948) do
     t.integer "crowd_id", :null => false
   end
 
+  add_index "ownerships", ["crowd_id"], :name => "user_id"
+  add_index "ownerships", ["feed_id", "crowd_id"], :name => "feed_id_2", :unique => true
+  add_index "ownerships", ["feed_id"], :name => "feed_id"
+
   create_table "tags", :force => true do |t|
     t.string   "url",        :limit => 256, :null => false
     t.string   "tags",       :limit => 256, :null => false
     t.datetime "created_at",                :null => false
   end
 
+  add_index "tags", ["url"], :name => "url", :unique => true
+
   create_table "users", :force => true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "identity_url"
