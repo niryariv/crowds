@@ -39,6 +39,7 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 			<%= link_to "sign in", '/signin' %>  to add or remove sources.
 		</p>
 <% end %>
+<% if @feeds.size > 5 %>Currently monitoring <%= @crowd.feeds.size %> sources: <% end %>
 </div>
 
 <div id="feeds-list">
