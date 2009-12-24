@@ -4,7 +4,7 @@ AppName = 'Crowds Machine'
 
 
 # Didn't really plan to cheat on my User-Agent, but Facebook forces that...
-USER_AGENT = 'FireFox (X11; Linux i686; pl-PL); slackware; FireFox;'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
 
 
 # These are the time gaps for which to check new items
