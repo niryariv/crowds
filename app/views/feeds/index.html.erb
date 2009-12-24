@@ -13,7 +13,7 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 <p>&nbsp;</p>
 <% end %>
 
-<% if current_user %>
+<% if current_user and current_user.owns?(@crowd) %>
 	<div class="centered">
 		Add a source URL:
 
@@ -33,13 +33,12 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 			<b>Add source with a single click using the Crowds bookmarklet</b> - drag this to your bookmarks toolbar: 
 			<a href="javascript:location.href='<%= root_url %>crowd/<%= @crowd.id %>/import?url='+encodeURIComponent(location.href)">&raquo;<%= @crowd.title %></a>
 		</p>
+		<% if @feeds.size > 5 %>Currently monitoring <%= @crowd.feeds.size %> sources: <% end %>
 <% else %>
 		<p align="center">
-			<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, 
-			<%= link_to "sign in", '/signin' %>  to add or remove sources.
+			<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, sign in to add or remove sources.
 		</p>
 <% end %>
-<% if @feeds.size > 5 %>Currently monitoring <%= @crowd.feeds.size %> sources: <% end %>
 </div>
 
 <div id="feeds-list">
