@@ -10,15 +10,14 @@ require "#{ROOT}/config/crowds.rb"
 
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
 
-puts "#{Time.now} [Feed Reader] Initialized in #{RAILS_ENV}"
-
 cycle_start = Time.now
-puts "#{Time.now} [Feedread Daemon] Starting feed cycle"
+puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 
+# Get to work
 
 hydra = Typhoeus::Hydra.new(:max_concurrency => 30)
 
-Feed.all[1..100].each do |f|     
+Feed.all.each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
 
     req = Typhoeus::Request.new(f.url, 
