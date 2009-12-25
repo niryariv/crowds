@@ -127,7 +127,7 @@ class Crowd < ActiveRecord::Base
   # Housekeeping: remove crowds marked for deletion over a week ago (allow for delete undo, up to a week)
   
   def self.remove_deleted
-    self.delete_all "deleted_at < '#{1.week.ago.to_s(:db)}'"
+    self.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
   end
   
 end
