@@ -16,6 +16,7 @@ puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 # Get to work
 
 hydra = Typhoeus::Hydra.new(:max_concurrency => 30)
+hydra.disable_memoization
 
 Feed.all.each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
