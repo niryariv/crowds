@@ -1,13 +1,12 @@
 <% if @items.size == 0 -%>
 	<p>
-		Welcome! <br/>
-		You don't seem to have any items - here's two things you can to fix this: 
+		No items yet for this crowd. Here's two things you can to change this: 
 		<ol>
 			<li><%= link_to "Add sources", crowd_feeds_path(@crowd.id) -%>: the more sources, the better the chance of
 				finding items.</li>
-			<li>Wait (but only after you added some sources ;): new items will usually appear only a day after adding 
-				sources, so give <%= AppName %> some time to read the new data.</li>
+			<li>Wait (but only after you add some sources ;): new sources will take about a day to be processed by <%= AppName %>.</li>
 		</ol>
+		So, add some sources and check back in 24 hours to see your discovered items!
 	</p>
 <% else -%>	
 	<p align="center">
