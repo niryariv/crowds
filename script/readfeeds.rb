@@ -18,18 +18,23 @@ puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 hydra = Typhoeus::Hydra.new(:max_concurrency => 30)
 hydra.disable_memoization
 
+GC.start
+
 Feed.all.each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
-
+    
+    last_updated = f.last_read_at.httpdate unless f.last_read_at.nil?
+    
     req = Typhoeus::Request.new(f.url, 
                                     :user_agent => USER_AGENT,
                                     :timeout    => 30000,
-                                    :follow_location => true
+                                    :follow_location => true,
+                                    :headers    => { 'If-Modified-Since' => last_updated }
                                 )
     req.on_complete do |resp|
-        f = File.new("/tmp/feeds/#{f.id}", "w")
-        f.write(resp.body)
-        f.close
+        if resp.code == 200
+            f.refresh(resp.body)
+        end
     end
     hydra.queue req
 end 
