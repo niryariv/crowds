@@ -52,8 +52,11 @@ class Feed < ActiveRecord::Base
         end 
       end
     end
-
-    self.update_attribute(:last_read_at, Time.now)
+    
+    self.failed_count = 0
+    self.last_read_at = Time.now
+    self.save
+    
   rescue Exception=>e
     logger.error "Feed/refresh - ERROR: #{e.message} on #{self.url}"
     false
