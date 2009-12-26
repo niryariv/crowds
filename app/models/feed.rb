@@ -25,11 +25,21 @@ class Feed < ActiveRecord::Base
   end
     
 
-  def refresh
+  def refresh(body = nil)
     logger.info "feeds/refresh url:#{self.url}"
 
     rss = FeedTools::Feed.new
-    rss.feed_data = load_url(self.url, self.last_read_at)
+    
+    if !body.nil?
+        rss.feed_data = body
+        logger.info "reading from memory"        
+    elsif File.exist?("#{FeedCacheDir}/#{self.id}")
+        rss.feed_data = File.new("#{FeedCacheDir}/#{self.id}", 'r').read
+        logger.info "reading from file"
+    else
+        rss.feed_data = load_url(self.url, self.last_read_at)
+        logger.info "reading from URL"
+    end
     
     rss.items.each do |i|
       published = i.time
