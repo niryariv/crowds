@@ -4,8 +4,7 @@ begin
 
   require 'rubygems'
   require 'daemons'
-
-
+  
   # def log(message)
   #   ActiveRecord::Base.logger.info "#{Time.now} [Mail Daemon] #{message}"
   # end
@@ -20,12 +19,15 @@ begin
 
   cycle_start = Time.now
   puts "#{Time.now} [Feedread Daemon] Starting feed cycle"
+
   Feed.all.each do |f| 
     puts "Refreshing feed #{f.title} [#{f.url}]"
+
     f.refresh
     f = nil
     sleep(1)
   end 
+  
   puts "#{Time.now} [Feedread Daemon] Ending feed cycle. Took #{(Time.now - cycle_start).round} seconds."
 
   Item.delete_old
