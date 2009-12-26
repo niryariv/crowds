@@ -16,6 +16,8 @@ Gaps = [1,3,7,30]   # days
 CacheLifetime = 12  # hours
 CacheDir = RAILS_ROOT + '/tmp/cache/data'
 
+FeedCacheDir = '/tmp/feeds'
+
 # Default number of references a URL should have in order to be considered "popular"
 DefaultThreshold = 2
 
