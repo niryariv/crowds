@@ -36,7 +36,7 @@ Feed.all(:order => "last_read_at ASC").each do |f|
             f.refresh(resp.body)
         else
             f.increment :failed_count
-            f.:last_read_at = Time.now
+            f.last_read_at = Time.now
             f.save
         end
     end
