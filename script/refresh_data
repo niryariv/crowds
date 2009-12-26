@@ -1,5 +1,0 @@
-# Production
-/home/niryariv/public_html/BottomFeeder/script/runner -e production "Crowd.find(:all).each {|c| c.refresh_feeds} ; Item.delete_old"
-
-# Development
-#/Users/niryariv/BottomFeeder/script/runner -e development "Crowd.find(:all).each {|c| c.refresh_feeds} ; Item.delete_old"
