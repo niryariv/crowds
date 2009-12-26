@@ -20,7 +20,7 @@ hydra.disable_memoization
 
 GC.start
 
-Feed.all(:order => "failed_count, last_read_at").each do |f|     
+Feed.all(:order => "fail_count, last_read_at").each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
     
     last_updated = f.last_read_at.httpdate unless f.last_read_at.nil?

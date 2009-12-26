@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20091226223424) do
     t.string   "home_url",                    :null => false
     t.datetime "created_at",                  :null => false
     t.datetime "last_read_at"
-    t.integer  "failed_count", :default => 0
+    t.integer  "fail_count",   :default => 0
   end
 
   add_index "feeds", ["url"], :name => "url", :unique => true
