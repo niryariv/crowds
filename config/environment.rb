@@ -36,7 +36,9 @@ Rails::Initializer.run do |config|
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
 
-  config.plugins = [ :openid_engine, :validates_url_format_of ]
+  # config.plugins = [ :openid_engine, :validates_url_format_of, :spawn ]
+  
+  config.plugins = [ :all ]
   
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
