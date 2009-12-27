@@ -20,7 +20,7 @@ hydra.disable_memoization
 
 GC.start
 
-Feed.all(:order => "fail_count, last_read_at, created_at").each do |f|     
+Feed.all(:conditions => "last_read_at is null").each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
     
     last_updated = f.last_read_at.httpdate unless f.last_read_at.nil?
@@ -47,3 +47,5 @@ hydra.run
 
 
 puts "#{Time.now} [Feed Reader] Ending feed cycle. Took #{(Time.now - cycle_start).round} seconds."
+
+
