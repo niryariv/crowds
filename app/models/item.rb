@@ -2,8 +2,10 @@ class Item < ActiveRecord::Base
 
   belongs_to :feed
 
+  # removing validations = let mysql keys take care of this... hope to save time
+
   # double check - Feed::refresh tries to check for known URLs, here's second check post Item::normalize_it
-  validates_uniqueness_of :url, :scope => :feed_id
+  # validates_uniqueness_of :url, :scope => :feed_id
   
   before_validation :normalize_it
   
