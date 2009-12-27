@@ -59,7 +59,7 @@ class Feed < ActiveRecord::Base
       i.description.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
         unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
             or u.include?('/feedads.googleadservices.com/') \
-            or u.include? ('/ad.doubleclick.net/') \
+            or u.include?('/ad.doubleclick.net/') \
             or known_urls.include?(u)
                 self.items.create(:url=>u, :created_at=>published, :source_id=>it.id)
                 known_urls << u
