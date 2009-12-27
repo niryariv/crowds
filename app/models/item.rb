@@ -5,11 +5,15 @@ class Item < ActiveRecord::Base
   # removing validations = let mysql keys take care of this... hope to save time
 
   # double check - Feed::refresh tries to check for known URLs, here's second check post Item::normalize_it
-  # validates_uniqueness_of :url, :scope => :feed_id
+  validates_uniqueness_of :url, :scope => :feed_id, :if => :should_validate?
   
   before_validation :normalize_it
   
+  def should_validate?
+    !self.feed.last_read_at.nil?
+  end
   
+    
   def normalize_it
     u = open(self.url)
     self.url = u.base_uri.to_s  # get real, unshortened, URL
