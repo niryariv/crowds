@@ -24,13 +24,6 @@ class Feed < ActiveRecord::Base
     fh
   end
     
-  def all_items
-    @items = []
-    self.items.each do |i|
-        @items << i.url
-    end
-  end
-    
 
   def refresh(body = nil)
     logger.info "feeds/refresh url:#{self.url}"
@@ -57,7 +50,7 @@ class Feed < ActiveRecord::Base
     
     rss.items.each do |i|
       published = i.time
-      next if published < self.last_read_at or known_urls.include?(i.link)
+      next if (!self.last_read_at.nil? and published < self.last_read_at) or known_urls.include?(i.link)
 
       it = self.items.create(:url=>i.link, :created_at=>published, :title=>i.title)
       known_urls << i.link
