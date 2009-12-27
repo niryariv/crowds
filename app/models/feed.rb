@@ -24,10 +24,24 @@ class Feed < ActiveRecord::Base
     fh
   end
     
+  def all_items
+    @items = []
+    self.items.each do |i|
+        @items << i.url
+    end
+  end
+    
 
   def refresh(body = nil)
     logger.info "feeds/refresh url:#{self.url}"
 
+    known_urls = []
+    self.items.each do |i|
+        known_urls << i.url
+    end
+    
+    # puts known_urls
+    
     rss = FeedTools::Feed.new
     
     if !body.nil?
@@ -43,22 +57,28 @@ class Feed < ActiveRecord::Base
     
     rss.items.each do |i|
       published = i.time
+      next if published < self.last_read_at or known_urls.include?(i.link)
+
       it = self.items.create(:url=>i.link, :created_at=>published, :title=>i.title)
+      known_urls << i.link
       next if it.new_record? # new_record?=true means that the item was was already in the DB previously, so ignore it
 
       i.description.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
-        unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i or u.include?('/feedads.googleadservices.com/')
+        unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i or u.include?('/feedads.googleadservices.com/') or known_urls.include?(u)
             self.items.create(:url=>u, :created_at=>published, :source_id=>it.id)
+            known_urls << u
         end 
       end
     end
     
-    self.failed_count = 0
+    self.fail_count = 0
     self.last_read_at = Time.now
     self.save
     
   rescue Exception=>e
     logger.error "Feed/refresh - ERROR: #{e.message} on #{self.url}"
+    self.increment :fail_count
+    self.save
     false
   end
 

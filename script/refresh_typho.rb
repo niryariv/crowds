@@ -20,7 +20,7 @@ hydra.disable_memoization
 
 GC.start
 
-Feed.all(:order => "fail_count, last_read_at").each do |f|     
+Feed.all(:order => "fail_count, last_read_at, created_at").each do |f|     
     puts "Reading feed #{f.title} [#{f.url}]"
     
     last_updated = f.last_read_at.httpdate unless f.last_read_at.nil?
@@ -35,8 +35,7 @@ Feed.all(:order => "fail_count, last_read_at").each do |f|
         if resp.code == 200
             f.refresh(resp.body)
         else
-            f.increment :failed_count
-            f.last_read_at = Time.now
+            f.increment :fail_count if resp.code != 304
             f.save
         end
     end
