@@ -30,11 +30,13 @@
 		<span id="context-<%= ctr %>" style="display: none">
 			<ul>
 			  <% data[:feeds].each do |f| -%>
-				<li><% if url==f.url or f.title.to_s == '' -%>
-						<a href="<%= f.feed.home_url -%>"><%= f.feed.title -%></a></li>
+				<li>
+					<% if url==f.url or f.title.to_s == '' -%>
+						<%= link_to f.feed.title, f.feed.home_url, { :target=>"_blank" } %>
 					<% else -%>
-						<%= f.feed.title %> : <a href="<%= f.url -%>"><%= f.title -%></a></li>
-					<% end -%></li>
+						<%= f.feed.title %> : <%= link_to f.title, f.url, { :target=>"_blank" } %>
+					<% end -%>
+				</li>
 			  <% end %>
 			</ul>
 		</span>
