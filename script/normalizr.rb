@@ -31,6 +31,7 @@ loop do
     items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
 
     if items.size == 0 # never quit...
+        puts "WAIT FOR MORE..."
         sleep(100) 
         next
     end
@@ -59,6 +60,7 @@ loop do
         hydra.queue req
     end 
     hydra.run
+    sleep(1)
 end
 
 puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items"
