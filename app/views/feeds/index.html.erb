@@ -44,10 +44,10 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 <div id="feeds-list">
 	<% for feed in @feeds %>
 	<span class="feed-item">
-		<%= link_to feed.title, feed.home_url %>
+		<%= link_to feed.title, feed.home_url, { :target=>"_blank" } %>
 		<span class="feed-details" style="display: none"> 
 			&nbsp;&nbsp;&nbsp;&nbsp;
-			<tt><%= feed.url %></tt>
+			<tt><%= link_to feed.url, feed.url, { :target=>"_blank", :style=>"text-decoration: none" } %></tt>
 			&nbsp;&nbsp;&nbsp;&nbsp;
 		<% if current_user and current_user.owns?(@crowd) %>
 				<%= link_to 'Delete', crowd_feed_url(@crowd, feed), :method => :delete  %>
