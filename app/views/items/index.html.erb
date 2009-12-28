@@ -26,7 +26,7 @@
 			<% current_period = data[:period] %>
 		<% end -%>
 		<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
-		<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
+		<a href="<%= url %>" target="_blank"><%= (data[:title].to_s.empty?) ? url : data[:title] %></a> <%= data[:tags] %>
 		<span id="context-<%= ctr %>" style="display: none">
 			<ul>
 			  <% data[:feeds].each do |f| -%>
