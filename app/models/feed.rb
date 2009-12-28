@@ -50,18 +50,24 @@ class Feed < ActiveRecord::Base
     
     rss.items.each do |i|
       published = i.time
-      next if (!self.last_read_at.nil? and published < self.last_read_at) or known_urls.include?(i.link)
-
-      it = self.items.create(:url=>i.link, :created_at=>published, :title=>i.title)
-      known_urls << i.link
-      next if it.new_record? # new_record?=true means that the item was was already in the DB previously, so ignore it
-
+      next if (!self.last_read_at.nil? and published < self.last_read_at) or published < (Gaps.max+10).days.ago or known_urls.include?(i.link)
+      
+      begin
+          it = self.items.create(:url=>i.link, :created_at=>published, :title=>i.title)
+          known_urls << i.link
+          next if it.new_record? # new_record?=true means that the item was was already in the DB previously, so ignore it
+      rescue
+      end
+      
       i.description.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
         unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
             or u.include?('/feedads.googleadservices.com/') \
             or u.include?('/ad.doubleclick.net/') \
             or known_urls.include?(u)
-                self.items.create(:url=>u, :created_at=>published, :source_id=>it.id)
+                begin
+                    self.items.create(:url=>u, :created_at=>published, :source_id=>it.id)
+                rescue
+                end
                 known_urls << u
         end 
       end
