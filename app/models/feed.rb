@@ -63,6 +63,7 @@ class Feed < ActiveRecord::Base
         unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
             or u.include?('/feedads.googleadservices.com/') \
             or u.include?('http://ads.') \
+            or u.include?('http://ad.') \
             or known_urls.include?(u)
                 begin
                     self.items.create(:url=>u, :created_at=>published, :source_id=>it.id, :normalized => false)
