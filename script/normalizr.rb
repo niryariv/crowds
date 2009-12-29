@@ -31,7 +31,7 @@ loop do
     items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
 
     if items.size == 0 # never quit...
-        puts "WAIT FOR MORE..."
+        puts "Normalizr done. Sleep(100) and go again!"
         sleep(100) 
         next
     end
