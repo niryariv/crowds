@@ -14,18 +14,23 @@ class Feed < ActiveRecord::Base
   # validates_url_format_of :url
   
   
-  def refresh(body = nil)
+  def refresh(body)
     logger.info "Feed::refresh url:#{self.url}"
 
     known_urls = []
     self.items.each do |i|
         known_urls << i.url
     end
-
+    
     rss = FeedTools::Feed.new
     
-    # work only via refresh_typho from now on
-    return false if body.nil?
+    # body is never nil, at the current setup
+    # if !body.nil?
+    #     rss.feed_data = body
+    # else
+    #     rss.feed_data = load_url(self.url, self.last_read_at)
+    # end
+    rss.feed_data = body
     
     rss.items.each do |i|
       published = i.time
@@ -47,7 +52,7 @@ class Feed < ActiveRecord::Base
             or known_urls.include?(u)
                 begin
                     self.items.create(:url=>u, :created_at=>published, :source_id=>it.id, :normalized => false)
-                rescue # silently
+                rescue
                 end
                 known_urls << u
         end 
@@ -65,4 +70,15 @@ class Feed < ActiveRecord::Base
     false
   end
 
+
+  # deprecated by refresh_typho. if this is called, something went wrong
+  def load_url(url, last_updated = nil) 
+    logger.error("WTF? refreshing #{url}")
+    last_updated ||= Time.at(0)
+    open(url, { 'User-Agent'=>USER_AGENT, 'If-Modified-Since' => last_updated.httpdate }).read.to_s
+  rescue Exception=>e
+    logger.error "load_url: #{e.message} on #{url}"
+    ''
+  end
+    
 end
