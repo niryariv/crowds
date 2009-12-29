@@ -10,9 +10,6 @@ require "#{ROOT}/config/crowds.rb"
 
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
 
-cycle_start = Time.now
-puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
-
 # Get to work
 
 MAX_CON = 20
@@ -20,40 +17,57 @@ MAX_CON = 20
 hydra = Typhoeus::Hydra.new(:max_concurrency => MAX_CON)
 hydra.disable_memoization
 
-ctr = 0
-all_feeds = Feed.all(:order => "fail_count, last_read_at, created_at")
+# all_feeds = Feed.all(:order => "fail_count, last_read_at, created_at")
+def now
+    Time.now.utc
+end
+
+cycle_start = now ; ctr = 0 # ; next_start = 0
+puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 
 loop do
-    feeds = all_feeds[ctr..(ctr+MAX_CON)]
-    ctr += MAX_CON
-    
-    break if feeds.nil? or feeds.size == 0
-    
-    feeds.each do |f|     
-        last_updated = f.last_read_at.httpdate unless f.last_read_at.nil?
 
+    feeds = Feed.all(   
+                        :order => "updated_at, fail_count, last_read_at, created_at", 
+                        :conditions => ["updated_at is null OR updated_at < ?", cycle_start],
+                        :limit => MAX_CON
+                    )
+
+    ctr += feeds.size
+    
+    if feeds.size == 0
+        puts "#{now} [Feed Reader] Ended feed cycle. Took #{(now - cycle_start).round} seconds. Updated #{ctr} feeds. Sleep(60) and go again!"
+        cycle_start = now ; ctr = 0
+        sleep(60)
+        next
+    end
+    
+    feeds.each do |f|
         puts "Reading feed #{f.title} [#{f.url}]"
         
-        req = Typhoeus::Request.new(f.url, 
+        req = Typhoeus::Request.new(    
+                                        f.url, 
                                         :user_agent => USER_AGENT,
                                         :timeout    => 30000,
                                         :follow_location => true,
-                                        :headers    => { 'If-Modified-Since' => last_updated }
+                                        :headers    => (f.last_read_at.nil? ? {} : { 'If-Modified-Since' => f.last_read_at.httpdate })
                                     )
         req.on_complete do |resp|
             puts "#{resp.code} #{f.url}"
             if resp.code == 200
                 f.refresh(resp.body)
-            elsif resp.code != 304
-                f.increment :fail_count
+            else
+                f.increment :fail_count unless resp.code == 304
+                f.updated_at = now
                 f.save
             end
         end
+
         hydra.queue req
+        # sleep(1)
     end 
-    hydra.run
-    sleep(1)
+    hydra.run    
+    puts "#{now} [Feed Reader] Running for #{(now - cycle_start).round} seconds. Updated #{ctr} feeds."
 end
 
 
-puts "#{Time.now} [Feed Reader] Ending feed cycle. Took #{(Time.now - cycle_start).round} seconds."
