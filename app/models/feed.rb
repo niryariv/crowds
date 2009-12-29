@@ -37,16 +37,18 @@ class Feed < ActiveRecord::Base
     
     rss = FeedTools::Feed.new
     
-    if !body.nil?
-        rss.feed_data = body
-        # logger.info "reading from memory"        
-    elsif File.exist?("#{FeedCacheDir}/#{self.id}")
-        rss.feed_data = File.new("#{FeedCacheDir}/#{self.id}", 'r').read
-        logger.info "reading from file"
-    else
-        rss.feed_data = load_url(self.url, self.last_read_at)
-        logger.info "reading from URL"
-    end
+    # work only via refresh_typho from now on
+    return false if body.nil?
+    # 
+    # if !body.nil?
+    #     rss.feed_data = body
+    # elsif File.exist?("#{FeedCacheDir}/#{self.id}")
+    #     rss.feed_data = File.new("#{FeedCacheDir}/#{self.id}", 'r').read
+    #     logger.info "reading from file"
+    # else
+    #     rss.feed_data = load_url(self.url, self.last_read_at)
+    #     logger.info "reading from URL"
+    # end
     
     rss.items.each do |i|
       published = i.time
