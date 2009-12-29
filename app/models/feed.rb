@@ -14,41 +14,18 @@ class Feed < ActiveRecord::Base
   # validates_url_format_of :url
   
   
-  
-  def self.hash_all
-    fh = {}
-    feeds = self.find(:all)
-    feeds.each do |f|
-      fh[f.id.to_s] = {:title=> f.title, :home_url=>f.home_url}
-    end
-    fh
-  end
-    
-
   def refresh(body = nil)
-    logger.info "feeds/refresh url:#{self.url}"
+    logger.info "Feed::refresh url:#{self.url}"
 
     known_urls = []
     self.items.each do |i|
         known_urls << i.url
     end
-    
-    # puts known_urls
-    
+
     rss = FeedTools::Feed.new
     
     # work only via refresh_typho from now on
     return false if body.nil?
-    # 
-    # if !body.nil?
-    #     rss.feed_data = body
-    # elsif File.exist?("#{FeedCacheDir}/#{self.id}")
-    #     rss.feed_data = File.new("#{FeedCacheDir}/#{self.id}", 'r').read
-    #     logger.info "reading from file"
-    # else
-    #     rss.feed_data = load_url(self.url, self.last_read_at)
-    #     logger.info "reading from URL"
-    # end
     
     rss.items.each do |i|
       published = i.time
@@ -70,7 +47,7 @@ class Feed < ActiveRecord::Base
             or known_urls.include?(u)
                 begin
                     self.items.create(:url=>u, :created_at=>published, :source_id=>it.id, :normalized => false)
-                rescue
+                rescue # silently
                 end
                 known_urls << u
         end 
@@ -82,34 +59,10 @@ class Feed < ActiveRecord::Base
     self.save
     
   rescue Exception=>e
-    logger.error "Feed/refresh - ERROR: #{e.message} on #{self.url}"
+    logger.error "Feed::refresh - ERROR: #{e.message} on #{self.url}"
     self.increment :fail_count
     self.save
     false
   end
 
-
-  # these two should probably be in a some library (?)
-  def load_url(url, last_updated = nil) 
-    last_updated ||= Time.at(0)
-    open(url, { 'User-Agent'=>USER_AGENT, 'If-Modified-Since' => last_updated.httpdate }).read.to_s
-  rescue Exception=>e
-    logger.error "load_url: #{e.message} on #{url}"
-    ''
-  end
-  
-
-# # deprecated for Crowd.refresh_feeds 
-#   def self.refresh_all
-#     feeds = self.find(:all, :include=>:ownerships)
-#     feeds.each do |f|
-#       next if f.ownerships.empty? # don't load URLs which aren't owned by anyone
-#       if f.refresh
-#         logger.info "Refreshed #{f.url}"
-#       else
-#         logger.error "Failed refresh #{f.url}"
-#       end
-#     end
-#   end
-  
 end
