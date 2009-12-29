@@ -39,16 +39,16 @@ class Crowd < ActiveRecord::Base
   end
   
   
-  # replaces Feed.refresh_all
-  def refresh_feeds
-    self.feeds.each do |f|
-      if f.refresh
-        logger.info "Refreshed #{f.url}"
-      else
-        logger.error "Failed refresh #{f.url}"
-      end
-    end
-  end
+  # deprecated
+  # def refresh_feeds
+  #   self.feeds.each do |f|
+  #     if f.refresh
+  #       logger.info "Refreshed #{f.url}"
+  #     else
+  #       logger.error "Failed refresh #{f.url}"
+  #     end
+  #   end
+  # end
 
 
   def popular_items_since(since, threshold = DefaultThreshold, limit = DefaultItemLimit)
