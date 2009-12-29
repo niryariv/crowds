@@ -39,7 +39,11 @@ many at once with an OPML file</b>. Best way to start would usually be to get an
 			<%= @crowd.title %> tracks the following <%= @feeds.size > 1 ? "#{@feeds.size} sources" : "source" %>. If this is your crowd, sign in to add or remove sources.
 		</p>
 <% end %>
-</div>
+	
+		<div id="notice"><tt><%= flash[:notice] %></tt></div>
+
+	</div>
+
 
 <div id="feeds-list">
 	<% for feed in @feeds %>

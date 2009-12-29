@@ -49,7 +49,7 @@ class FeedsController < ApplicationController
 
     respond_to do |format|
       format.html { 
-        flash[:notice] = url_param ? "Added feed: '#{new_f.title}'" : "Imported #{new_feed_count} feeds"
+        flash[:notice] = url_param ? "Added: '#{new_f.title}'" : "Imported #{new_feed_count} sources"
         redirect_to crowd_feeds_path(crowd) 
       }
       format.xml  { render :xml => crowd.feeds, :status => :created }
@@ -80,7 +80,7 @@ class FeedsController < ApplicationController
     if o.nil?
       flash[:notice] = "Not allowed to delete this."
     else
-      flash[:notice] = "Deleted #{o.feed.title} (<a href=\"/crowd/#{crowd}/import?url=#{CGI::escape(o.feed.url)}\">Undo</a>)"
+      flash[:notice] = "Deleted '#{o.feed.title}' (<a href=\"/crowd/#{crowd}/import?url=#{CGI::escape(o.feed.url)}\">Undo</a>)"
       Ownership.delete_all(["crowd_id = ? and feed_id = ?", params[:crowd_id], params[:id]])
       Item.delete_all(["feed_id = ?", params[:id]])
     end

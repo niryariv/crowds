@@ -21,6 +21,12 @@ body, p{
     height: 100%;
 }
 
+#notice *{
+    text-align: center;
+    color: #6b5245;
+}
+/*#notice a {  }*/
+
 #header {
         background-color: #bbd9ee; 
         padding: 1% 5% 0%;
