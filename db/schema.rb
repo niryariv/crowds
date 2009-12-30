@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091229203933) do
+ActiveRecord::Schema.define(:version => 20091230200455) do
 
   create_table "crowds", :force => true do |t|
     t.string   "title",     :null => false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20091229203933) do
   add_index "items", ["created_at"], :name => "items_created_at_index"
   add_index "items", ["feed_id", "url"], :name => "feed_id_2", :unique => true
   add_index "items", ["feed_id"], :name => "feed_id"
+  add_index "items", ["normalized"], :name => "index_items_on_normalized"
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
