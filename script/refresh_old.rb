@@ -27,6 +27,8 @@ puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 
 loop do
 
+    Crowd.remove_deleted
+
     feeds = Feed.all(   
                         :order => "fail_count, last_read_at, created_at", 
                         :conditions => ["updated_at is not null AND updated_at < ?", cycle_start],

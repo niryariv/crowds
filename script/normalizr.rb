@@ -19,8 +19,6 @@ puts "#{cycle_start} [Normalizr] Initialized in #{RAILS_ENV}"
 
 # Get to work
 
-# clean up those weird future items
-Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"
 
 hydra = Typhoeus::Hydra.new(:max_concurrency => MAX_CON)
 hydra.disable_memoization
@@ -28,6 +26,10 @@ hydra.disable_memoization
 ctr = 0
 
 loop do
+    # clean up items table
+    Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"
+    Item.delete_old
+
     items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
 
     if items.size == 0 # never quit...

@@ -26,6 +26,8 @@ cycle_start = now ; ctr = 0 # ; next_start = 0
 puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 
 loop do
+    
+    Crowd.remove_deleted
 
     feeds = Feed.all(   
                         :order => "updated_at, fail_count, last_read_at, created_at", 
@@ -68,6 +70,7 @@ loop do
     end 
     hydra.run    
     puts "#{now} [Feed Reader] Running for #{(now - cycle_start).round} seconds. Updated #{ctr} feeds."
+    
 end
 
 
