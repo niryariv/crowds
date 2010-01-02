@@ -13,10 +13,11 @@ class Feed < ActiveRecord::Base
   # TODO
   # validates_url_format_of :url
   
-  
+
+
   def refresh(body)
     logger.info "Feed::refresh url:#{self.url}"
-
+    
     known_urls = []
     self.items.each do |i|
         known_urls << i.url
@@ -45,9 +46,8 @@ class Feed < ActiveRecord::Base
       
       i.description.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
         unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
-            or u.include?('/feedads.googleadservices.com/') \
-            or u.include?('http://ads.') \
             or u.include?('http://feedads.') \
+            or u.include?('http://ads.') \
             or u.include?('http://ad.') \
             or known_urls.include?(u)
                 begin
@@ -72,13 +72,14 @@ class Feed < ActiveRecord::Base
 
 
   # deprecated by refresh_typho. if this is called, something went wrong
-  def load_url(url, last_updated = nil) 
-    logger.error("WTF? refreshing #{url}")
-    last_updated ||= Time.at(0)
-    open(url, { 'User-Agent'=>USER_AGENT, 'If-Modified-Since' => last_updated.httpdate }).read.to_s
+  def load
+    logger.error("WTF? load (#{self.id}) #{self.url}")
+    self.last_read_at = Time.at(0) if self.last_read_at.nil?
+    
+    open(self.url, { 'User-Agent' => USER_AGENT, 'If-Modified-Since' => self.last_read_at.httpdate }).read.to_s                    
   rescue Exception=>e
-    logger.error "load_url: #{e.message} on #{url}"
+    logger.error "ERROR Feed::load : #{e.message} on #{url}"
     ''
   end
-    
+
 end
