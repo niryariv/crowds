@@ -40,7 +40,7 @@
 					<% show_recent = 5 %>
 					<% recent_items[0..(show_recent-1)].each do |url, data| %>
 					<%= link_to_function "<tt>[+]</tt>", "$(\"#context-#{ctr}\").toggle()" %>
-					<a href="<%= url %>" target="_blank"><%= (data[:title].empty?) ? url : data[:title] %></a> <%= data[:tags] %>
+					<a href="<%= url %>" target="_blank"><%= (data[:title].to_s.empty?) ? url : data[:title] %></a> <%= data[:tags] %>
 					<span id="context-<%= ctr %>" style="display: none">
 						<ul>
 						  <% data[:feeds].each do |f| -%>
