@@ -9,7 +9,7 @@ ROOT = File.expand_path(File.dirname(__FILE__)+'/../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
-MAX_CON = 20
+MAX_CON = 100
 
 # quiet
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
@@ -30,13 +30,19 @@ loop do
     Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"
     Item.delete_old
 
-    items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
-
+    # items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
+    
+    # order by id, mark all as normalized allow the next normalizr process to pick new ones
+    items = Item.all(:conditions => "normalized = 0", :order => "id", :limit => MAX_CON)
+    
     if items.size == 0 # never quit...
-        puts "Normalizr done. Sleep(100) and go again!"
-        sleep(100) 
+        puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items. Sleep(60) and go again!"
+        cycle_start = now ; ctr = 0
+        sleep(60) 
         next
     end
+
+    Item.update_all "normalized = 1", "id BETWEEN #{items.first.id} AND #{items.last.id}"
     
     ctr += items.size
     
@@ -47,14 +53,15 @@ loop do
                                     :timeout => 20000 )
 
         req.on_complete do |resp|
-            # puts "Check [#{i.id}] #{i.url}"
-            if resp.code == 200
+            if resp.code == 200 and resp.body != 'error'
                 begin
                     d = JSON.parse(resp.body)
-                    puts "FOUND #{i.url} => #{d['url']}" if i.url != d['url']
-                    Item.update_all ["normalized = 1, url=?, title=?", d['url'], d['title']] , "url='#{i.url}'"
+                    if i.url != d['url']
+                        i.update_attributes :url => d['url'], :title => d['title']
+                    elsif d['title'] != i.title.to_s
+                        i.update_attribute "title", d['title']
+                    end
                 rescue Exception => e
-                    Item.update_all "normalized = 1" , "url='#{i.url}'"
                     puts "ERROR: #{e} [#{i.url}]"
                 end
             end
@@ -62,7 +69,6 @@ loop do
         hydra.queue req
     end 
     hydra.run
-    sleep(1)
 end
 
-puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items"
+
