@@ -9,7 +9,7 @@ ROOT = File.expand_path(File.dirname(__FILE__)+'/../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
-MAX_CON = 100
+MAX_CON = 20
 
 # quiet
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
@@ -29,15 +29,13 @@ loop do
     # clean up items table
     Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"
     Item.delete_old
-
-    # items = Item.all(:conditions => "normalized = 0", :order => "created_at DESC", :limit => MAX_CON)
     
     # order by id, mark all as normalized allow the next normalizr process to pick new ones
     items = Item.all(:conditions => "normalized = 0", :order => "id", :limit => MAX_CON)
     
     if items.size == 0 # never quit...
         puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items. Sleep(60) and go again!"
-        cycle_start = now ; ctr = 0
+        cycle_start = Time.now ; ctr = 0
         sleep(60) 
         next
     end
@@ -69,6 +67,5 @@ loop do
         hydra.queue req
     end 
     hydra.run
+    sleep(1)
 end
-
-
