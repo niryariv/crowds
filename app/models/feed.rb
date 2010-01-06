@@ -94,7 +94,7 @@ class Feed < ActiveRecord::Base
               or u.include?('http://ads.') \
               or u.include?('http://ad.') \
               or items.keys.include?(u)
-                 items[u] << {:created_at=>published, :parent=>i.url}
+                 items[u] = {:created_at=>published, :parent=>i.url}
           end 
         end
       end
