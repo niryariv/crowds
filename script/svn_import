@@ -1,2 +1,0 @@
-svn import BottomFeeder http://opensvn.csie.org/BottomFeeder --username niryariv -m "Initial Import"
-svn co http://opensvn.csie.org/BottomFeeder --username niryariv

@@ -5,7 +5,7 @@ require 'rubygems'
 require 'typhoeus'
 require 'json'
 
-ROOT = File.expand_path(File.dirname(__FILE__)+'/../')
+ROOT = File.expand_path(File.dirname(__FILE__)+'/../../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
