@@ -51,7 +51,7 @@ loop do
                                     :timeout => 20000 )
 
         req.on_complete do |resp|
-            if resp.code == 0
+            if resp.code != 200
                 puts "ERROR!!! TheRealURL down?!"
                 Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
                 exit!
