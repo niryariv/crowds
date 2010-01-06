@@ -70,6 +70,65 @@ class Feed < ActiveRecord::Base
     false
   end
 
+ 
+  require 'feedzirra'
+  
+  def feedzirra_get_links(body)
+      items = {}
+
+      # rss = FeedTools::Feed.new
+      # rss.feed_data = body
+      
+      rss = Feedzirra::Feed.parse(body)
+
+      rss.entries.each do |i|
+          puts "checking #{i.title}"
+          published = i.last_modified
+          next if (!self.last_read_at.nil? and published < self.last_read_at) # or published < (Gaps.max+10).days.ago \
+
+        items[i.url] = { :created_at=>published, :title=>i.title }
+
+        i.summary.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
+          unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
+              or u.include?('http://feedads.') \
+              or u.include?('http://ads.') \
+              or u.include?('http://ad.') \
+              or items.keys.include?(u)
+                 items[u] << {:created_at=>published, :parent=>i.url}
+          end 
+        end
+      end
+      
+      items
+  end
+
+  def get_links(body)
+      items = {}
+
+      rss = FeedTools::Feed.new
+      rss.feed_data = body
+      
+      rss.items.each do |i|
+          puts "checking #{i.title}"
+          published = i.time
+          next if (!self.last_read_at.nil? and published < self.last_read_at) # or published < (Gaps.max+10).days.ago \
+
+        items[i.link] = { :url=>i.link, :created_at=>published, :title=>i.title, :items=>[] }
+
+        i.description.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
+          unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
+              or u.include?('http://feedads.') \
+              or u.include?('http://ads.') \
+              or u.include?('http://ad.') \
+              or items.keys.include?(u)
+                 items[i.link][:items] << {:url=>u, :created_at=>published}
+          end 
+        end
+      end
+      
+      items
+  end
+
 
   # deprecated by refresh_typho. if this is called, something went wrong
   def load
