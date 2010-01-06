@@ -51,7 +51,13 @@ loop do
                                     :timeout => 20000 )
 
         req.on_complete do |resp|
-            if resp.code == 200 and resp.body != 'error'
+            if resp.code == 0
+                puts "ERROR!!! TheRealURL down?!"
+                Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
+                exit!
+            end
+            
+            if resp.body != 'error'
                 begin
                     d = JSON.parse(resp.body)
                     if i.url != d['url']
