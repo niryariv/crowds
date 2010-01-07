@@ -38,10 +38,12 @@ loop do
     ctr += feeds.size
     
     if feeds.size == 0
-        puts "#{now} [Feed Reader] Ended feed cycle. Took #{(now - cycle_start).round} seconds. Updated #{ctr} feeds. Sleep(60) and go again!"
-        cycle_start = now ; ctr = 0
-        sleep(300)
-        next
+        puts "#{now} [Feed Reader] Ended feed cycle. Took #{(now - cycle_start).round} seconds. Updated #{ctr} feeds." # Sleep(60) and go again!"
+        ## single loop
+        # cycle_start = now ; ctr = 0
+        # sleep(300)
+        # next
+        exit
     end
 
 

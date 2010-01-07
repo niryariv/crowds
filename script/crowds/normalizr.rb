@@ -35,10 +35,14 @@ loop do
     items = Item.all(:conditions => "normalized = 0", :order => "id", :limit => MAX_CON)
     
     if items.size == 0 # never quit...
-        puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items. Sleep(60) and go again!"
-        cycle_start = Time.now ; ctr = 0
-        sleep(300) 
-        next
+        puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items."# Sleep(60) and go again!"
+        
+        ## single loop
+        # cycle_start = Time.now ; ctr = 0
+        # sleep(300) 
+        # next
+        
+        exit
     end
 
     Item.update_all "normalized = 1", "id BETWEEN #{items.first.id} AND #{items.last.id}"
