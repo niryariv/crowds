@@ -1,5 +1,6 @@
 #require 'htmlentities/string'
-require 'feed_tools'
+# require 'feed_tools'
+require 'feedzirra'
 
 class Feed < ActiveRecord::Base
 
@@ -71,7 +72,6 @@ class Feed < ActiveRecord::Base
   end
 
  
-  require 'feedzirra'
 
   def feedzirra_refresh(body)
       items = {}

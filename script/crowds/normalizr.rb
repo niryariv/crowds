@@ -54,7 +54,7 @@ loop do
         req.on_complete do |resp|
             if resp.code != 200
                 fail_count += 1
-                puts "ERROR from TheRealURL: #{resp.code}"
+                puts "ERROR from TheRealURL: #{resp.code} on '#{i.url}'"
                 if fail_count < 10 
                     puts "Sleep(3), redo"
                     sleep(3)
