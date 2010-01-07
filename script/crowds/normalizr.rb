@@ -37,7 +37,7 @@ loop do
     if items.size == 0 # never quit...
         puts "#{Time.now} [Normalizr] Done. Took #{(Time.now - cycle_start).round} seconds to clean #{ctr} items. Sleep(60) and go again!"
         cycle_start = Time.now ; ctr = 0
-        sleep(60) 
+        sleep(300) 
         next
     end
 

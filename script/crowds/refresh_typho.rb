@@ -40,7 +40,7 @@ loop do
     if feeds.size == 0
         puts "#{now} [Feed Reader] Ended feed cycle. Took #{(now - cycle_start).round} seconds. Updated #{ctr} feeds. Sleep(60) and go again!"
         cycle_start = now ; ctr = 0
-        sleep(60)
+        sleep(300)
         next
     end
 
@@ -73,7 +73,7 @@ loop do
         end
 
         hydra.queue req
-        # sleep(1)
+        sleep(10)
     end 
     hydra.run    
     puts "#{now} [Feed Reader] Running for #{(now - cycle_start).round} seconds. Updated #{ctr} feeds."
