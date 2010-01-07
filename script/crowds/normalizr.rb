@@ -24,6 +24,7 @@ hydra = Typhoeus::Hydra.new(:max_concurrency => MAX_CON)
 hydra.disable_memoization
 
 ctr = 0
+fail_count = 0
 
 loop do
     # clean up items table
@@ -52,9 +53,17 @@ loop do
 
         req.on_complete do |resp|
             if resp.code != 200
-                puts "ERROR!!! TheRealURL down?! Response: #{resp.code}"
-                Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
-                exit!
+                fail_count += 1
+                puts "ERROR from TheRealURL: #{resp.code}"
+                if fail_count < 10 
+                    puts "Sleep(3), redo"
+                    sleep(3)
+                    redo
+                else
+                    puts "10 ERRORS. EXITING"
+                    Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
+                    exit
+                end
             end
             
             if resp.body != 'error'
