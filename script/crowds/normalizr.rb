@@ -52,7 +52,7 @@ loop do
 
         req.on_complete do |resp|
             if resp.code != 200
-                puts "ERROR!!! TheRealURL down?!"
+                puts "ERROR!!! TheRealURL down?! Response: #{resp.code}"
                 Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
                 exit!
             end
