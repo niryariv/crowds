@@ -73,7 +73,6 @@ loop do
         end
 
         hydra.queue req
-        sleep(10)
     end 
     hydra.run    
     puts "#{now} [Feed Reader] Running for #{(now - cycle_start).round} seconds. Updated #{ctr} feeds."
