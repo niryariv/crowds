@@ -60,9 +60,9 @@ loop do
                 fail_count += 1
                 puts "ERROR from TheRealURL: #{resp.code} on '#{i.url}'"
                 if fail_count < 10 
-                    puts "Sleep(3), redo"
+                    puts "Sleep(3), next"
                     sleep(3)
-                    redo
+                    next
                 else
                     puts "10 ERRORS. EXITING"
                     Item.update_all "normalized = 0", "id BETWEEN #{items.first.id} AND #{items.last.id}"
