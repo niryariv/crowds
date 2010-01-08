@@ -18,7 +18,7 @@ class Feed < ActiveRecord::Base
   # rss is a Feedzirra::Feed object
   def refresh(rss = nil)
       
-      # this is meant to be called with a Feed object. If the object isnt present, try and fetch the feed - without If-Modified-Since etc
+      # this is meant to be called with a Feed object. If the object isn't present, try and fetch the feed - without If-Modified-Since etc
       rss = Feedzirra::Feed.fetch_and_parse(self.url) if rss.nil?
       
       items = {}
@@ -86,15 +86,15 @@ class Feed < ActiveRecord::Base
   # end
 
 
-  # deprecated by refresh_typho. if this is called, something went wrong
-  def load
-    logger.error("WTF? load (#{self.id}) #{self.url}")
-    self.last_read_at = Time.at(0) if self.last_read_at.nil?
-    
-    open(self.url, { 'User-Agent' => USER_AGENT, 'If-Modified-Since' => self.last_read_at.httpdate }).read.to_s                    
-  rescue Exception=>e
-    logger.error "ERROR Feed::load : #{e.message} on #{url}"
-    ''
-  end
+  # # deprecated - use refresh() with no arguments instead
+  # def load
+  #   logger.error("WTF? load (#{self.id}) #{self.url}")
+  #   self.last_read_at = Time.at(0) if self.last_read_at.nil?
+  #   
+  #   open(self.url, { 'User-Agent' => USER_AGENT, 'If-Modified-Since' => self.last_read_at.httpdate }).read.to_s                    
+  # rescue Exception=>e
+  #   logger.error "ERROR Feed::load : #{e.message} on #{url}"
+  #   ''
+  # end
 
 end
