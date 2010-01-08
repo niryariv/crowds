@@ -61,7 +61,7 @@ loop do
             puts "#{resp.code} #{f.url}"
             if resp.code == 200
                 begin
-                    f.feedzirra_refresh(resp.body)
+                    f.refresh(Feedzirra::Feed.parse(resp.body))
                 rescue Exception => e # because, when FZ fails it often means the feed is dead, so mark it +1000 to check it later
                     f.fail_count += 1000
                     puts "ERROR: #{e} [#{f.id}] #{f.url}"

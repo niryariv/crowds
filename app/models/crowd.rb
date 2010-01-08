@@ -1,4 +1,6 @@
-require 'feed_tools'
+# require 'feed_tools'
+require 'feedzirra'
+require 'MyTruffleHog'
 
 class Crowd < ActiveRecord::Base
 
@@ -11,15 +13,33 @@ class Crowd < ActiveRecord::Base
   validates_uniqueness_of :title
 
 
-  def add_feed_from_url(url)
-    rss = FeedTools::Feed.open(url)
-    return false if rss.title.nil? #title is required for both RSS/Atom, so it tells us if FeedTools actually found a feed
+  def add_feed_from_url(url, refresh = false)
+    # discover RSS/Atom URL, if needed
+    url = MyTruffleHog.parse_from(url).to_a.first
 
-    # rss.url.nil? is for feeds that don't carry their own URL, eg news.YC
-    self.add_feed({:url => (rss.url.nil?) ? feed_url : rss.url, :home_url => rss.link, :title => rss.title})
-  rescue FeedTools::FeedAccessError
-    false
+    return false if url.nil?
+    
+    f = Feedzirra::Feed.fetch_and_parse(url)
+    
+    return false if f.title.nil? #title is required for both RSS/Atom, so it tells us if FeedTools actually found a feed
+
+    feed = self.add_feed({:url => (f.feed_url.nil?) ? feed_url : f.feed_url, :home_url => f.url, :title => f.title})
+    feed.refresh(f) if refresh
+    
+    feed
+  rescue Exception => e
+    logger.error "ERROR Crowd::add_feed_from_url(#{url}, #{refresh})"
   end
+
+  # def add_feed_from_url(url)
+  #   rss = FeedTools::Feed.open(url)
+  #   return false if rss.title.nil? #title is required for both RSS/Atom, so it tells us if FeedTools actually found a feed
+  # 
+  #   # rss.url.nil? is for feeds that don't carry their own URL, eg news.YC
+  #   self.add_feed({:url => (rss.url.nil?) ? feed_url : rss.url, :home_url => rss.link, :title => rss.title})
+  # rescue FeedTools::FeedAccessError
+  #   false
+  # end
   
   
   # data is a hash {:url => feed_url, :home_url => rss.link, :title => rss.title}

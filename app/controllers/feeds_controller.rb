@@ -25,11 +25,15 @@ class FeedsController < ApplicationController
     raise "unauthorized" unless current_user.owns?(crowd)
     
     url_param = params[:feed] ? params[:feed][:url] : params[:url]
+    
+    # add single URL
     unless url_param.blank?
       url = url_param.strip.gsub(/^https/i, 'http') # open-uri can't handle SSL, so attempt to get the feed from the http address
-      new_f = crowd.add_feed_from_url(url)
+      new_f = crowd.add_feed_from_url(url, true)
       raise "cant_save_url" unless new_f
-    else # import OPML
+      
+    # import OPML
+    else 
       new_feed_count = 0
       raise "no_opml" if params[:feed].nil?
 
@@ -63,12 +67,12 @@ class FeedsController < ApplicationController
           when 'cant_save_url': "Cannot find feed for: '#{url}'"
           when 'unauthorized' : "Sorry, you're not allowed to edit this crowd"
           when 'no_opml'      : "No OPML file to upload"
-          else "Can't import this file - are you sure this is OPML?"
+          else "Can't import this file - are you sure this is OPML? #{e.message}"
         end
         redirect_to crowd_feeds_path(crowd) 
       }
       format.xml  { render :xml => crowd.feeds, :status => :created }
-   end
+    end
   end
 
   # DELETE /feeds/1
