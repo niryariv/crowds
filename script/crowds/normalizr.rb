@@ -87,5 +87,4 @@ loop do
         hydra.queue req
     end 
     hydra.run
-    sleep(1)
-end
+  end
