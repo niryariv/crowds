@@ -9,7 +9,7 @@ ROOT = File.expand_path(File.dirname(__FILE__)+'/../../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
-MAX_CON = 1
+MAX_CON = 50
 
 # quiet
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
@@ -87,4 +87,5 @@ loop do
         hydra.queue req
     end 
     hydra.run
-  end
+    sleep(1)
+end
