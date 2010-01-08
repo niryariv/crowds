@@ -9,7 +9,7 @@ ROOT = File.expand_path(File.dirname(__FILE__)+'/../../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
-MAX_CON = 20
+MAX_CON = 1
 
 # quiet
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
@@ -52,10 +52,10 @@ loop do
     items.each do |i|     
     
         req = Typhoeus::Request.new("http://therealurl.appspot.com/",
-                                    :params => { "format" => "json", "url" => CGI.escape(i.url) },
+                                    :params => { "format" => "json", "url" => i.url },
                                     :timeout => 20000 )
 
-        req.on_complete do |resp|
+        req.on_complete do |resp|            
             if resp.code != 200
                 fail_count += 1
                 puts "ERROR from TheRealURL: #{resp.code} on '#{i.url}'"
@@ -82,6 +82,7 @@ loop do
                     puts "ERROR: #{e} [#{i.url}]"
                 end
             end
+            
         end
         hydra.queue req
     end 
