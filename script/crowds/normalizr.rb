@@ -52,7 +52,7 @@ loop do
     items.each do |i|     
     
         req = Typhoeus::Request.new("http://therealurl.appspot.com/",
-                                    :params => { "format" => "json", "url" => i.url },
+                                    :params => { "format" => "json", "url" => CGI.escape(i.url) },
                                     :timeout => 20000 )
 
         req.on_complete do |resp|
