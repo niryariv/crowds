@@ -9,7 +9,7 @@ ROOT = File.expand_path(File.dirname(__FILE__)+'/../../')
 require "#{ROOT}/config/environment.rb"
 require "#{ROOT}/config/crowds.rb"
 
-MAX_CON = 50
+MAX_CON = 20
 
 # quiet
 ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which is then directed to the daemon's log file
