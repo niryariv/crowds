@@ -70,6 +70,8 @@ loop do
                 end
             end
             
+            fail_count = 0
+            
             if resp.body != 'error'
                 begin
                     d = JSON.parse(resp.body)
