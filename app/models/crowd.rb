@@ -1,6 +1,6 @@
 # require 'feed_tools'
 require 'feedzirra'
-require 'MyTruffleHog'
+require 'mytrufflehog'
 
 class Crowd < ActiveRecord::Base
 
