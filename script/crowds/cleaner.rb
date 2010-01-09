@@ -14,12 +14,16 @@ ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which
 cycle_start = Time.now
 puts "#{Time.now} [Cleaner] Initialized in #{RAILS_ENV}"
 
-puts "[Cleaner] deleting crowds scheduled for removal"
-Crowd.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
+c = Crowd.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
+
+puts "[Cleaner] deleted #{c} crowds scheduled for removal"
+
 
 # clean up items table
-puts "[Cleaner] deleting expired items"
-Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"  # some items have a future date..
-Item.delete_all "created_at < '#{14.days.ago.to_s(:db)}'"     # remove old items
+c = Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"  # some items have a future date..
+puts "[Cleaner] deleted #{c} items from the future"
+
+c = Item.delete_all "created_at < '#{14.days.ago.to_s(:db)}'"     # remove old items
+puts "[Cleaner] deleted #{c} old items"
 
 puts "#{Time.now} [Cleaner] Done. Take care!"
