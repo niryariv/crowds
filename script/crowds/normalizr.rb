@@ -27,9 +27,6 @@ ctr = 0
 fail_count = 0
 
 loop do
-    # clean up items table
-    Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"
-    Item.delete_old
     
     # order by id, mark all as normalized allow the next normalizr process to pick new ones
     items = Item.all(:conditions => "normalized = 0", :order => "id", :limit => MAX_CON)

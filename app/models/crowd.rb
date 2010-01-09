@@ -144,10 +144,11 @@ class Crowd < ActiveRecord::Base
     items
   end
   
-  # Housekeeping: remove crowds marked for deletion over a week ago (allow for delete undo, up to a week)
-  
-  def self.remove_deleted
-    self.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
-  end
+  ## Deprecated - moved to crowds/cleaner script
+  # # Housekeeping: remove crowds marked for deletion over a week ago (allow for delete undo, up to a week)
+  # 
+  # def self.remove_deleted
+  #   self.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
+  # end
   
 end

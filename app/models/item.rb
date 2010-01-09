@@ -22,10 +22,10 @@ class Item < ActiveRecord::Base
   #   ''
   # end
   
-  
-  # Housekeeping: removes old items from the DB
-  def self.delete_old
-    self.delete_all "created_at < '#{(Gaps.max+10).days.ago.to_s(:db)}'"
-  end
+  ## Deprecated - moved to crowds/cleaner script
+  # # Housekeeping: removes old items from the DB
+  # def self.delete_old
+  #   self.delete_all "created_at < '#{(Gaps.max+10).days.ago.to_s(:db)}'"
+  # end
 
 end
