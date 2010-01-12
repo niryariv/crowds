@@ -9,14 +9,14 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.6)
 
 # These are the time gaps for which to check new items
 # Items older than (Gaps.max + 10) are automatically deleted from the DB
-Gaps = [1,3,7,30]   # days
+# Gaps = [1,3,7,30]   # days
 
 
 # Lifetime of popular items cache
 CacheLifetime = 12  # hours
 CacheDir = RAILS_ROOT + '/tmp/cache/data'
 
-FeedCacheDir = '/tmp/feeds'
+# FeedCacheDir = '/tmp/feeds'
 
 # Default number of references a URL should have in order to be considered "popular"
 DefaultThreshold = 2
