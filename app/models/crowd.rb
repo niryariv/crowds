@@ -132,8 +132,8 @@ class Crowd < ActiveRecord::Base
       items = popular_items_since(last_updated, threshold, limit) + items unless cache_fresh
 
     else
-      logger.info "calling popular_items_since(#{1.month.ago}, #{threshold}, #{limit})"
-      items = popular_items_since(1.month.ago, threshold, limit)
+      logger.info "calling popular_items_since(#{TimeframeStart.days.ago}, #{threshold}, #{limit})"
+      items = popular_items_since(TimeframeStart.days.ago, threshold, limit)
     end
       
     items = items[0..(limit-1)]   # remove older items

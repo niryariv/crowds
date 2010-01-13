@@ -11,6 +11,9 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.6)
 # Items older than (Gaps.max + 10) are automatically deleted from the DB
 # Gaps = [1,3,7,30]   # days
 
+TimeframeStart = 14 # days.ago
+TimeframeEnd   = 1  # day.from_now
+
 
 # Lifetime of popular items cache
 CacheLifetime = 8  # hours

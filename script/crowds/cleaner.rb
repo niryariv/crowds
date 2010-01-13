@@ -20,10 +20,10 @@ puts "[Cleaner] deleted #{c} crowds scheduled for removal"
 
 
 # clean up items table
-c = Item.delete_all "created_at > '#{1.day.from_now.to_s(:db)}'"  # some items have a future date..
+c = Item.delete_all "created_at > '#{TimeframeEnd.days.from_now.to_s(:db)}'"  # some items have a future date..
 puts "[Cleaner] deleted #{c} items from the future"
 
-c = Item.delete_all "created_at < '#{14.days.ago.to_s(:db)}'"     # remove old items
+c = Item.delete_all "created_at < '#{TimeframeStart.days.ago.to_s(:db)}'"     # remove old items
 puts "[Cleaner] deleted #{c} old items"
 
 puts "#{Time.now} [Cleaner] Done. Take care!"
