@@ -59,35 +59,11 @@ class Crowd < ActiveRecord::Base
   end
   
   
-  # deprecated
-  # def refresh_feeds
-  #   self.feeds.each do |f|
-  #     if f.refresh
-  #       logger.info "Refreshed #{f.url}"
-  #     else
-  #       logger.error "Failed refresh #{f.url}"
-  #     end
-  #   end
-  # end
-
-
   def popular_items_since(since, threshold = DefaultThreshold, limit = DefaultItemLimit)
     
     logger.info "Reading popular_items_since #{since}"
     
     items = {} ; items.default = {} ; item_counter = {}
-    since_db = since.to_s(:db)
-    now = Time.now.to_i
-#    cur_time = ((Time.now - since)/86400).round
-
-# # performance killer
-#     filt = []
-#     (Item.find_by_sql "SELECT url FROM items WHERE created_at >= '#{since_db}' GROUP BY url HAVING count(*)>=#{threshold}").each do |i|
-#        filt << i.url
-#      end
-# 
-#     return [] if filt.size == 0 # no new URLs
-# 
 
     sql = "SELECT items.url as url, items.id as id, items.title as title, items.feed_id as feed_id, items.source_id as source_id,
                    DATE(items.created_at) as created_day
@@ -95,27 +71,25 @@ class Crowd < ActiveRecord::Base
           WHERE 
             items.feed_id = ownerships.feed_id
             AND ownerships.crowd_id=#{self.id}
-            AND items.created_at > '#{since_db}'
+            AND items.created_at > '#{since.to_s(:db)}'
           ORDER BY 
             items.created_at DESC
           " #LIMIT 5000"
 
     (Item.find_by_sql sql).each do |res|
       url = res.url
-#      next unless filt.include?(url)
 
       res.source_id ||= res.id
-      #source = Item.find(res.source_id)
 
       f = items[url].has_key?(:feed_ids) ? items[url][:feed_ids] << res.source_id : [res.source_id]
       items[url] = { :title => res.title, :feed_ids => f, :period => res.created_day }
 
       item_counter[url] = true if items[url][:feed_ids].size >= threshold
-     # break if item_counter.size >= limit # save time
+      break if item_counter.size >= limit # save time
     end
 
     items.delete_if {|url, data| data[:feed_ids].length < threshold }
-    
+        
     items.each_key do |url| 
       items[url][:feeds] = []      
       items[url][:feed_ids].each { |id| items[url][:feeds] << Item.find(id) }
@@ -152,12 +126,5 @@ class Crowd < ActiveRecord::Base
     logger.info "FOUND #{items.size} items"
     items
   end
-  
-  ## Deprecated - moved to crowds/cleaner script
-  # # Housekeeping: remove crowds marked for deletion over a week ago (allow for delete undo, up to a week)
-  # 
-  # def self.remove_deleted
-  #   self.delete_all "delete_at <= '#{Time.now.to_s(:db)}'"
-  # end
-  
+    
 end
