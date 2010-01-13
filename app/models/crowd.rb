@@ -96,7 +96,12 @@ class Crowd < ActiveRecord::Base
     end
 
     logger.info "Items.size: #{items.size}"
-    items.each_key { |url| items[url][:tags] = Tag.get_for(url) }
+    
+    # # get tags 
+    if EnableTags
+      items.each_key { |url| items[url][:tags] = Tag.get_for(url) }
+    end
+    
     items.sort_by { |a| [a[1][:period], a[1][:feeds].size] }.reverse
   end
 
