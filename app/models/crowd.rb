@@ -105,16 +105,22 @@ class Crowd < ActiveRecord::Base
 #      next unless filt.include?(url)
 
       res.source_id ||= res.id
-      source = Item.find(res.source_id)
+      #source = Item.find(res.source_id)
 
-      f = items[url].has_key?(:feeds) ? items[url][:feeds] << source : [source]
-      items[url] = { :title => res.title, :feeds => f, :period => res.created_day } #((now - res.created_day.to_i)/86400).round } #:period => cur_time }
+      f = items[url].has_key?(:feed_ids) ? items[url][:feed_ids] << res.source_id : [res.source_id]
+      items[url] = { :title => res.title, :feed_ids => f, :period => res.created_day }
 
-      item_counter[url] = true if items[url][:feeds].size >= threshold
+      item_counter[url] = true if items[url][:feed_ids].size >= threshold
      # break if item_counter.size >= limit # save time
     end
 
-    items.delete_if {|url, data| data[:feeds].length < threshold }
+    items.delete_if {|url, data| data[:feed_ids].length < threshold }
+    
+    items.each_key do |url| 
+      items[url][:feeds] = []      
+      items[url][:feed_ids].each { |id| items[url][:feeds] << Item.find(id) }
+    end
+
     logger.info "Items.size: #{items.size}"
     items.each_key { |url| items[url][:tags] = Tag.get_for(url) }
     items.sort_by { |a| [a[1][:period], a[1][:feeds].size] }.reverse
