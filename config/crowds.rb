@@ -13,7 +13,7 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.6)
 
 
 # Lifetime of popular items cache
-CacheLifetime = 12  # hours
+CacheLifetime = 8  # hours
 CacheDir = RAILS_ROOT + '/tmp/cache/data'
 
 # FeedCacheDir = '/tmp/feeds'
