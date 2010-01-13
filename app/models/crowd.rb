@@ -75,16 +75,19 @@ class Crowd < ActiveRecord::Base
     
     logger.info "Reading popular_items_since #{since}"
     
-    items = {} ; items.default = {} ; filt = [] ; item_counter = {}
+    items = {} ; items.default = {} ; item_counter = {}
     since_db = since.to_s(:db)
     now = Time.now.to_i
 #    cur_time = ((Time.now - since)/86400).round
 
-    (Item.find_by_sql "SELECT url FROM items WHERE created_at >= '#{since_db}' GROUP BY url HAVING count(*)>=#{threshold}").each do |i|
-       filt << i.url
-     end
-
-    return [] if filt.size == 0 # no new URLs
+# # performance killer
+#     filt = []
+#     (Item.find_by_sql "SELECT url FROM items WHERE created_at >= '#{since_db}' GROUP BY url HAVING count(*)>=#{threshold}").each do |i|
+#        filt << i.url
+#      end
+# 
+#     return [] if filt.size == 0 # no new URLs
+# 
 
     sql = "SELECT items.url as url, items.id as id, items.title as title, items.feed_id as feed_id, items.source_id as source_id,
                    DATE(items.created_at) as created_day
@@ -95,7 +98,7 @@ class Crowd < ActiveRecord::Base
             AND items.created_at > '#{since_db}'
           ORDER BY 
             items.created_at DESC
-          LIMIT 5000"
+          " #LIMIT 5000"
 
     (Item.find_by_sql sql).each do |res|
       url = res.url
