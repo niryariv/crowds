@@ -26,7 +26,7 @@ class Feed < ActiveRecord::Base
       rss.entries.each do |i|
           puts "checking #{i.title}"
           published = i.last_modified
-          next if (!self.last_read_at.nil? and published < self.last_read_at) or published < 14.days.ago \
+          next if (!self.updated_at.nil? and published < self.updated_at) or published < 14.days.ago \
 
           begin
               # items[i.url] = { :created_at=>published, :title=>i.title }

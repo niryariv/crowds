@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091230200455) do
+ActiveRecord::Schema.define(:version => 20100113215046) do
 
   create_table "crowds", :force => true do |t|
     t.string   "title",     :null => false
@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(:version => 20091230200455) do
   end
 
   create_table "feeds", :force => true do |t|
-    t.string   "title",                       :null => false
-    t.string   "url",                         :null => false
-    t.string   "home_url",                    :null => false
-    t.datetime "created_at",                  :null => false
-    t.datetime "last_read_at"
-    t.integer  "fail_count",   :default => 0
+    t.string   "title",                         :null => false
+    t.string   "url",                           :null => false
+    t.string   "home_url",                      :null => false
+    t.datetime "created_at",                    :null => false
+    t.integer  "fail_count",    :default => 0
     t.datetime "updated_at"
+    t.string   "etag",          :default => ""
+    t.string   "last_modified", :default => ""
   end
 
   add_index "feeds", ["updated_at"], :name => "index_feeds_on_updated_at"

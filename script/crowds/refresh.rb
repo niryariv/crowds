@@ -17,9 +17,17 @@ MAX_CON = 60
 hydra = Typhoeus::Hydra.new(:max_concurrency => MAX_CON)
 hydra.disable_memoization
 
-# all_feeds = Feed.all(:order => "fail_count, last_read_at, created_at")
 def now
     Time.now.utc
+end
+
+def get_headers(headers_string)
+  headers = {}
+  headers_string.to_a.each do |h|
+    k,v = h.split(':')
+    headers[k.strip.downcase] = v.strip unless v.nil? or k.nil?
+  end
+  headers
 end
 
 cycle_start = now ; ctr = 0 # ; next_start = 0
@@ -28,7 +36,7 @@ puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 loop do
     
     feeds = Feed.all(   
-                        :order => "updated_at, fail_count, last_read_at, created_at", 
+                        :order => "updated_at, fail_count, created_at", 
                         :conditions => ["updated_at is null OR updated_at < ?", cycle_start],
                         :limit => MAX_CON
                     )
@@ -53,12 +61,14 @@ loop do
                                         :user_agent => USER_AGENT,
                                         :timeout    => 30000,
                                         :follow_location => true,
-                                        :headers    => (f.last_read_at.nil? ? {} : { 'If-Modified-Since' => f.last_read_at.httpdate })
+                                        :headers    => { 'If-None-Match' => f.etag, 'If-Modified-Since' => f.last_modified }
                                     )
         req.on_complete do |resp|
             puts "#{resp.code} #{f.url}"
             if resp.code == 200
                 begin
+                    f.etag = get_headers(resp.headers)['etag']
+                    f.last_modified = get_headers(resp.headers)['last-modified']
                     f.refresh(Feedzirra::Feed.parse(resp.body))
                 rescue Exception => e # because, when FZ fails it often means the feed is dead, so mark it +1000 to check it later
                     f.fail_count += 1000
