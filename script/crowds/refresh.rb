@@ -24,7 +24,7 @@ end
 def get_headers(headers_string)
   headers = {}
   headers_string.to_a.each do |h|
-    k,v = h.split(':')
+    k,v = h.split(':',2)
     headers[k.strip.downcase] = v.strip unless v.nil? or k.nil?
   end
   headers
