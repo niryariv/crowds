@@ -52,8 +52,9 @@ loop do
                                     :params => { "format" => "json", "url" => i.url },
                                     :timeout => 20000 )
 
-        req.on_complete do |resp|            
-            if resp.code != 200
+        req.on_complete do |resp|
+            # TheRealURL down or not responding (404 is acceptable, simply means that TheRealURL couldn't access the URL supplied)
+            if resp.code != 200 and resp.code != 404
                 fail_count += 1
                 puts "ERROR from TheRealURL: #{resp.code} on '#{i.url}'"
                 if fail_count < 10 
@@ -69,7 +70,8 @@ loop do
             
             fail_count = 0
             
-            if resp.body != 'error'
+            # request successful
+            if resp.code == 200
                 begin
                     d = JSON.parse(resp.body)
                     if i.url != d['url']
