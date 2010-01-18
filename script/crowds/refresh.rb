@@ -30,14 +30,15 @@ def get_headers(headers_string)
   headers
 end
 
-cycle_start = now ; ctr = 0 # ; next_start = 0
+cycle_start = now ; ctr = 0
+feed_expire = now - CacheLifetime.hours
 puts "#{cycle_start} [Feed Reader] Initialized in #{RAILS_ENV}"
 
 loop do
     
     feeds = Feed.all(   
                         :order => "updated_at, fail_count, created_at", 
-                        :conditions => ["updated_at is null OR updated_at < ?", cycle_start],
+                        :conditions => [ "updated_at is null OR updated_at < ?", feed_expire ],
                         :limit => MAX_CON
                     )
 
@@ -61,14 +62,17 @@ loop do
                                         :user_agent => USER_AGENT,
                                         :timeout    => 30000,
                                         :follow_location => true,
-                                        :headers    => { 'If-None-Match' => f.etag, 'If-Modified-Since' => f.last_modified }
+                                        :headers    => { 
+                                                          'If-None-Match' => f.etag,
+                                                          'If-Modified-Since' => f.last_modified 
+                                                        }
                                     )
         req.on_complete do |resp|
             puts "#{resp.code} #{f.url}"
             if resp.code == 200
                 begin
-                    f.etag = get_headers(resp.headers)['etag']
-                    f.last_modified = get_headers(resp.headers)['last-modified']
+                    f.etag = get_headers(resp.headers)['etag'].to_s
+                    f.last_modified = get_headers(resp.headers)['last-modified'].to_s
                     f.refresh(Feedzirra::Feed.parse(resp.body))
                 rescue Exception => e # because, when FZ fails it often means the feed is dead, so mark it +1000 to check it later
                     f.fail_count += 1000
