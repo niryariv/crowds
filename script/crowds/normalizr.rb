@@ -74,7 +74,7 @@ loop do
             if resp.code == 200
                 begin
                     d = JSON.parse(resp.body)
-                    if i.url != d['url']
+                    if i.url != d['url'] and d['url'] != 'http://twitter.com/login' and d['url'] != 'http://digg.com/register/'
                         i.update_attributes :url => d['url'], :title => d['title']
                     elsif d['title'] != i.title.to_s
                         i.update_attribute "title", d['title']
