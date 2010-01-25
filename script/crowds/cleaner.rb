@@ -26,4 +26,14 @@ puts "[Cleaner] deleted #{c} items from the future"
 c = Item.delete_all "created_at < '#{TimeframeStart.days.ago.to_s(:db)}'"     # remove old items
 puts "[Cleaner] deleted #{c} old items"
 
+deadfeeds = Feed.all(:conditions => "fail_count > 10000")
+
+deadfeeds.each do |f|
+  f.ownerships.destroy_all
+  f.destroy
+end
+
+puts "[Cleaner] deleted #{deadfeeds.size} dead feeds"
+
+
 puts "#{Time.now} [Cleaner] Done. Take care!"
