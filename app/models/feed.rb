@@ -26,10 +26,10 @@ class Feed < ActiveRecord::Base
       rss.entries.each do |i|
           puts "checking #{i.title}"
           published = i.last_modified
-          next if (!self.updated_at.nil? and published < self.updated_at) or published < 14.days.ago \
+          next if published < TimeframeStart.days.ago or published > TimeframeEnd.days.from_now
+          # next if (!self.updated_at.nil? and published < self.updated_at) or published < 14.days.ago
 
           begin
-              # items[i.url] = { :created_at=>published, :title=>i.title }
               it = self.items.create(:url=>i.url, :created_at=>published, :title=>i.title, :normalized => false)
           rescue Exception => e # items already existed
               puts "ERROR Feed::feedzirra_refresh #{e}"

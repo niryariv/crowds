@@ -69,7 +69,7 @@ loop do
                                     )
         req.on_complete do |resp|
             puts "#{resp.code} #{f.url}"
-            if resp.code == 200
+            if resp.code == 200 || resp.code == 301
                 begin
                     f.etag = get_headers(resp.headers)['etag'].to_s
                     f.last_modified = get_headers(resp.headers)['last-modified'].to_s
