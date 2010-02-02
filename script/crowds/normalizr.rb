@@ -39,7 +39,7 @@ loop do
         # sleep(300) 
         # next
         
-        exit
+        exit!
     end
 
     Item.update_all "normalized = 1", "id BETWEEN #{items.first.id} AND #{items.last.id}"

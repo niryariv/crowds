@@ -50,7 +50,7 @@ loop do
         # cycle_start = now ; ctr = 0
         # sleep(300)
         # next
-        exit
+        exit!
     end
 
 
