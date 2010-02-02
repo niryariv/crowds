@@ -19,7 +19,7 @@ class Tag < ActiveRecord::Base
       xml = response.body
     end
     
-    xml = xml.gsub 'recommended>', 'popular>'
+    xml = xml.gsub 'recommended>', 'popular>' # if <recommended> is there, use it instead of <popular>
     tags = xml.scan(/<popular>(.*)<\/popular>/).flatten
     tags = (tags.size > 0) ? '#' + tags[0..2].join(' #') : ''
     create(:url=>url, :tags=>tags)
