@@ -113,7 +113,7 @@ class Crowd < ActiveRecord::Base
     cache_fresh = false
     
     if File.exist?(cachefile)
-      last_updated = File.mtime(cachefile).utc
+      last_updated = File.mtime(cachefile)
       cache_fresh = (last_updated > CacheLifetime.hours.ago)
 
       items = Marshal.load(File.read(cachefile))
