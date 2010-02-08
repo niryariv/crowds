@@ -12,7 +12,7 @@ ActiveRecord::Base.logger = Logger.new(STDOUT) # direct all log to output, which
 
 # Get to work
 
-MAX_CON = 60
+MAX_CON = 20
 
 hydra = Typhoeus::Hydra.new(:max_concurrency => MAX_CON)
 hydra.disable_memoization
