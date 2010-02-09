@@ -37,7 +37,7 @@ class Feed < ActiveRecord::Base
           end
           
           i.content.to_s.scan(/(http:\/\/.*?)[$|\'|\"|\s|\<]/i).flatten.uniq.each do |u|
-            unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.js)$/i \
+            unless u =~ /(\.mp3|\.mp4|\.mpeg|\.mpg|\.mov|\.gif|\.jpg|\.jpeg|\.png|\.cab|\.js)$/i \
               or u.include?('http://feedads.') \
               or u.include?('http://ads.') \
               or u.include?('http://ad.') \
