@@ -42,6 +42,7 @@ class Feed < ActiveRecord::Base
               or u.include?('http://ads.') \
               or u.include?('http://ad.') \
               or u.include?('http://fpdownload2.macromedia.com/get/shockwave/cabs/flash/swflash.cab') \
+              or u.include?('http://creativecommons.org/licenses/by/') \
               or items.keys.include?(u)
                 begin
                     self.items.create(:url=>u, :created_at=>published, :source_id=>it.id, :normalized => false)
