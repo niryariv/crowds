@@ -128,7 +128,7 @@ class Crowd < ActiveRecord::Base
     
     File.open(cachefile, 'w') {|f| f.puts Marshal.dump(items); f.close} unless cache_fresh or items.size < 1
     
-    logger.info "FOUND #{items.size} items"
+    logger.info "cache_fresh #{cache_fresh} :: FOUND #{items.size} items"
     items
   end
     
