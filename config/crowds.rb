@@ -16,7 +16,7 @@ TimeframeEnd   = 1  # day.from_now
 
 
 # Lifetime of popular items cache
-CacheLifetime = 4  # hours
+CacheLifetime = 24  # hours
 CacheDir = RAILS_ROOT + '/tmp/cache/data'
 
 # FeedCacheDir = '/tmp/feeds'
