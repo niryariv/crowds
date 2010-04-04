@@ -30,8 +30,6 @@ DefaultItemLimit = 25
 
 # Delicious API login (for tags)
 EnableTags     = false
-DeliciousUser  = 'crowdwhisper'
-DeliciousPass  = 'cr0wdd'
 
 
 require 'open-uri'
