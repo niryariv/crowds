@@ -8,3 +8,5 @@ tmp/cache/data/*
 doc/api
 doc/app
 config/database.yml
+config/exceptional.yml
+
